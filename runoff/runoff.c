@@ -129,9 +129,10 @@ bool vote(int voter, int rank, string name)
     // name is a match for the name of a valid candidate
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp(candidates[i].name,name) == 0)
+        if (strcmp(candidates[i].name, name) == 0)
         {
-            // then you should update the global preferences array to indicate that the voter voter has that candidate as their rank preference
+            // then you should update the global preferences array to indicate that the voter voter has that candidate as their rank
+            // preference
             preferences[voter][rank] = i;
             return true;
 
