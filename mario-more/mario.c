@@ -3,5 +3,10 @@
 
 int main(void)
 {
-  inr 
+  int n;
+  do
+  {
+    n = get_int("Height: ");
+  }
+  
 }
