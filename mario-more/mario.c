@@ -18,10 +18,11 @@ int main(void)
         for (int j = 0; j < height+i+3; j++)
         {
             if (j == height || j == height+1 || i +j < height-1)
+                printf("  ");
             else
-                 printf("#")
+                 printf("#");
         }
-        printf(""\n);
+        printf("\n");
     }
 
 }
