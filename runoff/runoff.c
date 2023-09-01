@@ -135,7 +135,6 @@ bool vote(int voter, int rank, string name)
             // preference
             preferences[voter][rank] = i;
             return true;
-
         }
     }
     return false;
@@ -177,7 +176,7 @@ bool print_winner(void)
 int find_min(void)
 {
     int min = INT_MAX;
-    for (int i =0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (!candidates[i].eliminated && candidates[i].votes < min)
         {
