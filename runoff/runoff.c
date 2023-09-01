@@ -203,9 +203,9 @@ bool is_tie(int min)
     }
     if (eliminate == counter)
     {
-
-    }
-    return true;
+        return
+     }
+    return false;
 }
 
 // Eliminate the candidate (or candidates) in last place
