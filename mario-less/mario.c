@@ -13,7 +13,7 @@ int main(void)
 
    for (int row = 0; row < height; row++)
    {
-    for (int sapce = 0; space < height - row -1; space++)
+    for (string sapce = 0; space < height - row -1; space++)
     {
         printf(" ")
     }
