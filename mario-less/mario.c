@@ -4,26 +4,20 @@
 
 int main(void)
 {
-    int height, row, column, space;
+   int height;
+   do
+   {
+    height = get_int("Enter height: ");
+   }
+   while (height < 1 || height > 8);
 
-    do
+   for (int row = 0; row < height; row++)
+   {
+    for (int col = 0; col < row; col++)
     {
-        height = get_int("Enter height: ");
+        printf("#");
     }
-
-    while (height < 1 || height > 8);
-
-    for (row = 0; row < height; row++)
-    {
-        for (space = 0; space < height - row - 1; space++)
-        {
-            printf("  ");
-        }
-        for (column = 0; column < row; column++)
-        {
-            printf("#");
-        }
-        printf("\n");
-    }
-    return 0;
+    printf("\n");
+   }
+   return true;
 }
