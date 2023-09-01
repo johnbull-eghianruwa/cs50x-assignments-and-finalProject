@@ -3,29 +3,22 @@
 
 int main(void)
 {
+    // GET INPUT OF THE HEIGHT
     int height;
     do
     {
-        height = get_int("Enter height: ");
+        height = get_int("height: ")
     }
     while (height < 1 || height > 8);
 
-    for (int row = 0; row < height; row++)
+    // PRINT DESIRED PYRAMID HEIGHT
+    for (int i = =; i < height; i++)
     {
-        for (int space = 0; space < height - row -1; space++)
+        // SET PERIMETERS FOR THE COLUMNS TO RIGHT
+        for (int j = 0; j < heoght+i+3; j++)
         {
-            printf(" ");
+            
         }
-        for (int col = 0; col < row; col++)
-        {
-            printf("#");
-        }
-        for (int col = 0; col < row; col++)
-        {
-            printf("  ");
-        }
-        printf("\n");
     }
-    return true;
 
 }
