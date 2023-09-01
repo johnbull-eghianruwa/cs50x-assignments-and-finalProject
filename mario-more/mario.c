@@ -20,9 +20,9 @@ int main(void)
         {
             printf("#");
         }
-        for (int col = 0; < row; col++)
+        for (int col = 0; col < row; col++)
         {
-            printf("  ")
+            printf("  ");
         }
         printf("\n");
     }
