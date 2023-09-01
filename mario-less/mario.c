@@ -3,20 +3,20 @@
 
 int main(void)
 {
-  int n;
+  int n, row, col, space;
   do
   {
     n = get_int("Height: ");
   }
   while (n < 1 || n > 8);
 
-  for (int i = 0; i < n; i++)
-  for (int space = 0; space < n - i - 1; space++)
+  for ( row = 0; row < n; row++)
+  for ( space = 0; space < n - row - 1; space++)
   {
     printf(" ");
   }
   {
-    for (int j = 0; j <= i; j++)
+    for (col = 0; col <= row; col++)
     {
         printf("#");
     }
