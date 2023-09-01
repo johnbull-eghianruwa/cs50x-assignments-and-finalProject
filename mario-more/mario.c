@@ -7,7 +7,7 @@ int main(void)
     int height;
     do
     {
-        height = get_int("height: ")
+        height = get_int("height: ");
     }
     while (height < 1 || height > 8);
 
@@ -17,8 +17,11 @@ int main(void)
         // SET PERIMETERS FOR THE COLUMNS TO RIGHT
         for (int j = 0; j < heoght+i+3; j++)
         {
-            
+            if (j == height || j == n+1 || i +j < n-1)
+            else
+            printf("#")
         }
+        printf(""\n);
     }
 
 }
