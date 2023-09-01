@@ -126,13 +126,13 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    // name is a match for the name of a valid candidate
+    // Name is a match for the name of a valid candidate
     for (int i = 0; i < candidate_count; i++)
     {
         if (strcmp(candidates[i].name, name) == 0)
         {
-            // then you should update the global preferences array to indicate that the voter voter has that candidate as their rank
-            // preference
+            // Update the global preferences array to indicate that the voter voter has that candidate as their rank
+            // Preference
             preferences[voter][rank] = i;
             return true;
         }
