@@ -13,9 +13,9 @@ int main(void)
 
    for (int row = 0; row < height; row++)
    {
-    for (string sapce = 0; space < height - row -1; space++)
+    for (int space = 0; space < height - row -1; space++)
     {
-        printf(" ")
+        printf(" ");
     }
     for (int col = 0; col < row; col++)
     {
