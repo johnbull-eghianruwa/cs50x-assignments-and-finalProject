@@ -3,7 +3,7 @@
 
 int main(void)
 {
- // GET INPUT OF THE HEIGHT
+    // GET INPUT OF THE HEIGHT
     int height;
     do
     {
@@ -17,10 +17,10 @@ int main(void)
         // SET PERIMETERS FOR THE COLUMNS TO RIGHT
         for (int j = 0; j < height+i+3; j++)
         {
-            if (j == height || j == height+1 || i +j < height-1)
+        if (j == height || j == height+1 || i +j < height-1)
                 printf(" ");
             else
-                 printf("#");
+                printf("#");
         }
         printf("\n");
     }
