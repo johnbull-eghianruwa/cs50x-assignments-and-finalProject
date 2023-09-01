@@ -16,3 +16,6 @@ int main(void)
     {
         // SET PERIMETERS FOR THE COLUMNS TO RIGHT
         for (int j = 0; j < height+i+3; j++)
+        {
+             printf("#");
+        }
