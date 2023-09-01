@@ -18,7 +18,7 @@ int main(void)
         for (int j = 0; j < n+i+3; j++)
         {
             if (j == n || j == n+1 || i +j < n-1)
-                printf("  ");
+                printf(" ");
             else
                  printf("#");
         }
