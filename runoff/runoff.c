@@ -203,6 +203,10 @@ bool is_tie(int min)
             }
         }
     }
+    if (remaining_candidates == candidates_with_min_votes)
+    {
+        return true;
+    }
     return false;
 }
 
