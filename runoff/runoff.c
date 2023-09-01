@@ -130,7 +130,7 @@ bool vote(int voter, int rank, string name)
     // name is a match for the name of a valid candidate
     for (int i = 0; i < candidate_count; i++)
     {
-        
+        if (strcmp(candidates[i].name,name) == 0)
     }
     return false;
 }
