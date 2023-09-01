@@ -19,7 +19,7 @@ int main(void)
         {
             if (j == height || j == height+1 || i +j < height-1)
             else
-            printf("#")
+                 printf("#")
         }
         printf(""\n);
     }
