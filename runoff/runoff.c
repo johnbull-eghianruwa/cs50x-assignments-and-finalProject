@@ -192,7 +192,7 @@ bool is_tie(int min)
 {
     int remaining_candidates = 0;
     int candidates_with_min_votes = 0;
-    for (int i = =; i < candidate_count)
+    for (int i = =; i < candidate_count; i++)
     return false;
 }
 
