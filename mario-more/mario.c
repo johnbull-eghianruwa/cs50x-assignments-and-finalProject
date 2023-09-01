@@ -4,20 +4,20 @@
 int main(void)
 {
     // GET INPUT OF THE HEIGHT
-    int n;
+    int height;
     do
     {
-        n = get_int("height: ");
+        height = get_int("height: ");
     }
-    while (n < 1 || n > 8);
+    while (height < 1 || height > 8);
 
     // PRINT DESIRED PYRAMID HEIGHT
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < height; i++)
     {
         // SET PERIMETERS FOR THE COLUMNS TO RIGHT
-        for (int j = 0; j < n+i+3; j++)
+        for (int j = 0; j < height+i+3; j++)
         {
-            if (j == n || j == n+1 || i +j < n-1)
+            if (j == height || j == height+1 || i +j < height-1)
                 printf(" ");
             else
                  printf("#");
