@@ -4,15 +4,15 @@
 int main(void)
 {
     // GET INPUT OF THE HEIGHT
-    int height;
+    int n;
     do
     {
-        height = get_int("height: ");
+        n = get_int("height: ");
     }
-    while (height < 1 || height > 8);
+    while (n < 1 || n > 8);
 
     // PRINT DESIRED PYRAMID HEIGHT
-    for (int i = 0; i < height; i++)
+    for (int i = 0; i < n; i++)
     {
         // SET PERIMETERS FOR THE COLUMNS TO RIGHT
         for (int j = 0; j < height+i+3; j++)
