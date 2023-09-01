@@ -12,12 +12,12 @@ int main(void)
     while (height < 1 || height > 8);
 
     // PRINT DESIRED PYRAMID HEIGHT
-    for (int i = =; i < height; i++)
+    for (int i = 0; i < height; i++)
     {
         // SET PERIMETERS FOR THE COLUMNS TO RIGHT
-        for (int j = 0; j < heoght+i+3; j++)
+        for (int j = 0; j < height+i+3; j++)
         {
-            if (j == height || j == n+1 || i +j < n-1)
+            if (j == height || j == height+1 || i +j < height-1)
             else
             printf("#")
         }
