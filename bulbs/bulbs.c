@@ -9,6 +9,7 @@ void print_bulb(int bit);
 int main(void)
 {
     // TODO
+    // Prompt user for a message
 }
 
 void print_bulb(int bit)
