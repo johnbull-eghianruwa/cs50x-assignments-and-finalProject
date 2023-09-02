@@ -12,7 +12,7 @@ int main(void)
     string message = get_string("Enter message here: ");
 
     // Iterate through each character of the string
-    for (int i = 0; = number = strlen(message); i < number; i++)
+    for (int i = 0;  number = strlen(message); i < number; i++)
     {
         int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
