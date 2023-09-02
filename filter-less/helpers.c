@@ -126,9 +126,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Calculate average of neighbouring pixels
-            tmp[i][j].rgbtRed = round(totalRed / count);
-            tmp[i][j].rgbtGreen = round(totalGreen / count);
-            tmp[i][j].rgbtBlue = round(totalBlue / count);
+            tmp[i][j].rgbtRed = round(totalRed / counter);
+            tmp[i][j].rgbtGreen = round(totalGreen / counter);
+            tmp[i][j].rgbtBlue = round(totalBlue / counter);
         }
      }
 }
