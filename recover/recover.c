@@ -38,6 +38,6 @@ int main(int argc, char *argv[])
     while (fread(buffer, sizeof(char), 512, input_file))
     {
         // Check if bytes indicate start of JPEG
-        if (buffer[0] == oxff && buffer[1] == oxd8 && buffer[2] == oxff && buffer[3]))
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
     }
 }
