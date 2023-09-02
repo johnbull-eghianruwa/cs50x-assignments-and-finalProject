@@ -118,10 +118,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     continue;
                 }
                 // Get image value
-                
-        }
-        }
 
+        }
+        }
+     }
 }
     return;
 }
