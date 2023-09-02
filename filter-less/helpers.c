@@ -101,7 +101,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             int totalRed, totalBlue, totalGreen;
         totalRed = totalBlue = totalGreen = 0;
-        float count = 0.00;
+        float counter = 0.00;
 
         // Get neighbouring pixels
         for (int x = -1; x < 2; x++)
@@ -118,7 +118,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     continue;
                 }
                 // Get image value
-                totalRed += image[currentX][currentY].rgbtRd;
+                totalRed += image[currentX][currentY].rgbtRed;
                 totalGreen += image[currentX][currentY].rgbtGreen;
                 totalBlue += image[currentX][currentY].rgbtBlue;
 
