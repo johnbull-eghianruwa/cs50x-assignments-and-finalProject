@@ -17,5 +17,18 @@ int main(int argc, char *argv[])
     if (input_file == NULL)
     {
         printf("Could not  open file");
+        return 2;
     }
+
+    // Store block of 512 bytes in an array
+    unsigned char buffer[512];
+
+    // Track number of images generated
+    int count_image = 0;
+
+    // File pointer for recovered images
+    FILE *output_file = NULL;
+
+    // Char filename[8]
+    char
 }
