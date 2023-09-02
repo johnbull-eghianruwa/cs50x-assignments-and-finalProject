@@ -118,8 +118,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     continue;
                 }
                 // Get image value
+                totalred += image[currentX][currentY].rgbtRd;
+                totalGreen += image[currentX][currentY].rgbtGreen;
+                totalBlue += image[currentX][currentY].rgbtBlue;
 
-        }
+                counter++;
+            }
+
+            // Calculate average of neighbouring pixels
+            tmp[i][j].r
         }
      }
 }
