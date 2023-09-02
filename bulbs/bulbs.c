@@ -8,8 +8,8 @@ void print_bulb(int bit);
 
 int main(void)
 {
-    // TODO
-    // Prompt user for a message
+    // Prompt user for input
+    string message = get_string("Enter message here: ");
 }
 
 void print_bulb(int bit)
