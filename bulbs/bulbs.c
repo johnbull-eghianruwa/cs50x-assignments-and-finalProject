@@ -16,23 +16,13 @@ int main(void)
     {
         int binary[] = {0, 0, 0, 0, 0, 0, 0, 0};
 
-        //Convert the character into ASCII
+        // Convert the character into ASCII
         int decimal = message [i];
 
-        // Covert the ASCII into binary
+        // Convert the  ASCII into binary
         int j = 0;
+
         while (decimal > 0)
-        {
-            binary[j] = decimal % 2;
-            decimal = decimal / 2;
-            j++;
-        }
-        // Print the binary in reverse
-        for (int k = BITS_IN_BYTE - 1; k >= 0; k--)
-        {
-            print_bulb(binary[k]);
-        }
-        printf("\n");
     }
 }
 
