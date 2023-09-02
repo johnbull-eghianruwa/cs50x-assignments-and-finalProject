@@ -126,9 +126,22 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
 
             // Calculate average of neighbouring pixels
-            tmp[i][j].r
+            tmp[i][j].rgbtRed = round(totalRed / counter);
+            tmp[i][j].rgbtGreen = round(totalGreen / counter);
+            tmp[i][j].rgbtBlue = round(totalBlue / counter);
         }
      }
 }
+
+    // Copy new pixels into orignal image
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j].rgbtRed = tmp[i][j].rgbtRed;
+            image[i][j].rgbtGreen = tmp[i][j].rgbtGreen;
+            image[i][j].rgbtBlue = tmp[i][j].rgbtBlue;
+        }
+    }
     return;
 }
