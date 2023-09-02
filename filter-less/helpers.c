@@ -68,9 +68,10 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    // Comb through each column
+    // Comb through each row
     for (int i = 0; i < height; i++)
     {
+        // Comb through each column
         for (int j = 0; j < width / 2; j++)
         {
             RGBTIPLE tmp = image[i][j];
