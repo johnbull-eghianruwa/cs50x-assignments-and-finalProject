@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
+typedef unit8_t BYTE;
 
 int main(int argc, char *argv[])
 {
@@ -30,5 +32,5 @@ int main(int argc, char *argv[])
     FILE *output_file = NULL;
 
     // Char filename[8]
-    char
+    char *filename = malloc(8 * sizeof(char));
 }
