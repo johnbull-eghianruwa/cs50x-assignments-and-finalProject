@@ -45,7 +45,8 @@ bool load(const char *dictionary)
         printf("Unable to open %s\n", dictionary);
         return false;
     }
-    // Declare variab
+    // Declare variable called word
+    char word[LENGHT]
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
@@ -56,7 +57,7 @@ unsigned int size(void)
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
-bool unload(void)le 
+bool unload(void)
 {
     // TODO
     return false;
