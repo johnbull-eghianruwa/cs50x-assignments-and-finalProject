@@ -40,6 +40,9 @@ int get_cents(void)
     int cents;
     do
     {
+
+        // Prompt the user for a number of cents using get_int and then return that number as an int
+        // If the user inputs a negative int, your code should prompt the user again.
         cents = get_int("Cents owned: ");
     }
     while (cents < 0);
@@ -74,11 +77,11 @@ int calculate_dimes(int cents)
 
 int calculate_nickels(int cents)
 {
+
+    // Calculate the number of nickels to give the customer
     int nickels = 0;
     while (cents >= 5)
     {
-
-        // Calculate the number of nickels to give the customer
         cents = cents -5;
         nickels++;
     }
