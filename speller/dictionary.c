@@ -46,16 +46,19 @@ bool load(const char *dictionary)
         printf("Unable to open %S\n", dictionary);
         return false;
     }
-
     // Declare variable called word
     char word[LENGTH+];
 
     // Scan dictionary for string up untill EOF
     while (fscanf(file, "%s", word) != EOF)
     {
-
         // Allocate memory for new node
         node *n = malloc(sizeof(node));
+    }
+    // if malloc returns NULL, return false
+    if (n == NULL)
+    {
+        return false;
     }
 }
 
