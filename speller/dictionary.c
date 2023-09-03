@@ -53,10 +53,10 @@ bool load(const char *dictionary)
     // Scan dictionary for string up untill EOF
     while (fscanf(file, "%s", word) != EOF)
     {
+
         // Allocate memory for new node
         node *n = malloc(sizeof(node));
     }
-
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
