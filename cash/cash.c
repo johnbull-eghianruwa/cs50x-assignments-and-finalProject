@@ -48,6 +48,8 @@ int get_cents(void)
 
 int calculate_quarters(int cents)
 {
+
+    // Calculate the number of quarters to give the customer
     int quarters = 0;
     while (cents >= 25)
     {
