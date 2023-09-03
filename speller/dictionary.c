@@ -48,7 +48,8 @@ bool load(const char *dictionary)
     // Declare variable called word
     char word[LENGTH+1];
 
-    // Scan diction
+    // Scan dictionary for strings up until EOF
+    while ()
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
