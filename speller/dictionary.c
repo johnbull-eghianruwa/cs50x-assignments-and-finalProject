@@ -35,7 +35,11 @@ bool check(const char *word)
     // Go through linked list
     while (cursor != 0)
     {
-        if (strcasecmp(word, cursor->word))
+        if (strcasecmp(word, cursor->word) == 0)
+        {
+            return true;
+        }
+        cursor = cursor->nex
     }
     return false;
 }
