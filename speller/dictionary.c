@@ -60,7 +60,8 @@ bool load(const char *dictionary)
             return false;
         }
 
-        
+        // Copy word into node
+        strcpy(n-)
     }
 }
 
