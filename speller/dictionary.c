@@ -44,8 +44,10 @@ bool load(const char *dictionary)
     if (file == NULL)
     {
         printf("Unable to open %S\n", dictionary);
+        return false;
     }
-    return false;
+    // Declare variable called word
+    
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
