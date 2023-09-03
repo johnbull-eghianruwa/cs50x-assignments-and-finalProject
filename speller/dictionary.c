@@ -38,7 +38,7 @@ bool check(const char *word)
     // Go through linked list
     while (cursor != 0)
     {
-        if (strcsecmp(word, cursor->word) == 0)
+        if (strcmp(word, cursor->word) == 0)
         {
             return true;
         }
