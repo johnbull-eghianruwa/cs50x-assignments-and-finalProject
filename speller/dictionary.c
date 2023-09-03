@@ -30,7 +30,8 @@ unsigned int hash_value:
 bool check(const char *word)
 {
     hash_value = hash(word);
-    node *cursor = table()
+    node *cursor = table[hash_value];
+    
     return false;
 }
 
