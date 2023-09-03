@@ -65,8 +65,10 @@ bool load(const char *dictionary)
         hash_value = hash(word);
         n->next = table[hash_value];
         table[hassh_value] = n;
-        word_
+        word_count++;
     }
+    fclose(file);
+    
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
