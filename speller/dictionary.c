@@ -89,7 +89,7 @@ bool load(const char *dictionary)
         strcpy(n->word, word);
         hash_value = hash(word);
         n->next = table[hash_value];
-        table[hassh_value] = n;
+        table[hash_value] = n;
         word_count++;
     }
     fclose(file);
