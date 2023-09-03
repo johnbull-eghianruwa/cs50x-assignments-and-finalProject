@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <strings.h>
 
 #include "dictionary.h"
 
@@ -39,8 +40,9 @@ bool check(const char *word)
         {
             return true;
         }
-        cursor = cursor->nex
+        cursor = cursor->next;
     }
+
     return false;
 }
 
