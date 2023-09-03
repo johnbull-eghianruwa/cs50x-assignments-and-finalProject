@@ -54,7 +54,8 @@ bool load(const char *dictionary)
         // Allocate memory for new node
         node *n = malloc(sizeof(node));
 
-        // If malloc
+        // If malloc returns NULL; return false
+        if (n == NULL)
     }
 }
 
