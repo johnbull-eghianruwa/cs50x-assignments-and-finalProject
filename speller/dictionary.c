@@ -52,7 +52,9 @@ bool load(const char *dictionary)
     while (fscanf(file, "%s", word) != EOF)
     {
         // Allocate memory for new node
-        node *n = malloc()
+        node *n = malloc(sizeof(node));
+
+        // If malloc
     }
 }
 
