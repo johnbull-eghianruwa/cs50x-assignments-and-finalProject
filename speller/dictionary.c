@@ -56,6 +56,11 @@ bool load(const char *dictionary)
 
         // If malloc returns NULL; return false
         if (n == NULL)
+        {
+            return false;
+        }
+
+        
     }
 }
 
