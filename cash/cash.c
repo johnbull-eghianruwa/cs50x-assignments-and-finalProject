@@ -87,6 +87,8 @@ int calculate_nickels(int cents)
 
 int calculate_pennies(int cents)
 {
+
+    // Calculate the number of pennies to give the customer
     int pennies = 0;
     while (cents >= 1)
     {
