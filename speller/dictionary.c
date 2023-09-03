@@ -25,7 +25,7 @@ node *table[N];
 
 // Delcare variable
 unsigned int word_count;
-unsigned int hash_value:
+unsigned int hash_value;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
