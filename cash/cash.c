@@ -61,6 +61,8 @@ int calculate_quarters(int cents)
 
 int calculate_dimes(int cents)
 {
+
+    // Calculate the number of dimes to give the customer
     int dimes = 0;
     while (cents >= 10)
     {
@@ -75,6 +77,8 @@ int calculate_nickels(int cents)
     int nickels = 0;
     while (cents >= 5)
     {
+
+        // Calculate the number of nickels to give the customer
         cents = cents -5;
         nickels++;
     }
