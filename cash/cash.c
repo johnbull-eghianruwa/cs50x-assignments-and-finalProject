@@ -38,11 +38,13 @@ int main(void)
 int get_cents(void)
 {
     int cents;
+
+     // Prompt the user for a number of cents using get_int and then return that number as an int
+    // If the user inputs a negative int, your code should prompt the user again.
     do
     {
 
-        // Prompt the user for a number of cents using get_int and then return that number as an int
-        // If the user inputs a negative int, your code should prompt the user again.
+        // Prompt user for input
         cents = get_int("Cents owned: ");
     }
     while (cents < 0);
