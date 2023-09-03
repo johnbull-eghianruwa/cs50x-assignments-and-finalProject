@@ -39,7 +39,7 @@ int get_cents(void)
 {
     int cents;
 
-     // Prompt the user for a number of cents using get_int and then return that number as an int
+    // Prompt the user for a number of cents using get_int and then return that number as an int
     // If the user inputs a negative int, your code should prompt the user again.
     do
     {
@@ -58,7 +58,7 @@ int calculate_quarters(int cents)
     int quarters = 0;
     while (cents >= 25)
     {
-       cents = cents -25;
+        cents = cents - 25;
         quarters++;
     }
     return quarters;
@@ -84,7 +84,7 @@ int calculate_nickels(int cents)
     int nickels = 0;
     while (cents >= 5)
     {
-        cents = cents -5;
+        cents = cents - 5;
         nickels++;
     }
     return nickels;
@@ -97,7 +97,7 @@ int calculate_pennies(int cents)
     int pennies = 0;
     while (cents >= 1)
     {
-        cents = cents -1;
+        cents = cents - 1;
         pennies++;
     }
     return pennies;
