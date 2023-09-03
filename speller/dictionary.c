@@ -46,9 +46,12 @@ bool load(const char *dictionary)
         printf("Unable to open %S\n", dictionary);
         return false;
     }
+
     // Declare variable called word
     char word[LENGTH+];
 
+    // Scan dictionary for string up untill EOF
+    
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
