@@ -35,7 +35,7 @@ bool check(const char *word)
     // Go through linked list
     while (cursor != 0)
     {
-        
+        if (strcasecmp(word, cursor->word))
     }
     return false;
 }
