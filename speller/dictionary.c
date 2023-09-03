@@ -40,7 +40,10 @@ bool load(const char *dictionary)
     FILE * fopen(dictionary, "r");
 
     // Return NULL if file cannot be open
-    if (file ==NULL
+    if (file == NULL)
+    {
+        printf("Unable to ")
+    }
     return false;
 }
 
