@@ -29,7 +29,8 @@ unsigned int hash_value:
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
+    hash_value = hash(word);
+    node *cursor = table()
     return false;
 }
 
