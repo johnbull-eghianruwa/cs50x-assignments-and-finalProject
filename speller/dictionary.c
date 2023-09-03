@@ -61,7 +61,9 @@ bool load(const char *dictionary)
         }
 
         // Copy word into node
-        strcpy(n-)
+        strcpy(n->word, word);
+        hash_value = hash(word);
+        n->
     }
 }
 
