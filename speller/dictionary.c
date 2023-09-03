@@ -42,9 +42,9 @@ bool load(const char *dictionary)
     // Return NULL if file cannot be open
     if (file == NULL)
     {
-        printf("Unable to ")
+        printf("Unable to open %s\n", dictionary);
+        return false;
     }
-    return false;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
