@@ -42,7 +42,9 @@ bool load(const char *dictionary)
 
     // Return NULL if file cannot be opened
     if (file == NULL)
-    
+    {
+        printf("Unable to open %S\n", dictionary);
+    }
     return false;
 }
 
