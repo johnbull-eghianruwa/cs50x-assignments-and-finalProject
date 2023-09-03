@@ -30,6 +30,18 @@ unsigned int hash_value;
 bool check(const char *word)
 {
     // Hash the word to obtain a hash value
+    hash_value = hash(word);
+    node *cursor = table[hash_value];
+
+    // Go through linked list
+    while (cursor != 0)
+    {
+        if (strcsecmp(word, cursor->word) == 0)
+        {
+            return true;
+        }
+        cursor = cursor->next;
+    }
     return false;
 }
 
