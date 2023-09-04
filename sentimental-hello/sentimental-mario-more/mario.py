@@ -14,5 +14,6 @@ for i in range(0, n, 1):
             print("", end=" ")
         else:
             print("#", end="")
+        for j in range()
     print()
 
