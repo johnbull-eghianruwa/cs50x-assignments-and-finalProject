@@ -124,7 +124,7 @@ bool unload(void)
         // If cursor is not NULL free memory
         if (cursor == NULL)
         {
-            
+            return true;
         }
     }
     return false;
