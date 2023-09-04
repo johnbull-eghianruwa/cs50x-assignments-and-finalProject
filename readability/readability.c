@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
-
+ int letters = 0;
+ 
 int main(void)
 {
    // Prompt user for text
