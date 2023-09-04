@@ -8,4 +8,11 @@ int main(void)
    // Prompt user for text
    string text = get_string("<type text here: ");
    printf("%s\n", text);
+
+   // Count the number of letters there are in the text
+   int letters = 0;
+   for (int i = 0; i < strlen(text); i++)
+   {
+        if ((text[i]))
+   }
 }
