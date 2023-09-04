@@ -11,6 +11,6 @@ int main(void)
     int letters = 0;
     for (int i = 0; i < strlen(text); i++)
     {
-        if (letters == text)
+        if ((text[i] >= "a" && text[i] <= "z"))
     }
 }
