@@ -14,8 +14,7 @@ typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
-}
-node;
+} node;
 
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
@@ -71,7 +70,7 @@ bool load(const char *dictionary)
         return false;
     }
     // Declare variable called word
-    char word[LENGTH+1];
+    char word[LENGTH + 1];
 
     // Scan dictionary for string up untill EOF
     while (fscanf(file, "%s", word) != EOF)
