@@ -18,4 +18,3 @@ for i in range(0, n, 1):
         else:
             print("#", end="")
     print()
-
