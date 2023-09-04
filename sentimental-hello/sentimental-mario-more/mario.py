@@ -8,4 +8,6 @@ while True:
 # notes as long as height is greater than o we use break
     if n > 0 and n < 9:
        break
+for i in range(0, n, 1)
+    for j in range 
 
