@@ -8,4 +8,4 @@ while True:
 # notes as long as height is greater than o we use break
     if n > 0 and n < 9:
        break
-    return
+
