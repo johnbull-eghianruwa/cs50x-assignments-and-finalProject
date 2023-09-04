@@ -3,6 +3,6 @@
 
 int main(void)
 {
-    string text = get_string("")
+    string text = get_string("Type a text here: ");
 
 }
