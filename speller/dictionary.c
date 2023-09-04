@@ -45,6 +45,25 @@ bool load(const char *dictionary)
         printf("Unable to open %s\n", dictionary);
         return false;
     }
+    // Declare variable called word
+    char word[LENGTH+1];
+
+    // Scan dictionary for string up untill EOF
+    while (fscanf(file, "%s", word) != EOF)
+    {
+        // Allocate memory for new node
+        node *n = malloc(sizeof(node));
+
+        // If malloc returns NULL, return false
+        if (n == NULL)
+        {
+            return false;
+        }
+
+        // Copy word into node
+        strcpy(n->word, word);
+        hash_value = hash(word);
+    }
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
