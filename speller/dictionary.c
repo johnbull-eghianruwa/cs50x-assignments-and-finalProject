@@ -37,8 +37,14 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // Open dictionary
-    FILE
-    return false;
+    FILE *file = fopen(dictionary, "r");
+
+    // Return NULL if file cannot be open
+    if (file == NULL)
+    {
+        printf("Unable to open %s\n", dictionary);
+        return false;
+    }
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
