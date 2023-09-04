@@ -1,7 +1,4 @@
 # TODO
-#include <cs50.h>
-#include <stdio.h>
-#include <string.h>
+from cs50 import get_string
 
-answer = get_string("What is your? ")
-    print(f"Hello", + answer)
+answer = get_string
