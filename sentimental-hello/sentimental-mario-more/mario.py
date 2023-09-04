@@ -1,4 +1,4 @@
-# TODO
+# Import cs50 get_string library
 from cs50 import get_int
 
 # so while true n equal to get into height we will prompt the iser for height
