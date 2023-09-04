@@ -120,6 +120,12 @@ bool unload(void)
             cursor = cusrsor->next;
             free(tmp);
         }
+
+        // If cursor is not NULL free memory
+        if (cursor == NULL)
+        {
+            
+        }
     }
     return false;
 }
