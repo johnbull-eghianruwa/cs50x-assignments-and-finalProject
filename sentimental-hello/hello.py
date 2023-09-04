@@ -1,4 +1,4 @@
-# 
+# Import cs50 get_string library
 from cs50 import get_string
 
 # Prompt user for input
