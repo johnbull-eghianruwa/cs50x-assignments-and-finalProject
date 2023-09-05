@@ -19,5 +19,6 @@ int main(void)
     {
         words++;
     }
+    else if (text[i] ==)
    }
 }
