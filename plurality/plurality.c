@@ -85,7 +85,7 @@ void print_winner(void)
     //  the most votes in the election, and then print a newline
     int maxvotes = 0;
 
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count < i++)
     {
         if (candidates[i].votes > maxvotes)
         {
