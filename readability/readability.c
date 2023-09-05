@@ -22,6 +22,8 @@ int main(void)
         letters++;
     }
     else if (text[i] == ' ')
+
+    // Count the number of words
     {
         words++;
     }
