@@ -9,7 +9,7 @@ int main(void)
     string text = get_string("Text: ");
 
      // Program tells the user the reading level of the text is throungh the formular
-   // Count the number of letters, words, and sentences there are in the text
+     // Count the number of letters, words, and sentences there are in the text
     int letters = 0;
     int words = 1;
     int sentences = 0;
