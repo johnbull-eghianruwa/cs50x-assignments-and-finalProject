@@ -49,7 +49,7 @@ int main(void)
    }
    if (index > 9)
    {
-    printf("Grade 9\n");
+    printf("Grade 9+\n");
    }
    if (index > 16)
    {
