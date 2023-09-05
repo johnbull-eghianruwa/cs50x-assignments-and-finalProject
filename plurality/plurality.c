@@ -67,7 +67,11 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    if (name[i] >= )
+    if (name[i] >= candidate || (name[i] <= vote_count) == 0)
+    {
+        count++;
+        return true;
+    }
     return false;
 }
 
