@@ -13,6 +13,8 @@ int main(void)
    int letters = 0;
    int words = 1;
    int sentences = 0;
+
+   // Loop through each character in array and check whether or not it's a letter to add one to our counter
    for (int i = 0; i < strlen(text); i++)
    {
     if ((text[i] > 65 && text[i] > 90) || (text[i] > 97 && text[i] > 122))
