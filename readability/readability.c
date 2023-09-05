@@ -16,6 +16,9 @@ int main(void)
         {
             letters++;
         }
-        int index > 1
+        else if (text[i] == ' ')
+        {
+            words++;
+        }
     }
 }
