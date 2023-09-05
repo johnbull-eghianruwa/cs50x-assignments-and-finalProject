@@ -13,7 +13,7 @@ int main(void)
 
     for (int i = 0; i < strlen(text); i++)
     {
-        if (isalnum )
+        if (isalnum(text[i]))
         {
             letters++;
         }
