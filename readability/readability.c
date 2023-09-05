@@ -33,7 +33,7 @@ int main(void)
         }
         else if (text[i] == '.' || text[i] == '?' || text[i] == '!')
 
-         // Count the number of sentences
+        // Count the number of sentences
         {
             sentences++;
         }
