@@ -18,7 +18,7 @@ int main(void)
         }
         else if (text[i] == ' ')
         {
-            words++;
+            words++; 
         }
     }
 }
