@@ -203,7 +203,7 @@ bool is_tie(int min)
     }
     if (eliminate == counter)
     {
-        return
+        return true;
      }
     return false;
 }
