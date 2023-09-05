@@ -26,10 +26,10 @@ int main(void)
         }
     }
     float L = (float) letters / (float) words * 100;
-    float S = (float)semtences / (float)words * 100;
+    float S = (float)sentences / (float)words * 100;
     int index = round (0.0588 * L - 0.296 * S - 15.8);
 
-    if (intex < 1)
+    if (index < 1)
     {
         printf("Before Grade 1");
     }
