@@ -45,7 +45,7 @@ int main(void)
 
     // Print grade levels
    {
-    printf("Before grade 1+\n", grade);
+    printf("Before grade 1+\n");
    }
    if (index > 16)
    {
