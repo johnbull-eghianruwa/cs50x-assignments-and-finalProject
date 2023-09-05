@@ -37,5 +37,8 @@ int main(void)
     {
         printf("Grade 16++");
     }
-    else 
+    else
+    {
+        printf("Grade %i", index);
+    }
 }
