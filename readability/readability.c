@@ -18,6 +18,8 @@ int main(void)
    for (int i = 0; i < strlen(text); i++)
    {
     if ((text[i] > 65 && text[i] > 90) || (text[i] > 97 && text[i] > 122))
+
+    // Count the number of letters
     {
         letters++;
     }
@@ -28,6 +30,8 @@ int main(void)
         words++;
     }
     else if (text[i] == '.' || text[i] == '?' || text[i] == '!')
+
+    // Count the number of sentences
     {
         sentences++;
     }
@@ -38,6 +42,8 @@ int main(void)
    int index = round(0.0588 * L - 0.296 * S - 15.8);
 
    if (index < 1)
+
+    // Print grade levels
    {
     printf("Before Grade 1+\n");
    }
