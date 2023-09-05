@@ -47,7 +47,7 @@ int main(void)
    {
     printf("Before grade 1+\n");
    }
-   if (index <= 9)
+   if (grade == 9)
    {
     printf("Grade 9\n");
    }
