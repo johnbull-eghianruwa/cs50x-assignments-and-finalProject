@@ -69,14 +69,12 @@ bool vote(string name)
     // update that candidate’s vote total to account for the new vote.
     for (int i = 0; i < candidate_count; i++)
     {
-        int (strcmp(name, candidates[i].name) == 0)
+        if (strcmp(name, candidates[i].name) == 0)
         {
             candidates[i].votes++;
             return true;
         }
     }
-
-
     return false;
 }
 
