@@ -14,7 +14,7 @@ int main(void)
     {
         if ((text[i] > 65 && text[i] < 90) || (text[i] > 97 && text[i] < 122))
         {
-            letter++;
+            letters++;
         }
     }
 }
