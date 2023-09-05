@@ -16,5 +16,6 @@ int main(void)
         {
             letters++;
         }
+        int index > 1
     }
 }
