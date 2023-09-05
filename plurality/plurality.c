@@ -67,7 +67,7 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    if (name == match)
+    if (name == match || names > candidate_)
     return false;
 }
 
