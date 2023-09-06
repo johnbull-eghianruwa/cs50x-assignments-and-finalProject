@@ -59,6 +59,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             int totalRed, totalBlue, totalGreen;
             totalRed = totalBlue = totalGreen = 0;
             float counter = 0.00;
+
+            // Get neighbouring
         }
     }
     return;
