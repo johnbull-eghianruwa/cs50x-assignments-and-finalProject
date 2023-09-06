@@ -150,7 +150,8 @@ void tabulate(void)
         {
             if (!candidates[preferrences[i][j]].eliminated)
             {
-                
+                candidates[preferences[i][j]].votes++;
+                break;
             }
         }
     }
@@ -160,7 +161,10 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // TODO
+    // Any candidate has more than half of the vote, their name should be printed and the function should return true
+    int majority = (voter_count / 2) + 1;
+    
+
     return false;
 }
 
