@@ -134,7 +134,8 @@ bool vote(int voter, int rank, string name)
         {
             // Then you should update the global preferences array to indicate that
             // The voter voter has that candidate as their rank preference
-            preferences(preferences[i].name)
+            preferences[voter][rank] = i;
+            return true;
         }
     }
     return false;
@@ -143,7 +144,7 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    // TODO
+    // The function should update the number of votes each candidate has at this stage in the runoff
     return;
 }
 
