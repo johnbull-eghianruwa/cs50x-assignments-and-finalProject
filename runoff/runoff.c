@@ -15,8 +15,7 @@ typedef struct
     string name;
     int votes;
     bool eliminated;
-}
-candidate;
+} candidate;
 
 // Array of candidates
 candidate candidates[MAX_CANDIDATES];
@@ -197,7 +196,7 @@ bool is_tie(int min)
     // TODO
     int remaining_candidates = 0;
     int candidates_with_min_votes = 0;
-    for ( int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (!candidates[i].eliminated)
         {
@@ -221,10 +220,10 @@ void eliminate(int min)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-      if  (!candidates[i].eliminated && candidates[i].votes == min)
-      {
-        candidates[i].eliminated = true;
-      }
+        if (!candidates[i].eliminated && candidates[i].votes == min)
+        {
+            candidates[i].eliminated = true;
+        }
     }
     return;
 }
