@@ -120,12 +120,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            int redX = 0;
-            int greebX = 0;
-            int blueX = 0;
-            int redY = 0;
-            int greenY = 0;
-            int blueY = 0;
+            int RedX = 0;
+            int GreebX = 0;
+            int BlueX = 0;
+            int RedY = 0;
+            int GreenY = 0;
+            int BlueY = 0;
 
             // loop through each pixel for neighbouring pixels
             for (int x = 0; x < 3; x++)
