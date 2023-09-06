@@ -112,11 +112,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     // Check if neighbouring pixel is valid
                     if (currentX < 0 || currentX > (height - 1) || currentY < 0 || currentY > (width - 1))
                     {
-                        countinue;
+                        continue;
                     }
                     // Get image vlaue
                     totalRed += image[currentX][currentY].rgbtRed;
-                    totlaGreen += image[currentY][currentY].rgbtGreen;
+                    totalGreen += image[currentY][currentY].rgbtGreen;
                     totalBlue += image[currentX][currentY].rgbtBlue;
 
                     count++;
@@ -125,14 +125,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 // Calculate average of neighbouring pixels
                 temp[i][j].rgbtRed = round(totalRed / counter);
                 temp[i][j].rgbtGreen = round(totalGreen / counter);
-                temp[i][j].rgbtBlue = round(totlaBlue / counter);
+                temp[i][j].rgbtBlue = round(totalBlue / counter);
             }
         }
     }
     // Cpy new pixels into original image
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; )
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j].rgbtRed = temp[i][j].rgbtRed;
+            image[i][j].rgbtGreen = temp[i][j].rgbtGreen;
+            image[i][j].rgbtBlue = temp[i][j].rgbtBlue;
+        }
     }
     return;
 }
