@@ -107,7 +107,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE temp[height][width];
     for (int i = 0; i < height; i++)
     {
-        for (int j = =; j < width; j++)
+        for (int j = 0; j < width; j++)
         {
             temp[i][j] = image[i][j];
         }
