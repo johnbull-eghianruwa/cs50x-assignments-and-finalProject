@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 // Max voters and candidates
 #define MAX_VOTERS 100
@@ -163,7 +164,14 @@ bool print_winner(void)
 {
     // Any candidate has more than half of the vote, their name should be printed and the function should return true
     int majority = (voter_count / 2) + 1;
-    
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes >= majority)
+        {
+            printf("$s\n", candidates[i].name);
+            return true;
+        }
+    }
 
     return false;
 }
