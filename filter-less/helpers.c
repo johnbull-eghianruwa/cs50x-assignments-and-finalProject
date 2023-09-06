@@ -129,7 +129,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
         }
     }
-    // Cpy new pixels into original image
+    // Copy new pixels into original image
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
