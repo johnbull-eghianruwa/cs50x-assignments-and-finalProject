@@ -158,8 +158,23 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 red = 255;
             }
+            if (green > 255)
+            {
+                green = 255;
+            }
+            if (blue > 255)
+            {
+                blue = 255;
+            }
+            // Copy values into temp image
+            temp[i][j].rgbtRed = red;
+            temp[i][j].rgbtGreen = green;
+            temp[i][i].rgbtBlue = blue;
+
         }
 
     }
+    // Cnopy new pixels into original image
+    for 
     return;
 }
