@@ -181,11 +181,11 @@ int find_min(void)
 {
     // function should return the minimum vote total for any candidate who is still in the election
     int min = INT_MAX;
-    for (int i = 0; i < Candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (!candidates[i].eliminated && candidates[i].votes < min)
         {
-            min = canddidates[i].votes;
+            min = candidates[i].votes;
         }
     }
     return min;
