@@ -131,7 +131,7 @@ bool vote(int voter, int rank, string name)
     // name is a match for the name of a valid candidate
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp(candidate[i].name, naame) == 0)
+        if (strcmp(candidates[i].name, name) == 0)
         {
             // Then you should update the global preferences array to indicate that
             // The voter voter has that candidate as their rank preference
@@ -147,9 +147,9 @@ void tabulate(void)
     // The function should update the number of votes each candidate has at this stage in the runoff
     for (int i = 0; i < candidate_count; i++)
     {
-        for (j = 0; j < candidate_count; j++)
+        for (int j = 0; j < candidate_count; j++)
         {
-            if (!candidates[preferrences[i][j]].eliminated)
+            if (!candidates[preferences[i][j]].eliminated)
             {
                 candidates[preferences[i][j]].votes++;
                 break;
@@ -168,7 +168,7 @@ bool print_winner(void)
     {
         if (candidates[i].votes >= majority)
         {
-            printf("$s\n", candidates[i].name);
+            printf("%s\n", candidates[i].name);
             return true;
         }
     }
@@ -180,7 +180,7 @@ bool print_winner(void)
 int find_min(void)
 {
     // function should return the minimum vote total for any candidate who is still in the election
-    int min = INT_MAX,
+    int min = INT_MAX;
     for (int i = 0; i < Candidate_count; i++)
     {
         if (!candidates[i].eliminated && candidates[i].votes < min)
