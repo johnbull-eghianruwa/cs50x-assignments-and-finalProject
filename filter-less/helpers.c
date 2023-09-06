@@ -30,7 +30,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     for (int i = 0; i < height; i++)
     {
     // Comb through each column
-    for (int j = 0; j < width; +jj)
+    for (int j = 0; j < width; j++)
     {
         // Convert pixels to float
         float originalRed = image[i][j].rgbtRed;
