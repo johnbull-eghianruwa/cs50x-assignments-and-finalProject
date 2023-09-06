@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     // Get filter flag and check validity
     char filter = getopt(argc, argv, filters);
     if (filter == '?')
-    {
+    { 
         printf("Invalid filter.\n");
         return 1;
     }
