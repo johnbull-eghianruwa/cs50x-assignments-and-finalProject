@@ -175,6 +175,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
     }
     // Cnopy new pixels into original image
-    for 
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j].rgbtRed = temp[i][j].rgbtRed;
+            image[i][j].rgbtGreen = temp[i][j].rgbtGreen;
+            image[i][j].rgbtBlue = temp[i][j].rgbtBlue;
+        }
+    }
     return;
 }
