@@ -36,7 +36,8 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 
         // Find the updated pixel value
         int sepiaRed = rund(0.393 * originalRed + 0.769 * originalGreen + 0.189 * originalBlue);
-        int sepiaGreen = round(0.349 * originalRed + 0.686)
+        int sepiaGreen = round(0.349 * originalRed + 0.686 * originalGreen + 0.168 * originalBlue);
+        int sepiaBlue = round(0.272 * originalRed + 0.534 * originalGreen + 0.131 * originalBlue);
     }
     return;
 }
