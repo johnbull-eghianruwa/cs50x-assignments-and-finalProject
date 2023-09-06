@@ -179,7 +179,15 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    // TODO
+    // function should return the minimum vote total for any candidate who is still in the election
+    int min = INT_MAX,
+    for (int i = 0; i < Candidate_count; i++)
+    {
+        if (!candidates[i].eliminated && candidates[i].votes < min)
+        {
+            min = canddidate
+        }
+    }
     return 0;
 }
 
