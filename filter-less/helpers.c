@@ -98,7 +98,30 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             int totalRed, totalBlue, totalGreen;
-            totalRed = totalBlue =
+            totalRed = totalBlue = totalGreen = 0;
+            float counter = 0.00;
+
+            // Get neighbouring pixels
+            for (int x = -1; x < 2; x++)
+            {
+                for (int y = -1; y < 2; y++)
+                {
+                    int currentX = i + y;
+                    int currentY = j +y;
+
+                    // Check if neighbouring pixel is valid
+                    if (currentX < 0 || currentX > (height - 1) || currentY < 0 || currentY > (width - 1))
+                    {
+                        countinue;
+                    }
+                    // Get image vlaue
+                    totalRed += image[currentX][currentY].rgbtRed;
+                    totlaGreen += image[currentY][currentY].rgbtGreen;
+                    totalBlue += image[currentX][currentY].rgbtBlue;
+
+                    count++;
+                }
+            }
         }
     }
     return;
