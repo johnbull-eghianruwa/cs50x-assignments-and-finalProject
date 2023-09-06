@@ -138,14 +138,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         continue;
                     }
                     // Calculate Gx for each colour
-                    redX = redX + (image[i - 1 + x][j - 1 + y].rgbtRed * Gx[x][y]);
-                    greenX = greenX + (image[i - 1 + x][j - 1 + y].rgbtGreen * Gx[x][y]);
-                    blueX = blueX + (image[i - 1 + x][j - 1 + y].rgbtBlue * Gx[x][y]);
+                    RedX = redX + (image[i - 1 + x][j - 1 + y].rgbtRed * Gx[x][y]);
+                    GreenX = greenX + (image[i - 1 + x][j - 1 + y].rgbtGreen * Gx[x][y]);
+                    BlueX = blueX + (image[i - 1 + x][j - 1 + y].rgbtBlue * Gx[x][y]);
 
                     // Calculate Gy fr each colour
-                    redY = redY + (image[i - 1 + x][j - 1 + y].rgbtRed * Gy[x][y]);
-                    greenY = greenY + (image[i - 1 + x][j - 1 + y].rgbtGreen * Gy[x][y]);
-                    blueY = blueY + (image[i - 1 + x][j - 1 + y].rgbtBlue * Gy[x][y]);
+                    RedY = redY + (image[i - 1 + x][j - 1 + y].rgbtRed * Gy[x][y]);
+                    GreenY = greenY + (image[i - 1 + x][j - 1 + y].rgbtGreen * Gy[x][y]);
+                    BlueY = blueY + (image[i - 1 + x][j - 1 + y].rgbtBlue * Gy[x][y]);
                 }
             }
             // Calculate square root of Gx2 and Gy2
