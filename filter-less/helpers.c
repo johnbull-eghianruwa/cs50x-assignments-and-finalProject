@@ -26,6 +26,18 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
+    // Comb through each column
+    for (int j = 0; j < width; +jj)
+    {
+        // Convert pixels to float
+        float originalRed = image[i][j].rgbtRed;
+        float originalGreen = image[i][j].rgbtGreen;
+        float originalBlue = image[i][j].rgbtBlue;
+
+        // Find the updated pixel value
+        int sepiaRed = rund(0.393 * originalRed + 0.769 * originalGreen + 0.189 * originalBlue);
+        int sepiaGreen = round(0.349 * originalRed + 0.686)
+    }
     return;
 }
 
