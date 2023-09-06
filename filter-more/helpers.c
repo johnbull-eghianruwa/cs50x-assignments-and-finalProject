@@ -109,7 +109,36 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = =; j < width; j++)
         {
-            temp[i]
+            temp[i][j] = image[i][j];
+        }
+    }
+    int Gx[3][3] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
+    int Gy[3][3] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
+
+    // Loop through each row and column
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            int redX = 0;
+            int greebX = 0;
+            int blueX = 0;
+            int redY = 0;
+            int greenY = 0;
+            int blueY = 0;
+
+            // loop through each pixel for neighbouring pixels
+            for (int x = 0; x < 3; x++)
+            {
+                for (int y = 0; y < 3; y++)
+                {
+                    // Check for valid pixels
+                    if (i - 1 + x < 0 || i - 1 + x > height - 1 || j - 1 + y < 0 || j - 1 + y > width - 1)
+                    {
+                        continue;
+                    }
+                }
+            }
         }
     }
     return;
