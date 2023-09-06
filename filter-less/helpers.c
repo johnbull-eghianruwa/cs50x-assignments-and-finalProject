@@ -119,7 +119,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     totalGreen += image[currentY][currentY].rgbtGreen;
                     totalBlue += image[currentX][currentY].rgbtBlue;
 
-                    count++;
+                    counter++;
                 }
 
                 // Calculate average of neighbouring pixels
