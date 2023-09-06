@@ -145,10 +145,21 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     // Calculate Gy fr each colour
                     redY = redY + (image[i - 1 + x][j - 1 + y].rgbtRed * Gy[x][y]);
                     greenY = greenY + (image[i - 1 + x][j - 1 + y].rgbtGreen * Gy[x][y]);
-                    blueY = blueY + (image[i - 1 + x][j - 1 + y].rgbtBlue)
+                    blueY = blueY + (image[i - 1 + x][j - 1 + y].rgbtBlue * Gy[x][y]);
                 }
             }
+            // Calculate square root of Gx2 and Gy2
+            int red = round(sqrt((redX * redX) + (redY * redY)));
+            int green = round(sqrt((greenX * greenX) + (greenY * greenY)));
+            int blue = round(sqrt((blueX * blueX) + (blueY * blueY)));
+
+            // Cap value at 255 if exceeds
+            if (red > 255)
+            {
+                red = 255;
+            }
         }
+
     }
     return;
 }
