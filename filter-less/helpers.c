@@ -17,7 +17,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             int rgbGray = round ((image[row][col].rgbtBlue + image[row][col].rgbtGreen + image[row][col].rgbtRed) / 3.0);
             image[row][col].rgbtBlue = rgbGray;
             image[row][col].rgbtGreen = rgbGray;
-            image[i][col].rgbtRed = rgbGray;
+            image[row][col].rgbtRed = rgbGray;
         }
     }
     return;
@@ -88,7 +88,7 @@ int getBlur(int i, int j, int height, int width, RGBTRIPLE image[height][width],
             count++;
         }
     }
-    return round(sum/count)
+    return round(sum/count);
 }
 
 // Blur image
