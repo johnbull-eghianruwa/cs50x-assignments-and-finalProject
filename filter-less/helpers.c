@@ -48,11 +48,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     // So any pixels on the left side of the image should end up on the right; and vice versa
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; < width; j++)
+        for (int j = 0; < width / 2; j++)
         {
             temp = image[i][j];
-            image[i][j] = image[i][height - i - 1]
-            image[i][]
+            image[i][j] = image[i][height - i - 1];
+            image[i][height - j - 1] = temp;
         }
     }
     return;
