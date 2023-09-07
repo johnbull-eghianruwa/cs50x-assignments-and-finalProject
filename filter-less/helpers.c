@@ -75,15 +75,15 @@ int getBlur(int i, int j, int height, int width, RGBTRIPLE image[height][width],
             }
             if (color_position == RED_COLOR)
             {
-                sum += image[i][j].rgbtRed;
+                sum += image[row][col].rgbtRed;
             }
             else if (color_position == GREEN_COLOR)
             {
-                sum += image[i][j].rgbtGreen;
+                sum += image[row][col].rgbtGreen;
             }
             else
             {
-                sum += image[i][j].rgbtBlue;
+                sum += image[row][col].rgbtBlue;
             }
             count++;
         }
@@ -95,18 +95,18 @@ int getBlur(int i, int j, int height, int width, RGBTRIPLE image[height][width],
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE copy[height][width];
-    for (int i = 0; i < height; i++)
+    for (int row = 0; row < height; row++)
     {
-        for (int j = 0; j < width; j++)
+        for (int col = 0; col < width; col++)
         {
-            copy[i][j] = image[i][j];
+            copy[row][col] = image[row][col];
         }
     }
-    for (int i = 0; i < height; i++)
+    for (int row = 0; row < height; row++)
     {
-        for ( int j = 0; j < width; j++)
+        for ( int col = 0; col < width; col++)
         {
-            image[i][j].rgbtRed = getBlur(i, j, height, width, copy[height][width], RED_COLOR);
+            image[row][j].rgbtRed = getBlur(i, j, height, width, copy[height][width], RED_COLOR);
             image[i][j].rgbtGreen = getBlur(i, j, height, width, copy[height][width], GREEN_COLOR);
             image[i][j].rgbtBlue = getBlur(i, j, height, width, copy[height][width], BLUE_COLOR);
 
