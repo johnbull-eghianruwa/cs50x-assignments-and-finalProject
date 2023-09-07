@@ -106,9 +106,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for ( int col = 0; col < width; col++)
         {
-            image[row][j].rgbtRed = getBlur(i, j, height, width, copy[height][width], RED_COLOR);
-            image[i][j].rgbtGreen = getBlur(i, j, height, width, copy[height][width], GREEN_COLOR);
-            image[i][j].rgbtBlue = getBlur(i, j, height, width, copy[height][width], BLUE_COLOR);
+            image[row][col].rgbtRed = getBlur(row, col, height, width, copy[height][width], RED_COLOR);
+            image[row][col].rgbtGreen = getBlur(row, col, height, width, copy[height][width], GREEN_COLOR);
+            image[row][col].rgbtBlue = getBlur(row, col, height, width, copy[height][width], BLUE_COLOR);
 
         }
     }
