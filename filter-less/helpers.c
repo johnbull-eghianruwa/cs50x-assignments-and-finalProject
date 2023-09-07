@@ -1,6 +1,10 @@
 #include "helpers.h"
 #include "math.h"
 
+#define RED_COLOR 0
+#define GREEN_COLOR 1
+#define BLUE_COLOR 2
+
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -57,6 +61,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 }
+int getBlur(int i, int j, int height, int width, RGBTRIPLE image[height][width], int color_position);
 
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
