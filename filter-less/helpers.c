@@ -10,14 +10,14 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     // So convert a pixel to grascale, we just need to make sure
     // the red, green, amd blue values are all the same value.
-    for (int i = 0; i < height; i++)
+    for (int row = 0; row < height; row++)
     {
-        for (int j = 0; j < width; j++)
+        for (int col = 0; col < width; col++)
         {
-            int rgbGray = round ((image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / 3.0);
-            image[i][j].rgbtBlue = rgbGray;
-            image[i][j].rgbtGreen = rgbGray;
-            image[i][j].rgbtRed = rgbGray;
+            int rgbGray = round ((image[row][col].rgbtBlue + image[row][col].rgbtGreen + image[row][col].rgbtRed) / 3.0);
+            image[row][col].rgbtBlue = rgbGray;
+            image[row][col].rgbtGreen = rgbGray;
+            image[i][col].rgbtRed = rgbGray;
         }
     }
     return;
@@ -30,17 +30,17 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
       // sepiaGreen = .349 * originalRed + .686 * originalGreen + .168 * originalBlue
      //sepiaBlue = .272 * originalRed + .534 * originalGreen + .131 * originalBlue
      // As a result, we can guarantee that the resulting red, green, and blue values will be whole numbers between 0 and 255, inclusive
-     for (int i = 0; i < height; i++)
+     for (int row = 0; row < height; row++)
      {
-        for (int j = 0; j < width; j++)
+        for (int col = 0; col < width; col++)
         {
-            int sepiaRed = round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 *image[i][j].rgbtBlue);
-            int sepiaGreen = round(.349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen + .168 *image[i][j].rgbtBlue);
-            int sepiaBlue = round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen + .131 *image[i][j].rgbtBlue);
+            int sepiaRed = round(.393 * image[row][col].rgbtRed + .769 * image[row][col].rgbtGreen + .189 *image[row][col].rgbtBlue);
+            int sepiaGreen = round(.349 * image[row][col].rgbtRed + .686 * image[row][col].rgbtGreen + .168 *image[row][col].rgbtBlue);
+            int sepiaBlue = round(.272 * image[row][col].rgbtRed + .534 * image[row][col].rgbtGreen + .131 *image[row][col].rgbtBlue);
 
-            image[i][j].rgbtRed = fmin(255, sepiaRed);
-            image[i][j].rgbtGreen = fmin(255, sepiaGreen);
-            image[i][j].rgbtBlue = fmin(255, sepiaBlue);
+            image[row][col].rgbtRed = fmin(255, sepiaRed);
+            image[row][col].rgbtGreen = fmin(255, sepiaGreen);
+            image[row][col].rgbtBlue = fmin(255, sepiaBlue);
         }
      }
     return;
@@ -50,13 +50,13 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     // So any pixels on the left side of the image should end up on the right; and vice versa
-    for (int i = 0; i < height; i++)
+    for (int row = 0; row < height; row++)
     {
-        for (int j = 0; j < width / 2; j++)
+        for (int col = 0; col < width / 2; col++)
         {
-            RGBTRIPLE temp = image[i][j];
-            image[i][j] = image[i][width - (j + 1)];
-            image[i][width - (j + 1)] = temp;
+            RGBTRIPLE temp = image[row][col];
+            image[row][col] = image[row][width - (col + 1)];
+            image[row][width - (col + 1)] = temp;
         }
     }
     return;
