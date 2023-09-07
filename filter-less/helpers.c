@@ -61,7 +61,12 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     }
     return;
 }
-int getBlur(int i, int j, int height, int width, RGBTRIPLE image[height][width], int color_position);
+int getBlur(int i, int j, int height, int width, RGBTRIPLE image[height][width], int color_position)
+{
+    float count = 0;
+    int sum = 0;
+    for (int i = i - 1; i <= (i + 1); i++)
+}
 
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
