@@ -65,11 +65,11 @@ int getBlur(int i, int j, int height, int width, RGBTRIPLE image[height][width],
 {
     float count = 0;
     int sum = 0;
-    for (int i = i - 1; i <= (i + 1); i++)
+    for (int row = i - 1; row <= (i + 1); row++)
     {
-        for (int j = j - 1; j  <= (j + 1); j++)
+        for (int col = j - 1; col  <= (j + 1); col++)
         {
-            if (row < 0 || row >= height || j < 0 || j >= width)
+            if (row < 0 || row >= height || col < 0 || col >= width)
             {
                 continue;
             }
