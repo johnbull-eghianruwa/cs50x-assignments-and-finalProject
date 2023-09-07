@@ -67,8 +67,28 @@ int getBlur(int i, int j, int height, int width, RGBTRIPLE image[height][width],
     int sum = 0;
     for (int i = i - 1; i <= (i + 1); i++)
     {
-        for (int j = j - 1; j  <= )
+        for (int j = j - 1; j  <= (j + 1); j++)
+        {
+            if (row < 0 || row >= height || j < 0 || j >= width)
+            {
+                continue;
+            }
+            if (color_position == RED_COLOR)
+            {
+                sum += image[i][j].rgbtRed;
+            }
+            else if (color_position == GREEN_COLOR)
+            {
+                sum += image[i][j].rgbtGreen;
+            }
+            else
+            {
+                sum += image[i][j].rgbtBlue;
+            }
+            count++;
+        }
     }
+    return round(sum/count)
 }
 
 // Blur image
