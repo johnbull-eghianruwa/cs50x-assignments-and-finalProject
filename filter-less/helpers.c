@@ -66,6 +66,7 @@ int getBlur(int i, int j, int height, int width, RGBTRIPLE image[height][width],
     float count = 0;
     int sum = 0;
     for (int i = i - 1; i <= (i + 1); i++)
+    {}
 }
 
 // Blur image
