@@ -22,6 +22,17 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
+      // sepiaRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue
+      // sepiaGreen = .349 * originalRed + .686 * originalGreen + .168 * originalBlue
+     //sepiaBlue = .272 * originalRed + .534 * originalGreen + .131 * originalBlue
+     // As a result, we can guarantee that the resulting red, green, and blue values will be whole number
+     for (int i = 0; i < height; i++)
+     {
+        for (int j = 0; j < width; j++)
+        {
+            i
+        }
+     }
     return;
 }
 
