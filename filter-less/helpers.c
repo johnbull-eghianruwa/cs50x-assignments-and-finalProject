@@ -45,6 +45,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
+    // So any pixels on the left side of the image should end up on the right; and vice versa
     return;
 }
 
