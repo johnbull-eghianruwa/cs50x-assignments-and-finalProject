@@ -25,12 +25,12 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
       // sepiaRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue
       // sepiaGreen = .349 * originalRed + .686 * originalGreen + .168 * originalBlue
      //sepiaBlue = .272 * originalRed + .534 * originalGreen + .131 * originalBlue
-     // As a result, we can guarantee that the resulting red, green, and blue values will be whole number
+     // As a result, we can guarantee that the resulting red, green, and blue values will be whole numbers between 0 and 255, inclusive
      for (int i = 0; i < height; i++)
      {
         for (int j = 0; j < width; j++)
         {
-            int sepiaRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue
+            int sepiaRed = round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen + .189 *image[i][j].rgbtBlue)
         }
      }
     return;
