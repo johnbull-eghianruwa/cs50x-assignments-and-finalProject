@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
     {
         printf("Usage: ./recover IMAGE\n");
         return 1;
+        free(recover IMAGE);
     }
 
     // Open file for reading
