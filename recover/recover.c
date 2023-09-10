@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 
     return 0;
     free(filename);
-    free(out_file);
-    free(intput_file);
+    free("out_file");
+    free("input_file");
 
 }
