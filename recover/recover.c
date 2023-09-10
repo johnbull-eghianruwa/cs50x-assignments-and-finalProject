@@ -60,4 +60,8 @@ int main(int argc, char *argv[])
     fclose(input_file);
 
     return 0;
+    free(filename);
+    free(out_file);
+    free(intput_file);
+
 }
