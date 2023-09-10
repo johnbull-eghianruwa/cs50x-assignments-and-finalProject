@@ -10,7 +10,6 @@ int main(int argc, char *argv[])
     {
         printf("Usage: ./recover IMAGE\n");
         return 1;
-        free(usage IMAGE);
     }
 
     // Open file for reading
@@ -21,6 +20,8 @@ int main(int argc, char *argv[])
     {
         printf("Could not  open file");
         return 2;
+
+        free;
     }
 
     // Store block of 512 bytes in an array
