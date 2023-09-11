@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     {
         printf("Could not  open file");
         return 2;
-        fclose(file);
+        free(file);
     }
 
     // Store block of 512 bytes in an array
