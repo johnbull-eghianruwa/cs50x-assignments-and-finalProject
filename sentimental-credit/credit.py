@@ -30,12 +30,15 @@ while True:
     # Find digits not multiplied by 2
     card9 = int(card % 10)
     card10 = int(card % 10**3 / 10**2)
-    card11 = int(card % 10**3 / 10**2)
-    card12 = int(card % 10**3 / 10**2)
-    card13 = int(card % 10**3 / 10**2)
-    card14 = int(card % 10**3 / 10**2)
-    card15 = int(card % 10**3 / 10**2)
-    card16 = int(card % 10**3 / 10**2)
+    card11 = int(card % 10**5 / 10**4)
+    card12 = int(card % 10**7 / 10**6)
+    card13 = int(card % 10**9 / 10**8)
+    card14 = int(card % 10**11 / 10**10)
+    card15 = int(card % 10**13 / 10**12)
+    card16 = int(card % 10**15 / 10**14)
+
+    sum2 = card10 + card11 + card12 + card13 + card14 + card15 + card16
+    sum3 = sum1 + sum2
 
 
 
