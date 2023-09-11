@@ -3,5 +3,5 @@ from cs50 import get_int
 
 while True:
     number = get_int("Enter numbers here: ")
-    print(f"%i\n", {credit(number)})
+    print(f"%i\n", (number))
 
