@@ -4,8 +4,8 @@ from cs50 import get_int
 while True:
     number = get_int("Enter numbers here: ")
 
-    if number > "American Express" and number < "American Express":
-        
+    if number > "American Express" and number < "American Express" and number > "MasterCard" and number < "MasterCard" :
+
 
     print(f"%i\n", (number))
 
