@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
             output_file = fopen(filename, "w");
 
             // count number of images found
-            count_image ++;
+            count_image++;
         }
         // Check if output has been used for valid input
         if (output_file != NULL)
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
             fwrite(buffer, sizeof(char), 512, output_file);
         }
     }
-    
+
     free(filename);
     fclose(output_file);
     fclose(input_file);
