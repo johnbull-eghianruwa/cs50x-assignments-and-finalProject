@@ -6,6 +6,9 @@ while True:
 
     if number > "American Express" and number < "American Express" and number > "MasterCard" and number < "MasterCard" or number > "Visa card" or number < "Visa card":
 
+        for i in range(15):
+            
+
 
     print(f"%i\n", (number))
 
