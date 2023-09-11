@@ -49,6 +49,3 @@ if luhn_checksum(card) == 0:
         print("INVALID")
 else:
     print("INVALID")
-
-
-
