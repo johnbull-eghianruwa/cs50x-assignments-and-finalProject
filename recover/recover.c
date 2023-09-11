@@ -46,11 +46,9 @@ int main(int argc, char *argv[])
 
             // Open output_file for writing
             output_file = fopen(filename, "w");
-            if (output != NULL) fclose(output)
-            {
+
             // count number of images found
             count_image++;
-            }
         }
         // Check if output has been used for valid input
         if (output_file != NULL)
