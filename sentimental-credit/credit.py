@@ -25,5 +25,17 @@ while True:
     card7 = int(card7 % 10 / 10) + (card7 % 10)
     card8 = int(card8 % 10 / 10) + (card8 % 10)
 
+    sum1 = card1 + card2 + card3 + card4 + card5 + card6 + card7 + card8
+
+    # Find digits not multiplied by 2
+    card9 = int(card % 10)
+    card10 = int(card % 10**3 / 10**2)
+    card11 = int(card % 10**3 / 10**2)
+    card12 = int(card % 10**3 / 10**2)
+    card13 = int(card % 10**3 / 10**2)
+    card14 = int(card % 10**3 / 10**2)
+    card15 = int(card % 10**3 / 10**2)
+    card16 = int(card % 10**3 / 10**2)
+
 
 
