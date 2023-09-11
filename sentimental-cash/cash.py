@@ -12,5 +12,8 @@ count = 0
 
 # Number of quarters
 while cents >= 25:
-    cents = cens
+    cents = cents - 25
+    count +=1
+
+
 
