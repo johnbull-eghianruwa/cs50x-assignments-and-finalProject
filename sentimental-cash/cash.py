@@ -6,14 +6,14 @@ while True:
     if cents > 0:
         break
 
-cents = round(cents*100)
+cents = round(cents * 100)
 
 count = 0
 
 # Number of quarters
 while cents >= 25:
     cents = cents - 25
-    count +=1
+    count += 1
 
 # Number of Dimes
 while cents >= 5:
@@ -30,6 +30,3 @@ while cents >= 1:
     cents = cents - 1
     count += 1
 print("Total coins: ", count)
-
-
-
