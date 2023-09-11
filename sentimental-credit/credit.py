@@ -43,7 +43,7 @@ if luhn_checksum(card) == 0:
         print("VISA")
     elif length == 15 and (amex == 34 or amex == 37):
         print("AMEX")
-    elif length == 16 and (51 <= master <= 55)
+    elif length == 16 and (51 <= master <= 55):
         print("MASTERCARD")
     else:
         print("INVALID")
