@@ -16,7 +16,7 @@ while cents >= 25:
     count += 1
 
 # Number of Dimes
-while cents >= 5:
+while cents >= 10:
     cents = cents - 10
     count += 1
 
