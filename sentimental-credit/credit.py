@@ -9,3 +9,11 @@ def main():
 def luhn_checksum(card):
     def digits_of(n):
         return[int(d) for d in str(n)]
+    digits = digits_of(card)
+    odd_digits = digits[- 1:: -2]
+    even_digits = digits[-2::-2]
+    checksum = 0
+    checksum += sum(odd_digits)
+    for d in even_digits:
+        checksum +=sum(digits_of(d*2))
+        
