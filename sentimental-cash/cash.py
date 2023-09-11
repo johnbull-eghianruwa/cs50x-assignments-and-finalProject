@@ -5,5 +5,6 @@ while True:
     n = get_int("Height: ")
     if n > 0:
         break
-while Tru:
-    cents = get_float("Cha")
+while True:
+    cents = get_float("Change: ")
+    
