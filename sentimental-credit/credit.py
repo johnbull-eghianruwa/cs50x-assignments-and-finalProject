@@ -7,6 +7,10 @@ while True:
         break
 
     # Find digits to be multipled by 2
-    card1 = int(card % 10**2 /10)
+    card1 = int(card % 10**2 / 10) * 2
+    card2 = int(card % 10**4 / 10) * 4
+    card3 = int(card % 10**6 / 10) * 6
+    card4 = int(card % 10**8 / 10) * 8
+    card5 = int(card % 10**10 / 10)
 
 
