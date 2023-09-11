@@ -1,10 +1,12 @@
 # TODO
-from cs50 import get_int
+from cs50 import get_float
 
 while True:
-    n = get_int("Height: ")
+    n = get_float("Change: ")
     if n > 0:
         break
-while True:
-    cents = get_float("Change: ")
-    
+
+cents = round(cents*100)
+
+count = 0
+
