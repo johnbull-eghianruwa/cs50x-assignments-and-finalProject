@@ -16,5 +16,14 @@ while True:
     card7 = int(card % 10**10 / 10**13) * 2
     card8 = int(card % 10**10 / 10**15) * 2
 
+    card1 = int(card1 % 10 / 10) + (card1 % 10)
+    card2 = int(card2 % 10 / 10) + (card2 % 10)
+    card3 = int(card3 % 10 / 10) + (card3 % 10)
+    card4 = int(card4 % 10 / 10) + (card4 % 10)
+    card5 = int(card5 % 10 / 10) + (card5 % 10)
+    card6 = int(card6 % 10 / 10) + (card6 % 10)
+    card7 = int(card7 % 10 / 10) + (card7 % 10)
+    card8 = int(card8 % 10 / 10) + (card8 % 10)
+
 
 
