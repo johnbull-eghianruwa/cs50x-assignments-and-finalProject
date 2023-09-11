@@ -9,6 +9,5 @@ while True:
         for i in range(15):
             if "Amrican Express" == number and "MasterCard" == number or "Visa card" == number:
 
-
-    print(f"%i\n", (number))
+    print(f"credit numbers", (number))
 
