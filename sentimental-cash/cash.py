@@ -15,5 +15,17 @@ while cents >= 25:
     cents = cents - 25
     count +=1
 
+# Number of Dimes
+while cents >= 5:
+    cents = cents - 10
+    count += 1
+
+# Number of Nickels
+while cents >= 5:
+    cents = cents - 5
+    count += 1
+
+
+
 
 
