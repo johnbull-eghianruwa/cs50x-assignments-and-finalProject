@@ -2,12 +2,8 @@
 from cs50 import get_int
 
 while True:
-    number = get_int("Enter numbers here: ")
+    card = get_int("Enter Card: ")
+    if card > 0:
+        break 
 
-    if number > "American Express" and number < "American Express" and number > "MasterCard" and number < "MasterCard" or number > "Visa card" or number < "Visa card":
-
-        for i in range(15):
-            if "Amrican Express" == number and "MasterCard" == number or "Visa card" == number:
-
-    print(f"credit numbers", (number))
 
