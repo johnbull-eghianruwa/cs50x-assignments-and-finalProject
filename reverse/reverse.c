@@ -11,6 +11,11 @@ int main(int argc, char *argv[])
 {
     // Ensure proper usage
     // TODO #1
+    if(argc != 3)
+    {
+        printf("Usafe: reverse input.wav output.wav");
+        return 1;
+    }
 
     // Open input file for reading
     // TODO #2
