@@ -26,10 +26,10 @@ int main(int argc, char *argv[])
         printf("Could not open %s.\n", infile);
         return 1;
     }
-
     // Read header
     // TODO #3
-
+    WAVHEADER header;
+    fread(&header, sizeof(WAVHEADER), 1, intpr);
     // Use check_format to ensure WAV format
     // TODO #4
 
