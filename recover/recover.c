@@ -49,12 +49,13 @@ int main(int argc, char *argv[])
 
             // count number of images found
             count_image++;
-            fclose(output_file);
+
         }
         // Check if output has been used for valid input
         if (output_file != NULL)
         {
             fwrite(buffer, sizeof(char), 512, output_file);
+            fclose(output_file);
         }
     }
 
