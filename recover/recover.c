@@ -13,12 +13,13 @@ int main(int argc, char *argv[])
     }
 
     // Open file for reading
+    printf("%s\n", argv[1]);
     FILE *input_file = fopen(argv[1], "r");
 
     // Check that the input_file is valid
     if (input_file == NULL)
     {
-        printf("Could not ---open file");
+        printf("Could not open file\n");
         return 2;
 
     }
