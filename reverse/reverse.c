@@ -13,12 +13,19 @@ int main(int argc, char *argv[])
     // TODO #1
     if(argc != 3)
     {
-        printf("Usafe: reverse input.wav output.wav");
+        printf("Usafe: reverse input.wav output.wav\n");
         return 1;
     }
 
     // Open input file for reading
     // TODO #2
+    char *infile = argv[1];
+    FILE *inptr = fopen(infile, "rb");
+    if (inptr == NULL)
+    {
+        printf("Could not open %s.\n", infile);
+        return 1;
+    }
 
     // Read header
     // TODO #3
@@ -37,6 +44,7 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
     // TODO #8
+    fclose(infile);
 }
 
 int check_format(WAVHEADER header)
