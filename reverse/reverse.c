@@ -30,9 +30,19 @@ int main(int argc, char *argv[])
     // TODO #3
     WAVHEADER header;
     fread(&header, sizeof(WAVHEADER), 1, inptr);
+
     // Use check_format to ensure WAV format
     // TODO #4
-
+    if (check_format == 0)
+    {
+        printf("Not a wav File\n");
+        return 1;
+    }
+    if(header.audioFormat != 1)
+    {
+        printf("Not a wav File\n");
+        return 1;
+    }
     // Open output file for writing
     // TODO #5
 
@@ -50,6 +60,10 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
+    if (header.format[0] == "W" && header.format[1] == "A" && header.format[2] == "V" && header.format[3] == "E")
+    {
+        return 1;
+    }
     return 0;
 }
 
