@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
     // Ensure proper usage
     // TODO #1
-    if(argc != 3)
+    if (argc != 3)
     {
         printf("Usafe: reverse input.wav output.wav\n");
         return 1;
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
         printf("Not a wav File\n");
         return 1;
     }
-    if(header.audioFormat != 1)
+    if (header.audioFormat != 1)
     {
         printf("Not a wav File\n");
         return 1;
@@ -67,9 +67,9 @@ int main(int argc, char *argv[])
         return 1;
     }
     BYTE buffer[size];
-    while(ftell(inptr) - size > sizeof(header))
+    while (ftell(inptr) - size > sizeof(header))
     {
-        if (fseek(inptr, - 2 * size, SEEK_CUR))
+        if (fseek(inptr, -2 * size, SEEK_CUR))
         {
             return 1;
         }
