@@ -20,6 +20,10 @@ def main():
         dna_sequence = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
+    subsequences = list(database[0].keys())[1:]
+    results = {}
+    for subsequenc in subsequences:
+        result[subsequence] 
 
     # TODO: Check database for matching profiles
 
