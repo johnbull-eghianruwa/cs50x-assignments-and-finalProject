@@ -7,7 +7,7 @@ text = get_string("Text: ")
 
 letters = 0
 words = 1
-sentences = 1
+sentences = 0
 
 # Count number of letters, words and sentences
 for i in text:
