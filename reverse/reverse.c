@@ -45,6 +45,13 @@ int main(int argc, char *argv[])
     }
     // Open output file for writing
     // TODO #5
+    char *outfile = argv[2];
+    File *outptr = fopen(outfile, "wb");
+    if (outptr == NULL)
+    {
+        printf("Could not open %s.\n", outfile);
+        return 1;
+    }
 
     // Write header to file
     // TODO #6
@@ -54,6 +61,7 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
     // TODO #8
+    fclose(outptr);
     fclose(inptr);
 }
 
