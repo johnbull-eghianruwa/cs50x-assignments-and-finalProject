@@ -6,8 +6,7 @@ typedef uint8_t BYTE;
 int main(int argc, char *argv[])
 {
     // Check that the argument count is 2
-    printf("%i\n", argc);
-    if (argc == 0)
+    if (argc != 2)
     {
         printf("Usage: ./recover IMAGE\n");
         return 1;
