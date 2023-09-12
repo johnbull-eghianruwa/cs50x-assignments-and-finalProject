@@ -65,8 +65,7 @@ int main(int argc, char *argv[])
     BYTE buffer[size];
     while(ftell(inptr) - size > sizeof(header))
     {
-        fread(buffer, size, 1, inptr);
-        fwrite(buffer, size 1, outptr);
+        fread(buffer, size, 1 inptr);
     }
 
     fclose(outptr);
