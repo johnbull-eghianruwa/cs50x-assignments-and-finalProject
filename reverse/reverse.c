@@ -69,6 +69,10 @@ int main(int argc, char *argv[])
     BYTE buffer[size];
     while(ftell(inptr) - size > sizeof(header))
     {
+        if (fseek(inptr, - 2 * size, SEEK_CUR))
+        {
+            return 1;
+        }
         fread(buffer, size, 1, inptr);
         fwrite(buffer, size, 1, outptr);
     }
