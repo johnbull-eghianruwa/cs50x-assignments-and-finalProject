@@ -21,7 +21,6 @@ int main(int argc, char *argv[])
     {
         printf("Could not open file\n");
         return 2;
-
     }
 
     // Store block of 512 bytes in an array
