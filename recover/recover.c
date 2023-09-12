@@ -6,7 +6,7 @@ typedef uint8_t BYTE;
 int main(int argc, char *argv[])
 {
     // Check that the argument count is 2
-    if (argc == 0 || argc > 1)
+    if (argc == 0)
     {
         printf("Usage: ./recover IMAGE\n");
         return 1;
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     // Check that the input_file is valid
     if (input_file == NULL)
     {
-        printf("Could not  open file");
+        printf("Could not ---open file");
         return 2;
 
     }
