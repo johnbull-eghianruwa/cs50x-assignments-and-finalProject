@@ -21,12 +21,21 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     subsequences = list(database[0].keys())[1:]
-    results = {}
-    for subsequenc in subsequences:
+    result = {}
+    for subsequence in subsequences:
         result[subsequence] = longest_match(dna_sequence, subsequence)
-        
+
 
     # TODO: Check database for matching profiles
+    for person in database:
+        match = 0
+        for subsequence in subsequences:
+            if int(person[subsequence]) == result[subsequence]:
+                match += 1
+        # If all sequences match
+        if match == len(subsequences):
+            print(person["name"])
+            re
 
     return
 
