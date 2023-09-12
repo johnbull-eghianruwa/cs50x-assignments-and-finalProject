@@ -13,7 +13,7 @@ sentences = 1
 for i in text:
     if i.isalpha():
         letters += 1
-    elif i == "":
+    elif i == " ":
         words += 1
     elif i == "." or i == "!" or i == "?":
         sentences += 1
