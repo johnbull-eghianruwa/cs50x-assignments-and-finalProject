@@ -1,8 +1,5 @@
 import csv
-import sys
-
-def main():
-
+import sysdef main():
     # TODO: Check for command-line usage
     if len(sys.argv) != 3:
         sys.exit("python dna.py data.csv sequence.text")
