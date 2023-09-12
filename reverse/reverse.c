@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     // TODO #4
-    if (check_format == 0)
+    if (check_format(header) == 0)
     {
         printf("Not a wav File\n");
         return 1;
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
-    if (header.format[0] == "W" && header.format[1] == "A" && header.format[2] == "V" && header.format[3] == "E")
+    if (header.format[0] == 'W' && header.format[1] == 'A' && header.format[2] == 'V' && header.format[3] == 'E')
     {
         return 1;
     }
