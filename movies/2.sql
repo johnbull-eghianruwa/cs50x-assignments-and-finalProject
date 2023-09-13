@@ -1,1 +1,1 @@
-SELECT birth
+SELECT birth  FROM 
