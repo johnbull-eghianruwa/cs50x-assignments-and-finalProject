@@ -1,1 +1,2 @@
-SELECT birth  FROM 
+SELECT birth FROM name;
+WHERE 
