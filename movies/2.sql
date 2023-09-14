@@ -1,2 +1,2 @@
-SELECT birth FROM name;
-WHERE 
+SELECT birth FROM Emma Stone;
+WHERE name AND year;
