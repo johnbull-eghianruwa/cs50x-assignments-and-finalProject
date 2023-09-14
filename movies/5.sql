@@ -1,2 +1,2 @@
-SELECT title FROM movies
-WHERE 'Harry Potter'
+SELECT title(movie) FROM movies
+WHERE year, 'Harry Potter'
