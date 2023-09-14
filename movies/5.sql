@@ -1,2 +1,2 @@
 SELECT title FROM movies
-WHERE 
+WHERE 'Harry Potter'
