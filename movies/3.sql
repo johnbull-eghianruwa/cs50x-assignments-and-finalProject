@@ -1,2 +1,2 @@
 SELECT title FROM movies
-WHERE 
+WHERE year=2018, ASCII_ORDER;
