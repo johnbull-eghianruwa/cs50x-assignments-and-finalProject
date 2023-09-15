@@ -1,4 +1,4 @@
 -- query to determine the average rating of all movies released in 2012
 SELECT AVG(rating) FROM movies
-JOIN ratings ON movies.id = ratings.movies_id
+JOIN ratings ON movies.id = ratings.movie_id
 WHERE year = 2012;
