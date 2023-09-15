@@ -4,4 +4,4 @@ WHERE year = 2021 AND month = 7 AND day = 28;
 
 -- Interviews were conducted today with three witnesses who were present at the time-each of their interview transcripts mentions the backery
 SELECT transcript FROM interviews
-WHERE year = 2021 AND month = 7 AND day 
+WHERE year = 2021 AND month = 7 AND day = 28 AND  transcript LIKE "%backery%";
