@@ -25,3 +25,5 @@ AND atm_transactions.month = 7
 AND atm_transactions.day = 28
 AND atm_location = "leggett Street"
 AND atm_transactions.transaction_type = "withdraw";
+
+SELECT
