@@ -26,4 +26,8 @@ AND atm_transactions.day = 28
 AND atm_location = "leggett Street"
 AND atm_transactions.transaction_type = "withdraw";
 
-SELECT
+SELECT caller, receiver FROM phone_calls
+WHERE year = 2021
+AND month = 7
+AND day = 28
+AND duration < 60;
