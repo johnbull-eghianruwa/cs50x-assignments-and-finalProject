@@ -22,7 +22,7 @@ bank_accounts.account_number
 WHERE atm_transactions.year = 2021
 AND atm_transactions.month = 7
 AND atm_transactions.day = 28
-AND atm_location = "Hunp"
+AND atm_location = "Humphrey Street"
 AND atm_transactions.transaction_type = "withdraw";
 
 SELECT caller, caller_name, receiver, receiver_name FROM phone_calls
