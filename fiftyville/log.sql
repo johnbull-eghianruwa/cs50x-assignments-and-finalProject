@@ -31,6 +31,3 @@ WHERE year = 2021
 AND month = 7
 AND day = 28
 AND duration < 60;
-
-UPDATE phone_calls
-SE
