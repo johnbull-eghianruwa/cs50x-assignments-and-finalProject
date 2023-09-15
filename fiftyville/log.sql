@@ -17,4 +17,5 @@ AND bakery_security_logs.minute >= 15
 AND bakery_security_logs.minute <= 25;
 
 SELECT people.name, atm_transactions.transaction_type FROM people
-JOIN bank_accounts ON bank_accounts
+JOIN bank_accounts ON bank_accounts.person_id = people.id
+JOIN atm_transactios ON 
