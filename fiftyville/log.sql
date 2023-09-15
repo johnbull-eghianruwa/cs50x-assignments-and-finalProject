@@ -32,8 +32,3 @@ AND month = 7
 AND day = 28
 AND duration < 60;
 
-ALTER TABLE phone_calls
-ADD caller_name text;
-
-ALTER TABLE phone_calls
-ADD receiver_name text;
