@@ -23,4 +23,4 @@ WHERE year = 2021
 AND month = 7
 AND day = 28
 AND atm_location = "leggett Street"
-AND transaction_type = "withdraw"
+AND transaction_type = "withdraw";
