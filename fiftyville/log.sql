@@ -33,6 +33,8 @@ transaction_type = "withdraw";
 -- Common suspects: Bruce, Luca, Iman, Diana
 -- Third transcript
 --  As the thief was leaving the bakery, they called someone who talked to them for less than a minute.
+
+-- Phone call
 SELECT phone_calls.caller, people.name FROM phone_calls
 JOIN people ON people.phone_number = phone_calls.caller
 WHERE year = 2021
@@ -59,5 +61,11 @@ LIMIT 1);
 -- Suspects: Doris, Sofia; Bruce, Edward, Kelsey, Talor, Kenny, Luca
 
 -- Common Suspects: Bruce and Luca
-
---Phone call
+-- DESTINATION
+SELECT city FROM airports
+WHERE id = (SELECT destination_airport_id FROM flights
+WHERE year = 2021 AND month = 7 AND day = 29 AND origin_airport_id = (
+SELECT id FROM airports WHERE city = "Fiftyville")
+ORDER BY hour,minute
+LIMIT 1);
+-- NEW YORK CITY
