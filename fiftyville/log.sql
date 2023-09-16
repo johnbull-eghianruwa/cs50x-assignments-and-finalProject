@@ -48,7 +48,7 @@ LIMIT 1);
 -- Common Suspects: Bruce and Luca
 
 -- Phone call
-SELECT phone_calls.caller, people.name FROM phone_calls
+SELECT city FROM airport
 JOIN people ON people.phone_number = phone_calls.caller
 WHERE year = 2021
 AND month = 7
