@@ -48,7 +48,7 @@ LIMIT 1);
 -- Common Suspects: Bruce and Luca
 
 -- Phone call
-SELECT city FROM airport
+SELECT city FROM airports
 WHERE id (SELECT destination_airport_id FROM flights
 WHERE year = 2021
 AND month = 7
