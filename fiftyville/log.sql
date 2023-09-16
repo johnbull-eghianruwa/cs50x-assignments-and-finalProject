@@ -52,4 +52,5 @@ JOIN passengers ON passengers.passport_number = people.passport_number
 WHERE passengers.flight_id = (SELECT id FROM flights
 WHERE year = 2021 AND month = 7 AND day = 29 AND origin_airport_id = (
 SELECT id  FROM airports WHERE city = "Fiftyville")
-ORDER BY hour)
+ORDER BY hour,minute
+LIMIT 1);
