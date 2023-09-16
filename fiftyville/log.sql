@@ -31,7 +31,8 @@ transaction_type = "withdraw";
 -- Suspects: Bruce, Diana, Brooke, Kenny, Iman, Luca, Talor, Benista
 
 -- Common suspects: Bruce, Luca, Iman, Diana
-
+-- Third transcript
+--  As the thief was leaving the bakery, they called someone who talked to them for less than a minute.
 SELECT phone_calls.caller, people.name FROM phone_calls
 JOIN people ON people.phone_number = phone_calls.caller
 WHERE year = 2021
