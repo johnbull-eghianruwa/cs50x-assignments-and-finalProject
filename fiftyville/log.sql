@@ -54,3 +54,6 @@ WHERE year = 2021 AND month = 7 AND day = 29 AND origin_airport_id = (
 SELECT id  FROM airports WHERE city = "Fiftyville")
 ORDER BY hour,minute
 LIMIT 1);
+-- Suspects: Doris, Sofia; Bruce, Edward, Kelsey, Talor, Kenny, Luca
+
+-- Common Suspects: Bruce and Luca
