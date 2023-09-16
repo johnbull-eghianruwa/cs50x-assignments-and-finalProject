@@ -42,6 +42,7 @@ AND duration < 60;
 -- THIEF: Bruce
 
 -- Common suspects: Bruce and Diana
+
 -- Third transcript
 --  As the thief was leaving the bakery, they called someone who talked to them for less than a minute.
 -- In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville
@@ -56,3 +57,5 @@ LIMIT 1);
 -- Suspects: Doris, Sofia; Bruce, Edward, Kelsey, Talor, Kenny, Luca
 
 -- Common Suspects: Bruce and Luca
+
+--Phone call
