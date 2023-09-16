@@ -31,7 +31,7 @@ transaction_type = "withdraw";
 -- Suspects: Bruce, Diana, Brooke, Kenny, Iman, Luca, Talor, Benista
 
 SELECT name FROM people
-JOIN phone_calls
+JOIN phone_calls ON phone_calls.
 
 -- Coomon suspects: Bruce, Luca, Iman, Diana
 -- Third transcript
