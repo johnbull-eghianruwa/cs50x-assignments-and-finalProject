@@ -30,6 +30,9 @@ WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street"
 transaction_type = "withdraw";
 -- Suspects: Bruce, Diana, Brooke, Kenny, Iman, Luca, Talor, Benista
 
+SELECT name FROM people
+JOIN phone_calls
+
 -- Coomon suspects: Bruce, Luca, Iman, Diana
 -- Third transcript
 --  As the thief was leaving the bakery, they called someone who talked to them for less than a minute.
