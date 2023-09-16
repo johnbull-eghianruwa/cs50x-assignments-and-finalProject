@@ -28,6 +28,7 @@ JOIN bank_accounts ON bank_accounts.person_id = people.id
 JOIN atm_transactions ON atm_transactions.account_number = bank_accounts.account_number
 WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street" AND
 transaction_type = "withdraw";
+
                                                                                                  |
 
 
