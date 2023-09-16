@@ -23,6 +23,6 @@ WHERE year = 2021
 AND month = 7
 AND day = 28
 AND atm_location = "leggett Street"
-AND transaction_type = "withdraw";
+AND transaction_type = "withdraw"
 AND (people.name = "Vanessa" OR people.name = "Bruce" OR people.name = "Barry" OR people.name =
 "Luca" OR people.name = "Sofia" OR people.name = "Iman" OR people.name = "Diana" OR people.name = "Kelsey");
