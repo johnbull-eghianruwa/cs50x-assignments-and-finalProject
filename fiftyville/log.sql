@@ -16,7 +16,11 @@ AND bakery_security_logs.hour = 10
 AND bakery_security_logs.minute >= 15
 AND bakery_security_logs.minute <= 25;
 
-SELECT name FROM people
-JOIN bank_accounts ON bank_accounts.person_id = people.id
-JOIN atm_transactions ON atm_transactions.account_number = bank_accounts.account_number
-WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "leggett Street" AND transaction_type = "withdraw";
+SELECT bank_accounts.person_id, people.name FROM bank_accounts
+JOIN atm_transactions ON atm_transactions.account_number =
+bank_accounts.account_number
+JOIN people ON bank_accounts.person_id = people.id
+WHERE atm_transactions.year = 2021
+AND atm_transactions.month = 7
+AND atm_transactions.day = 28
+AND atm_transactions.transaction_type = "withdraw"
