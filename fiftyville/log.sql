@@ -49,9 +49,9 @@ LIMIT 1);
 
 -- Phone call
 SELECT city FROM airport
-JOIN people ON people.phone_number = phone_calls.caller
+WHERE id (SELECT destination_airport_id FROM flights
 WHERE year = 2021
 AND month = 7
-AND day = 28
+AND day = 29
 AND duration < 60;
 --Suspects: Sofia, Kelsey, Bruce, Taylor, Diana, Carina, Kenny, Benista
