@@ -47,6 +47,8 @@ AND duration < 60;
 --  As the thief was leaving the bakery, they called someone who talked to them for less than a minute.
 -- In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville
 -- tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket.
+
+-- FLIGHT
 SELECT name FROM people
 JOIN passengers ON passengers.passport_number = people.passport_number
 WHERE passengers.flight_id = (SELECT id FROM flights
