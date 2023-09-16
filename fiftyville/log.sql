@@ -18,7 +18,7 @@ AND bakery_security_logs.minute <= 25;
 -- Suspects: Vanessa, Bruce, Barry, Luca, Sofia, Iman, Diana, Kelsey
 SELECT name FROM people
 JOIN bank_accounts ON bank_accounts.person_id = people.id
-JOIN atm_transactions ON atm_transactions.account_number = Bank_account.account_number
+JOIN atm_transactions ON atm_transactions.account_number = Bank_accounts.account_number
 WHERE atm_transactions.year = 2021
 AND atm_transactions.month = 7
 AND atm_transactions.day = 28
