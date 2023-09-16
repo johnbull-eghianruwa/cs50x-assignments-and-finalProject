@@ -31,7 +31,18 @@ transaction_type = "withdraw";
 -- Suspects: Bruce, Diana, Brooke, Kenny, Iman, Luca, Talor, Benista
 
 -- Common suspects: Bruce, Luca, Iman, Diana
+-- Third transcript
+--  As the thief was leaving the bakery, they called someone who talked to them for less than a minute.
+SELECT phone_calls.caller, people.name FROM phone_calls
+JOIN people ON people.phone_number = phone_calls.caller
+WHERE year = 2021
+AND month = 7
+AND day = 28
+AND duration < 60;
+--Suspects: Sofia, Kelsey, Bruce, Taylor, Diana, Carina, Kenny, Benista
 
+
+-- Common suspects: Bruce and Diana
 -- Third transcript
 --  As the thief was leaving the bakery, they called someone who talked to them for less than a minute.
 -- In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville
@@ -46,13 +57,3 @@ LIMIT 1);
 -- Suspects: Doris, Sofia; Bruce, Edward, Kelsey, Talor, Kenny, Luca
 
 -- Common Suspects: Bruce and Luca
-
--- Phone call
-SELECT city FROM airports
-WHERE id = (SELECT destination_airport_id FROM flights
-WHERE year = 2021 AND month = 7 AND day = 29 AND origin_airport_id = (
-SELECT id FROM airports WHERE city = "Fiftyville")
-ORDER BY hour,minute
-LIMIT 1);
---Suspects: Sofia, Kelsey, Bruce, Taylor, Diana, Carina, Kenny, Benista
-
