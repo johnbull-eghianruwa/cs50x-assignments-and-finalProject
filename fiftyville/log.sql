@@ -39,8 +39,7 @@ WHERE year = 2021
 AND month = 7
 AND day = 28
 AND duration < 60;
---Suspects: Sofia, Kelsey, Bruce, Taylor, Diana, Carina, Kenny, Benista
-
+-- THIEF: Bruce
 
 -- Common suspects: Bruce and Diana
 -- Third transcript
