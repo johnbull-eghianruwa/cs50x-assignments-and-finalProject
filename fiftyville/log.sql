@@ -30,16 +30,18 @@ WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = "Leggett Street"
 transaction_type = "withdraw";
 -- Suspects: Bruce, Diana, Brooke, Kenny, Iman, Luca, Talor, Benista
 
+-- Common suspects: Bruce, Luca, Iman, Diana
+
 SELECT phone_calls.caller, people.name FROM phone_calls
 JOIN people ON people.phone_number = phone_calls.caller
 WHERE year = 2021
 AND month = 7
 AND day = 28
 AND duration < 60;
---
+--Suspects: Sofia, Kelsey, Bruce, Taylor, Diana, Carina, Kenny, Benista
 
 
--- Coomon suspects: Bruce, Luca, Iman, Diana
+-- Common suspects: Bruce, Luca, Iman, Diana
 -- Third transcript
 --  As the thief was leaving the bakery, they called someone who talked to them for less than a minute.
 -- In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville
