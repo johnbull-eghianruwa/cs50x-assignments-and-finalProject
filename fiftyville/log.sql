@@ -49,12 +49,10 @@ LIMIT 1);
 
 -- Phone call
 SELECT city FROM airports
-WHERE id (SELECT destination_airport_id FROM flights
-WHERE year = 2021
-AND month = 7
-AND day = 29
-AND origin _airport_id = (
+WHERE id = (SELECT destination_airport_id FROM flights
+WHERE year = 2021 AND month = 7 AND day = 29 AND origin_airport_id = (
 SELECT id FROM airports WHERE city = "Fiftyville")
 ORDER BY hour,minute
 LIMIT 1);
 --Suspects: Sofia, Kelsey, Bruce, Taylor, Diana, Carina, Kenny, Benista
+
