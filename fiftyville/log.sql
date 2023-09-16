@@ -16,7 +16,6 @@ AND bakery_security_logs.hour = 10
 AND bakery_security_logs.minute >= 15
 AND bakery_security_logs.minute <= 25;
 -- Suspects: Vanessa, Bruce, Barry, Luca, Sofia, Iman, Diana, Kelsey
-
 SELECT bank_accounts.person_id, people.name FROM bank_accounts
 JOIN atm_transactions ON atm_transactions.account_number =
 bank_accounts.account_number
