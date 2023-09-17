@@ -69,3 +69,6 @@ SELECT id FROM airports WHERE city = "Fiftyville")
 ORDER BY hour,minute
 LIMIT 1);
 -- NEW YORK CITY
+
+-- ACCOMPLICE
+SELECT phone_number FROM people WHERE name = "Bruce";
