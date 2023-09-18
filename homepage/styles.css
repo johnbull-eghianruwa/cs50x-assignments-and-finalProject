@@ -1,4 +1,4 @@
-body #nav-menu{
+body #nav-menu.nav_menu{
     font-size: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display:flex;
