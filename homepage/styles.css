@@ -7,13 +7,15 @@ body #nav-menu.nav_menu{
     list-style-type: none;
     margin-left: -5em;
     background-color:cornflowerblue;
+    letter-spacing: 2px;
 }
 a.nav_item{
-    
+
 }
 a{
     text-decoration: none;
     color:white;
+    letter-spacing: 2px;
 
 }
 
