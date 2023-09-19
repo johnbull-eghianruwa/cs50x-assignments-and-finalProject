@@ -5,7 +5,8 @@ body #nav-menu.nav_menu{
     display: flex;
     list-style-type: none;
     margin-left: -5em;
-    background-color:cornflowerblue
+    background-color:cornflowerblue;
+    color:white;
 }
     color:white;
 }
