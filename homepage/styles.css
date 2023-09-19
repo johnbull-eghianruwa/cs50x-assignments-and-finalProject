@@ -1,10 +1,6 @@
 body #nav-menu.nav_menu{
     font-size: 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-
-a.nav_link active-link{
-    display:flex;
+.nav_grid {
+    display: flex;
 }
-}
-
