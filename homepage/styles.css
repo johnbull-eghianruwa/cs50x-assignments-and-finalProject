@@ -1,17 +1,19 @@
 body #nav-menu.nav_menu{
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .nav_grid {
     display: flex;
     list-style-type: none;
     margin-left: -5em;
     background-color:cornflowerblue;
-    color:white;
 }
-    color:white;
+a.nav_item{
+    
 }
+a{
+    text-decoration: none;
+    color:white;
 
-a .nav_item{
-    color:white;
 }
 
