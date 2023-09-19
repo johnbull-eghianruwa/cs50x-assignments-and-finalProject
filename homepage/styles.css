@@ -5,7 +5,8 @@ body #nav-menu.nav_menu{
     display: flex;
     list-style-type: none;
     margin-left: -5em;
-    background-color:rgb(46, 90, 172);
+    background-color:rgb(46, 107, 172);
+}
     color:white;
 }
 
