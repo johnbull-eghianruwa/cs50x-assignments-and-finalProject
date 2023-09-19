@@ -1,8 +1,11 @@
 body #nav-menu.nav_menu{
-    font-size: 50px;
+    font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 .nav_grid {
     display: flex;
     list-style-type: none;
-    padding-left: -20em;
+    margin-left: -5em;
+    background-color:blue;
+    color:white;
 }
+
