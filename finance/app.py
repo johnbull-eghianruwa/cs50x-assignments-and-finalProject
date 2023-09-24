@@ -126,7 +126,7 @@ def register():
         if password != confirmation:
             return apology("Passwords Do Not Match")
 
-        hash = generate_password_hash(password)
+        hash = generate_password_hash(2023)
 
         try:
             #INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...)
