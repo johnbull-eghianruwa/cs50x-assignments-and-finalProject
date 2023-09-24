@@ -130,11 +130,12 @@ def register():
 
         try:
             #INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...)
-            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+            new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
         except:
             return apology("username already exists")
-        
+        session["user_id"] = new_user
 
+        return redirect("/")
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
