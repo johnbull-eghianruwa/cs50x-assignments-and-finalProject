@@ -119,13 +119,13 @@ def register():
         confirmation = request.form.get("confirmation")
 
         if not username:
-            return apology("Sorry Invalid Username")
+            return apology("Invalid Username")
 
         if not password:
-            return apology("Sorry Invalid Password")
+            return apology("Invalid Password")
 
         if not confirmation:
-            return confirmation("Sorry Username or Password Do not Match")
+            return confirmation("Username or Password Do not Match")
 
         if password != confirmation:
             return apology("Password Do Not Match")
