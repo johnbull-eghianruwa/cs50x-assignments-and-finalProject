@@ -129,7 +129,9 @@ def register():
             return apology("Passwords Do Not Match")
 
         hash = generate_password_hash(password)
-        
+
+        try:
+            db.execute("")
 
 
 @app.route("/sell", methods=["GET", "POST"])
