@@ -123,7 +123,7 @@ def register():
             return apology("Sorry invalid password")
 
         if not confirmation:
-            return 
+            return confirmation("Sorry username or password doesn't match")
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
