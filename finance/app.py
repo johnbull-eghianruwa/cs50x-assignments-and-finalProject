@@ -133,9 +133,9 @@ def register():
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
         # Ensure username does not already exist
         if(rows) != 0:
-            return apology("username already exist", 400)
-
-
+            return apology("username already exists", 400)
+        # Isert new user onto database
+      
 
 
 @app.route("/sell", methods=["GET", "POST"])
