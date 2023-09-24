@@ -110,6 +110,24 @@ def quote():
 def register():
     """Register user"""
     # User reach route vis POST (as by submitting a form via )
+    if request.method == "POST":
+        # Ensure username was submitted
+        if not request.form.get("username"):
+            return apology("username required", 400)
+
+        # Ensure password was sumitted
+        elif not request.form.get("password"):
+            return apology("password required", 400)
+
+        # Ensure confirmation was submitted
+        elif not request.form.get("confirmation"):
+            return apology("confirmation of password required", 400)
+
+        # Ensure password and confirmation match
+        elif request.form.get("password") != request.form.get("confirmation"):
+            return apology("passwords do not match", 400)
+        
+
 
 
 @app.route("/sell", methods=["GET", "POST"])
