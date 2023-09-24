@@ -119,13 +119,16 @@ def register():
         confirmation = request.form.get("confirmation")
 
         if not username:
-            return apology("Sorry invalid username")
+            return apology("Sorry Invalid Username")
 
         if not password:
-            return apology("Sorry invalid password")
+            return apology("Sorry Invalid Password")
 
         if not confirmation:
-            return confirmation("Sorry username or password doesn't match")
+            return confirmation("Sorry Username or Password Do not Match")
+
+        if password != confirmation:
+            return apology("Password Do Not Match")
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
