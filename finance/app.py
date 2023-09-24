@@ -109,6 +109,8 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
+
+    # Render an apology if the user’s input is blank or the username already exists.
     if request.method == "GET":
         return render_template("register.html")
     else:
