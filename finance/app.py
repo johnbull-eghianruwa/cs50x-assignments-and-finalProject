@@ -133,7 +133,8 @@ def register():
         hash = generate_password_hash(password)
 
         try:
-            
+            db.execute("")
+
 
 
 @app.route("/sell", methods=["GET", "POST"])
