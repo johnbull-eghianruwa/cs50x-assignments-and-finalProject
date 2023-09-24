@@ -126,6 +126,10 @@ def register():
         if password != confirmation:
             return apology("Passwords Do Not Match")
 
+        hash = generate_password_hash(password)
+
+        try:
+
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
