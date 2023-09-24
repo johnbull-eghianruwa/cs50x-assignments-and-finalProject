@@ -141,8 +141,6 @@ def register():
         session["user_id"] = new_user
         return redirect("/")
 
-
-
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
