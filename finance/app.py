@@ -108,7 +108,9 @@ def quote():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    """Register user"""
+    """Register user FIRST"""
+    # Forgot any user_id
+    session.clear()
     # User reach route vis POST (as by submitting a form via )
     if request.method == "POST":
         # Ensure username was submitted
