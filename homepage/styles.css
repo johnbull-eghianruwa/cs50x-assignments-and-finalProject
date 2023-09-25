@@ -35,11 +35,11 @@ footer{
 }
 /*----------- CONTACT AND INFORMATION SECTION -------------*/
 h2{
-    padding-left: 220px;
+    padding-left: 180px;
 }
 .item1{
     height: 1.8em;
-    font: 20px;
+    font: 16px, 18px;
     font-family: 'Times New Roman', Times, serif;
 }
 .item2{
