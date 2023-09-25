@@ -16,7 +16,7 @@ body #nav-menu.nav_menu{
 a{
     text-decoration: none;
     color:white;
-   
+
 }
 /*------------- MAIN CONTAINER ----------*/
 
@@ -33,7 +33,7 @@ footer{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-left: 70px;
 }
-/*----------- CONTACT PAGE AND INFORMATION SECTION-------------*/
+/*----------- CONTACT AND INFORMATION SECTION -------------*/
 h2{
     padding-left: 220px;
 }
