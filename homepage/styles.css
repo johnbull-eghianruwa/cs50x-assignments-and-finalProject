@@ -5,17 +5,18 @@ body #nav-menu.nav_menu{
 .nav_grid {
     display: flex;
     list-style-type: none;
-    margin-left: -5em;
+    margin-left: -9em;
     background-color:cornflowerblue;
     letter-spacing: 2px;
-}
-a.nav_item{
-
+    width: 1815px;
 }
 a{
     text-decoration: none;
     color:white;
     letter-spacing: 2px;
+}
 
+.main_section{
+    font
 }
 
