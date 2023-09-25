@@ -70,7 +70,9 @@ def buy():
         uptd_cash = user_cash - transaction_value
 
         # UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition
-        db.execute("Update users SET cash = ?")
+        db.execute("Update users SET cash = ? WHERE id = ?", user_id)
+
+        
 
 
 
