@@ -54,13 +54,13 @@ h2{
 
 }
 h1{
-    margin-left: 220px;
+    margin-left: 250px;
     font-size: 30px;
     margin-top: 1.5em;
 }
 
 p{
-    padding-left: 220px;
+    padding-left: 250px;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
@@ -68,7 +68,8 @@ p{
 .list_section ul, li{
     color: black;
     height: 1.5em;
-    padding-left: 110px;
+    padding-left: 120px;
+    list-style: none;
 
 }
 
