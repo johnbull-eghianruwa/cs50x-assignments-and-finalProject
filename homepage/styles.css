@@ -6,7 +6,7 @@ body #nav-menu.nav_menu{
 }
 .nav_grid {
     display: flex;
-    justify-content: space-btween;
+    justify-content: space-around;
     list-style-type: none;
     margin-left: -9em;
     background-color:cornflowerblue;
@@ -15,13 +15,13 @@ body #nav-menu.nav_menu{
 a{
     text-decoration: none;
     color:white;
-    letter-spacing: 2px;
+    
 }
 /*------------- MAIN CONTAINER ----------*/
 
 .main_section{
     font-size: 20px;
-    margin: 3em;
+    margin: 4em;
 }
 
 /*--------------- FOOTER ---------------*/
