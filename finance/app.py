@@ -43,6 +43,8 @@ def index():
     cash_db = db.execute("SELECT cash FROM users WHEREid id = ?", user_id)
     cash = cash_db[0]["cash"]
 
+    return render_template("index.html", database = transactions_db, cash = cash)
+
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
