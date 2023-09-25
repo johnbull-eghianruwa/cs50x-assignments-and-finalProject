@@ -2,14 +2,14 @@
 body #nav-menu.nav_menu{
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 .nav_grid {
     display: flex;
-    word-spacing: 10px;
+    justif
     list-style-type: none;
     margin-left: -9em;
     background-color:cornflowerblue;
-    letter-spacing: 2px;
     width: 1815px;
 }
 a{
