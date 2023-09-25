@@ -43,5 +43,7 @@ h2{
     font: 20px;
     font-family: 'Times New Roman', Times, serif;
     padding-left: 90px;
+    list-style: none;
+
 }
 
