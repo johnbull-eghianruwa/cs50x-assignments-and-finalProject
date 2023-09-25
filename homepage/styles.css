@@ -65,7 +65,7 @@ p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
-ul, li{
+.list_section ul, li{
     color: black;
     height: 1.5em;
     padding-left: 110px;
