@@ -21,3 +21,11 @@ a{
     margin: 3em;
 }
 
+footer{
+    position: absolute;
+    bottom: 0;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 70px;
+}
+
