@@ -49,6 +49,13 @@ def buy():
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
 
+        if not symbol:
+            return apology("Must Give Symbol")
+
+        stock = lookup(Symbol.upper())
+        if stock == None:
+            return apology("Symbol Does Not Exist")
+
 @app.route("/history")
 @login_required
 def history():
