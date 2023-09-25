@@ -38,10 +38,10 @@ h2{
     padding-left: 180px;
     font: 16px;
 }
-.item1, .item2, .item3{
+.info-lists, .item1, .item2, .item3{
     height: 1.8em;
     font: 20px;
     font-family: 'Times New Roman', Times, serif;
-    padding-left: 100px;
+    padding-left: 90px;
 }
 
