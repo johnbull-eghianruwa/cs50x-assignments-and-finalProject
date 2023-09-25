@@ -1,3 +1,4 @@
+/*------------NAVIGATION MENU ------------*/
 body #nav-menu.nav_menu{
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -15,6 +16,7 @@ a{
     color:white;
     letter-spacing: 2px;
 }
+/*------------- MAIN CONTAINER ----------*/
 
 .main_section{
     font-size: 20px;
