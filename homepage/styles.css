@@ -6,7 +6,7 @@ body #nav-menu.nav_menu{
 }
 .nav_grid {
     display: flex;
-    justif
+    word-spacing: 9cm;
     list-style-type: none;
     margin-left: -9em;
     background-color:cornflowerblue;
