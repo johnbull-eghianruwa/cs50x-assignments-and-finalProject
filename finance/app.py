@@ -225,7 +225,7 @@ def sell():
         user_shares_real = user_shares[0]["shares"]
 
         if shares > user_shares_real:
-            return apology("You Do Not")
+            return apology("You Do Not Have This Amount Of Shares")
 
         uptd_cash = user_cash + transaction_value
 
