@@ -55,33 +55,7 @@ h2{
     list-style: none;
 }
 /*------------ ABOUT-ME AND LISTS OF INFORMATION--------------------*/
-.list_section{
 
-  font-size: 22px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  padding-right: 15px;
-
-}
-h1{
-  margin-left: 220px;
-  font-size: 30px;
-  margin-top: 1.5em;
-}
-
-p{
-  padding-left: 220px;
-  font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-}
-
-ul, li{
-  color: black;
-  height: 1.5em;
-  padding-left: 110px;
-  list-style: none;
-
-}
 
 /*------------------ HOBBIES -------------*/
 .dropbtn {
