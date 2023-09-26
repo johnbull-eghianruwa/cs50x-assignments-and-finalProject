@@ -86,6 +86,8 @@ def buy():
         db.execute("INSERT INTO transactions (user_id, symbol, shares price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, stock["price"], date)
         flask("Bought!")
 
+        return redirect("/")
+
 
 
 
