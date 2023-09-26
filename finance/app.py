@@ -221,10 +221,7 @@ def sell():
         user_cash_db = db.execute("SELECT cash FROM users WHERE = :id", id=user_id)
         user_cash = user_cash_db[0]["cash"]
 
-        if user_cash < transaction_value:
-            return apology("Not Enough Money")
-
-        uptd_cash = user_cash - transaction_value
+        uptd_cash = user_cash + transaction_value
 
         # UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition
         db.execute("Update users SET cash = ? WHERE id = ?", uptd_cash, user_id)
@@ -233,7 +230,7 @@ def sell():
 
          #INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...)
         db.execute("INSERT INTO transactions (user_id, symbol, shares price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, stock["price"], date)
-        flask("Bought!")
+        flask("Sold!")
 
         return redirect("/")
 
