@@ -2,7 +2,7 @@
 body #nav-menu.nav_menu{
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 1em;
+    margin-top: 0.2em;
 
 }
 .nav_grid {
@@ -12,6 +12,7 @@ body #nav-menu.nav_menu{
     margin-left: -9em;
     background-color:#3498DB;;
     width: 1815px;
+    margin-top: 0.2em;
 }
 
 a{
