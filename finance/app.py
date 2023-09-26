@@ -222,6 +222,7 @@ def sell():
         user_cash = user_cash_db[0]["cash"]
 
         user_shares = db.execute("SELECT cash FROM transactions WHERE id=:id AND symbol = :symbol GROUP BY symbol", user_id, symbol)
+        user_shares_real = user_shares[0]
 
         uptd_cash = user_cash + transaction_value
 
