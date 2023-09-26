@@ -202,4 +202,5 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    if request
+    if request.method == "GET":
+        user_id = session["user"]
