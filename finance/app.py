@@ -203,4 +203,5 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "GET":
-        user_id = session["user"]
+        user_id = session["user_id"]
+        symbol_user = db.execute("SELECT")
