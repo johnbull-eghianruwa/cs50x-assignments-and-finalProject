@@ -8,7 +8,11 @@
     <h1>Buy</h1>
     <form action="/buy" method="post">
         <div class="mb-3">
-           
+            <select name="symbol">
+                {% for symbol in symbols %}
+                    <option value="{symbol">Volvo</option>
+                {% endfor %}
+                </select>
         </div>
         <input autocomplete="off" autofocus class="form-control mx-auto w-auto"  name="shares" placeholder="shares" type="number">
     </div>
