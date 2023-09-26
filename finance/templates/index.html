@@ -6,18 +6,22 @@
 
 {% block main %}
     <table>
-        <tr>
+        <thead>
+          <tr>
             <th>Symbol</th>
             <th>Shares</th>
             <th>Price</th>
-        </tr>
-            {% for row in datebase %}
-             <tr>
-                <td>{{ row["symbol"] }}</td>
-                <td>{{ row["shares"] }}</td>
-                <td>{{ row["price"] }}</td>
-            </tr>
+          </tr>
+        </thead>
+        <tbody>
+                {% for row in datebase %}
+                <tr>
+                    <td>{{ row["symbol"] }}</td>
+                    <td>{{ row["shares"] }}</td>
+                    <td>{{ row["price"] }}</td>
+                </tr>
             {% endfor %}
+            
     </table>
 
 {% endblock %}
