@@ -75,8 +75,35 @@ p{
     height: 1.5em;
     padding-left: 120px;
     list-style: none;
+}
+/*------------------ HOBBIES -------------*/
+#first_header{
+    font-family: sans-serif;
 
 }
+ h3{
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 219px;
+}
+
+h2{
+    margin-top: 2em;
+}
+/*------------ DOPDOWN AND DROPBTN ---------*/
+
+.dropdown .dropbtn {
+    font-weight: 500;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    padding-left: 150px;
+    margin-top: -0.5em;
+  }
+  
 
 
 
