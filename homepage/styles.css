@@ -2,6 +2,7 @@
 body #nav-menu.nav_menu{
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 1em;
 
 }
 .nav_grid {
