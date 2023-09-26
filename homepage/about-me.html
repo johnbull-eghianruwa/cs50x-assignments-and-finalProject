@@ -34,13 +34,13 @@
                 </li>
                 <li class#="nav_item">
                     <div class="dropdown">
-                    <a href="./hobbies.html">Hobbies</a>
-                        <div class="dropdown-content">
-                            <a href="#">Basketball</a>
-                            <a href="#">Tennis</a>
-                            <a href="#">Football</a>
+                        <button onclick="myFunction()" class="dropbtn">Hobbies</button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a href="Basketball">Basketball</a>
+                          <a href="tennis">Tennis</a>
+                          <a href="football">Football</a>
                         </div>
-                    </div>
+                      </div>
                 </li>
             </ul>
         </div>
@@ -64,6 +64,28 @@
      <footer class="bottom">
         <div>Copyright<i class="fa-solid fa-copyright"></i> Johnbull Eghianruwa</div>
     </footer>
+
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
 
 </body>
 </html>
