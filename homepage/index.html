@@ -32,39 +32,19 @@
                         </a>
                     </li>
                     <!--=============== DROPDOWN AND DROPBTN==========-->
-                     <!--=============== DROPDOWN AND DROPBTN==========-->
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">
-                        <a href="./hobbies.html">Hobbies</a></button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="#basketball">Basketball</a>
-                        <a href="#tennis">Tennis</a>
-                        <a  href="#football">Football</a>
-                    </div>
-                </div>
-            </ul>
-        </div>
-        </nav>
-    </header>
-    <script>
-        /* When the user clicks on the button,
-        toggle between hiding and showing the dropdown content */
-        function myFuction(){
-            document.getElementById(myDropdowmn).classList.toggle("show");
-        }
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')){
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.leng; i++){
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.remove('show'));
-                }
-            }
-        }
-
-    </script>
+                    <li class#="nav_item">
+                        <div class="dropdown">
+                        <a href="./hobbies.html">
+                            <button class="dropbtn">Hobbies
+                            <i class="fa-solid fa-caret-down"></i>
+                            </button></a>
+                            <div class="dropdown-content">
+                                <a href="#">Basketball</a>
+                                <a href="#">Tennis</a>
+                                <a href="#">Football</a>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
             </nav>
