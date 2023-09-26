@@ -12,7 +12,9 @@ body #nav-menu.nav_menu{
     margin-left: -9em;
     background-color:#3498DB;;
     width: 1815px;
-    margin-top: 0.2em;
+}
+.nav_item, a{
+  margin-top: 0.5em;
 }
 
 a{
