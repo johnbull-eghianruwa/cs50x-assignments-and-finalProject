@@ -52,68 +52,6 @@ h2{
 }
 
 /*------------------ HOBBIES -------------*/
-#first_header{
-    font-family: sans-serif;
-
-}
- h3{
-    font-family: 'Times New Roman', Times, serif;
-    padding-left: 219px;
-}
-
-h2{
-    margin-top: 2em;
-}
-/*------------ DOPDOWN AND DROPBTN ---------*/
-
-.dropdown .dropbtn {
-    font-weight: 500;
-    font-size: 25px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    padding-left: 150px;
-    margin-top: -0.5em;
-  }
-  .nav_link .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-  }
-  .nav_link .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  /*----------- DROPDOWN-CONTENT A --------*/
-
-  .nav_link .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 18px 20px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  .nav_link .dropdown:hover .dropdown-content {
-    display: block;
-  }
-/*---------- THEAD AND TH ------------------*/
-thead, th{
-    font-weight: bold;
-    font-size: 18px;
-    padding-left: 220px;
-}
-
-/*------------ TBODY AND TD ------------------*/
-tbody, td{
-    padding-left: 220px;
-}
-
 
 
 
