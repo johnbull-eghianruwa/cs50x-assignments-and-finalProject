@@ -96,6 +96,14 @@ def history():
     transactions_db = db.execute("SELECT * FROM transactions WHERE user_id = :id=user_id")
     return render_template("history.html", transactions = transactions_db)
 
+@app.route("/add_cash")
+@login_required
+def add_cash():
+    """User can add cash"""
+    user_id = session["user_id"]
+    transactions_db = db.execute("SELECT * FROM transactions WHERE user_id = :id=user_id")
+    return render_template("history.html", transactions = transactions_db)
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
