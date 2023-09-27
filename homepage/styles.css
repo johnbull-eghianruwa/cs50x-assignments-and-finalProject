@@ -47,11 +47,11 @@ h2{
     padding-left: 180px;
     font: 16px;
 }
-.info-lists, .item1, .item2, .item3{
+ .item1, .item2, .item3{
     height: 1.8em;
-    font: 250px;
+    font: 25px;
     font-family: 'Times New Roman', Times, serif;
-    padding-left: 90px;
+    padding-left: 200px;
     list-style: none;
 }
 /*------------ ABOUT-ME AND LISTS OF INFORMATION--------------------*/
