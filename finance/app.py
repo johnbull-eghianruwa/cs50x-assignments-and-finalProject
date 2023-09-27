@@ -104,7 +104,7 @@ def add_cash():
     if request.method == "GET":
         return render_template("add.html")
     else:
-        new_cash = request.form.get("new_cash")
+        new_cash = int(request.form.get("new_cash"))
         if not new_cash:
             return apology("You Must Give Money")
 
@@ -112,10 +112,11 @@ def add_cash():
         user_cash_db = db.execute("SELECT cash FROM users WHERE = :id", id=user_id)
         user_cash = user_cash_db[0]["cash"]
 
-        uptd_cash = user_cash - transaction_value
-
+        uptd_cash = user_cash + new_cash
         # UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition
         db.execute("Update users SET cash = ? WHERE id = ?", uptd_cash, user_id)
+
+        return redirect("/")
 
 
 
