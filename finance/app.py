@@ -68,6 +68,7 @@ def buy():
             return apology("Share Not Allowed")
 
         transaction_value = shares *stock["price"]
+
         user_id = session["user_id"]
         user_cash_db = db.execute("SELECT cash FROM users WHERE = :id", id=user_id)
         user_cash = user_cash_db[0]["cash"]
@@ -92,7 +93,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-   user_id = session["user_id"]
+    user_id = session["user_id"]
     transactions_db = db.execute("SELECT * FROM transactions WHERE user_id = :id=user_id")
     return render_template("history.html", transactions = transactions_db)
 
