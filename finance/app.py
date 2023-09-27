@@ -100,7 +100,10 @@ def history():
 @login_required
 def add_cash():
     """User can add cash"""
-    user_id = session["user_id"]
+    if request.method == "GET":
+        return render_template("add.html")
+    else:
+        
 
 
 
