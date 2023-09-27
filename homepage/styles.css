@@ -44,14 +44,14 @@ footer{
 }
 /*----------- CONTACT AND INFORMATION SECTION -------------*/
 h2{
-    padding-left: 180px;
+    padding-left: 190px;
     font: 16px;
 }
  .item1, .item2, .item3{
     height: 1.8em;
-    font: 70px;
+    font: 16px;
     font-family: 'Times New Roman', Times, serif;
-    padding-left: 150px;
+    padding-left: 190px;
     list-style: none;
 }
 /*------------ ABOUT-ME AND LISTS OF INFORMATION--------------------*/
