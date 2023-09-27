@@ -103,7 +103,12 @@ def add_cash():
     if request.method == "GET":
         return render_template("add.html")
     else:
-        
+        new_cash = request.form.get("new_cash")
+        if not new_cash:
+            return apology("You Must Give Money")
+
+        user_id = seseeion
+
 
 
 
