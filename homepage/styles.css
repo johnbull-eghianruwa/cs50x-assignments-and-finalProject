@@ -108,6 +108,6 @@ h2{
 
 .show {display: block;}
 /*------------- FOOTBALL -------*/
-.tab-list, .t-w{
-  padding-left: 50px;
+.t-w{
+  padding-left: 100px;
 }
