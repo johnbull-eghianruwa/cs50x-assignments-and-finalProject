@@ -92,7 +92,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    transactions_db = db.execute("SELECT * F")
+    transactions_db = db.execute("SELECT * FROM transactions WHERE user_id = :id=")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
