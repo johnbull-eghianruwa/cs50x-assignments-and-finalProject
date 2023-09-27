@@ -108,7 +108,17 @@ def add_cash():
         if not new_cash:
             return apology("You Must Give Money")
 
-        user_id = seseeion
+        user_id = session["user_id"]
+        user_cash_db = db.execute("SELECT cash FROM users WHERE = :id", id=user_id)
+        user_cash = user_cash_db[0]["cash"]
+
+        if user_cash < transaction_value:
+            return apology("Not Enough Money")
+
+        uptd_cash = user_cash - transaction_value
+
+        # UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition
+        db.execute("Update users SET cash = ? WHERE id = ?", uptd_cash, user_id)
 
 
 
