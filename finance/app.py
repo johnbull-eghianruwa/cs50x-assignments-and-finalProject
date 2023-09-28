@@ -37,7 +37,9 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    return apology("TODO")
+    user_id = session["user_id"]
+
+    transaction_db = db.execute("")
 
 
 @app.route("/buy", methods=["GET", "POST"])
