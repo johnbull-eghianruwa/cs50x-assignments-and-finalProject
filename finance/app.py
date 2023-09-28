@@ -101,16 +101,7 @@ def history():
 @login_required
 def add_cash():
     """User can add cash"""
-    if request.method == "GET":
-        return render_template("add.html")
-    else:
-        new_cash = int(request.form.get("new_cash"))
-        if not new_cash:
-            return apology("You Must Give Money")
-
-        user_id = session["user_id"]
-        user_cash_db = db.execute("SELECT cash FROM users WHERE = :id", id=user_id)
-        user_cash = user_cash_db[0]["cash"]
+   
 
         uptd_cash = user_cash + new_cash
         # UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition
