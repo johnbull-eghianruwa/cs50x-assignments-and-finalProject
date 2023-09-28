@@ -108,8 +108,10 @@ def quote():
 
     else:
         symbol = request.form.get("symbol")
+        
         if not symbol:
-            return apology("Must Give Sym")
+            return apology("Must Give Symbol")
+
 
 
 @app.route("/register", methods=["GET", "POST"])
