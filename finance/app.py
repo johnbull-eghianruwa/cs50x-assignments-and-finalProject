@@ -76,6 +76,7 @@ def buy():
         # UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition
         db.execute("UPDATE users SET cash = ? WHERE id = ?", user_id)
 
+        date = datetime.datetime.now()
         
 
 
