@@ -47,7 +47,7 @@ def buy():
 
     else:
         symbol = request.form.get("symbol")
-        shares = request.form.get()
+        shares = request.form.get("shares")
 
 
 @app.route("/history")
