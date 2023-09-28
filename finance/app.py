@@ -108,9 +108,15 @@ def quote():
 
     else:
         symbol = request.form.get("symbol")
-        
+
         if not symbol:
             return apology("Must Give Symbol")
+
+        stock = lookup(symbol.upper())
+        if stock == None:
+            return apology("Symbol Does Exist")
+
+        return render_template("quoted")
 
 
 
