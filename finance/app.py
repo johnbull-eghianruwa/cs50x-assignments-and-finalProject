@@ -47,7 +47,7 @@ def buy():
 
     else:
         symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares")
+        shares = int(request.form.get("shares"))
 
         if not symbol:
             return apology("Must Give Symbol")
@@ -55,6 +55,9 @@ def buy():
         stock = lookup(symbol.upper())
         if stock == None:
             return apology("Symbol Does Exist")
+
+        if shares < 0:
+            return apology("S")
 
 
 @app.route("/history")
