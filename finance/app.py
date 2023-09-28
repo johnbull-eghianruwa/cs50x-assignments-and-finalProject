@@ -101,16 +101,6 @@ def history():
 @login_required
 def add_cash():
     """User can add cash"""
-   
-
-        uptd_cash = user_cash + new_cash
-        # UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition
-        db.execute("Update users SET cash = ? WHERE id = ?", uptd_cash, user_id)
-
-        return redirect("/")
-
-
-
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
