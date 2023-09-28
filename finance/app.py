@@ -6,6 +6,7 @@ from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask import jsonify
 
+
 from helpers import apology, login_required, lookup, usd
 
 # Configure application
@@ -70,7 +71,15 @@ def buy():
         if user_cash < transaction_value:
             return apology("Not Enough Money")
 
-        uptd_cash =  user_cash - transactions_value
+        uptd_cash =  user_cash - transaction_value
+
+        # UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", user_id)
+
+
+
+
+
 
 
 
