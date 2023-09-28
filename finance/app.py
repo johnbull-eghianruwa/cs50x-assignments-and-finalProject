@@ -46,7 +46,8 @@ def buy():
         return render_template("buy.html")
 
     else:
-        symbol = request.form.get("")
+        symbol = request.form.get("symbol")
+        shares = request.form.get()
 
 
 @app.route("/history")
