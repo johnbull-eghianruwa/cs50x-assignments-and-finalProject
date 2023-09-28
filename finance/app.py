@@ -40,10 +40,10 @@ def index():
     user_id = session["user_id"]
 
     transaction_db = db.execute("SELECT symbol, SUM(shares) AS shares, price FROM transactions WHERE user_id = ? GROUP BY symbol", (user_id,))
-    cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+    cash_db = db.execute("SELECT cash FROM users WHERE id = ?", (user_id,))
     cash = cash_db[0]["cash"]
 
-    return render_template("index.html", database = transaction_db, cash = cash)
+    return render_template("index.html", database=transaction_db, cash=cash)
 
 
 @app.route("/buy", methods=["GET", "POST"])
