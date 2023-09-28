@@ -103,55 +103,9 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    if request.method == "GET":
-        return render_template("quote.html")
-
-    else:
-        symbol = request.form.get("symbol")
-
-        if not symbol:
-            return apology("Must Give Symbol")
-
-        stock = lookup(symbol.upper())
-
-        if stock == None:
-            return apology("Symbol Does Not Exist")
-
-        return render_template("quoted.html", name = stock["name"], price = stock["price"], symbol = stock[symbol])
-
-
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    """Register user"""
-    if request.method == "GET":
-        return render_template("register.html")
-    else:
-        username = request.form.get("username")
-        password = request.form.get("password")
-        confirmation = request.form.get("confirmation")
-
-        if not username:
-            return apology("Must Give Username")
-        if not password:
-            return apology("Must Give Password")
-        if not confirmation:
-            return apology("Must Give Confirmation")
-        if password != confirmation:
-            return apology("Passwords Do Not Match")
-
-        hash = generate_password_hash(password)
-
-        try:
-            #INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...)
-            new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
-        except:
-            return apology("username already exists")
-        session["user_id"] = new_user
-
-        return redirect("/")
+    
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
     """Sell shares of stock"""
-    
