@@ -116,7 +116,7 @@ def quote():
         if stock == None:
             return apology("Symbol Does Exist")
 
-        return render_template("quoted.html", name = stock["name"], price = stock[""])
+        return render_template("quoted.html", name = stock["name"], price = stock["price"], symbol = stock[""])
 
 
 
