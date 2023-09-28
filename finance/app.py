@@ -62,7 +62,7 @@ def buy():
         transaction_value = shares * stock["price"]
 
         user_id = session["user_id"]
-        user_cash_db = db.execute("SELECT cash ")
+        user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
 
 
 @app.route("/history")
