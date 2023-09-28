@@ -57,7 +57,9 @@ def buy():
             return apology("Symbol Does Exist")
 
         if shares < 0:
-            return apology("S")
+            return apology("Share Not Allowed")
+
+        
 
 
 @app.route("/history")
