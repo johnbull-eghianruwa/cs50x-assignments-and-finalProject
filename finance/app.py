@@ -92,6 +92,14 @@ def buy():
         return redirect("/")
 
 
+@app.route("/add_cash" methods=["GET", "POST"])
+@login_required
+def Add_cash():
+    """User can add cash"""
+    if request.method == "GET":
+        return render_template("add.html")
+    else:
+
 @app.route("/history")
 @login_required
 def history():
