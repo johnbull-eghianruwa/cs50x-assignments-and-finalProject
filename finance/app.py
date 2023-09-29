@@ -208,4 +208,6 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+   if request.method == "GET":
+        user_id = session["user_id"]
+        symbols_user = db.execute("SELECT symbol ")
