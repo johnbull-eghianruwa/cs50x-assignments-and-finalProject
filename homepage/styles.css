@@ -10,6 +10,16 @@ html, body {
   height: 70px;
   background-color: #3498DB;
 }
+.nav {
+  width: 100%;
+  height:100%;
+}
+.nav_grid {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  color: white;
+}
 /*body #nav-menu.nav_menu{
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
