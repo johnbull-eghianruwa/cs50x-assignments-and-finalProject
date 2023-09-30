@@ -233,7 +233,7 @@ def sell():
     """Sell shares of stock"""
     if request.method == "GET":
         user_id = session["user_id"]
-        symbols_user = db.execute("SELECT symbol, SUN(shares) AS shares, price FROM transactions WHERE user_id = 1 GROUP BY symbol HAVING SUM(shares) > 0", id=user_id )
+        symbols_user = db.execute("SELECT symbol, SUN(shares) AS shares, price FROM transactions WHERE user_id = 1 GROUP BY symbol SELECT cash"; FROM users WHERE id= 1)
         return render_template("sell.html", symbols = [row["symbol"] for row in symbols_user])
 
     else:
