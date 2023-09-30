@@ -120,7 +120,6 @@ def add_cash():
 
     return redirect("/")
 
-    uptd_cash = user_cash + new_cash
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
