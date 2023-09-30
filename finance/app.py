@@ -118,7 +118,7 @@ def add_cash():
     # UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition
     db.execute("UPDATE users SET cash = ? WHERE id = ?", uptd_cash,  user_id)
 
-    return redirect("7")
+    return redirect("/")
 
     uptd_cash = user_cash + new_cash
 @app.route("/login", methods=["GET", "POST"])
