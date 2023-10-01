@@ -260,7 +260,7 @@ def sell():
             id=user_id,
             symbol=symbol,
         )
-        if user_shares is None or user_shares["total_shares"] < shares:
+        if user_shares is None or user_shares ["total_shares"] < shares:
             return apology("You Do Not Have This Amount Of Shares")
 
         # Update user's cash
