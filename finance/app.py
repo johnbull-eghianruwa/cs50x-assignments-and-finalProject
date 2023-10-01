@@ -231,8 +231,7 @@ def register():
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
-    """Sell shares of stock"""
-   if request.method == "GET":
+    if request.method == "GET":
         user_id = session["user_id"]
         symbols_user = db.execute(
             "SELECT symbol FROM transactions WHERE user_id = :id GROUP BY symbol HAVING SUM(shares) > 0", id=user_id
@@ -287,4 +286,3 @@ def sell():
         flash("Sold!")
 
         return redirect("/")
-
