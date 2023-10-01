@@ -256,6 +256,8 @@ def sell():
          user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id,)
          user_cash = user_cash_db[0]["cash"]
 
+         user_shares =db.execute("SELECT shares FROM users WHERE id =:id AND symbol = :symbol GROUP BY symbol", user_id, 
+
          uptd_cash = user_cash + transaction_value
 
          # UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition
