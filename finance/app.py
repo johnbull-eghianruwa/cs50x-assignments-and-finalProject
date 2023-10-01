@@ -265,7 +265,7 @@ def sell():
 
         # Update user's cash
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
-        user_cash = user_cash_db.fetchone()["cash"]
+        user_cash = user_cash_db["cash"]
         transaction_value = shares * stock["price"]
         updated_cash = user_cash + transaction_value
 
