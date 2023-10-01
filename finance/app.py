@@ -233,56 +233,44 @@ def sell():
     """Sell shares of stock"""
     if request.method == "GET":
         user_id = session["user_id"]
-        symbols_user = db.execute(
-            "SELECT symbol FROM transactions WHERE user_id = :id GROUP BY symbol HAVING SUM(shares) > 0", id=user_id
-        )
-        return render_template("sell.html", symbols=[row["symbol"] for row in symbols_user])
+        symbols_user = db.execute("SELECT symbol FROM transactions WHERE user_id = :id GROUP BY symbol HAVING SUM(shares) > 0", id=user_id )
+        return render_template("sell.html", symbols = [row["symbol"] for row in symbols_user])
 
     else:
-        symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
+         symbol = request.form.get("symbol")
+         shares = int(request.form.get("shares"))
 
-        if not symbol:
+         if not symbol:
             return apology("Must Give Symbol")
 
-        stock = lookup(symbol.upper())
-        if stock is None:
+         stock = lookup(symbol.upper())
+         if stock == None:
             return apology("Symbol Does Not Exist")
 
-        if shares <= 0:
-            return apology("Invalid Number of Shares")
+         if shares < 0:
+            return apology("Share Not Allowed")
 
-        user_id = session["user_id"]
+         transaction_value = shares *stock["price"]
 
-        # Check if the user has enough shares
-        user_shares = db.execute(
-            "SELECT SUM(shares) as total_shares FROM transactions WHERE user_id=:id AND symbol = :symbol GROUP BY symbol",
-            id=user_id,
-            symbol=symbol,
-        ).fetchone()
+         user_id = session["user_id"]
+         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id,)
+         user_cash = user_cash_db[0]["cash"]
 
-        if user_shares is None or user_shares["total_shares"] < shares:
-            return apology("You Do Not Have This Amount Of Shares")
+         user_shares =db.execute("SELECT shares FROM users WHERE user_id=:id AND symbol = :symbol GROUP BY symbol", id=user_id, symbol=symbol)
+         user_shares_real = user_shares[0][shares]
 
-        # Update user's cash
-        user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
-        user_cash = user_cash_db.fetchone()["cash"]
-        transaction_value = shares * stock["price"]
-        updated_cash = user_cash + transaction_value
+         if shares > user_shares_real:
+             return apology("You Do Not Have This Amount Of Shares")
 
-        db.execute("UPDATE users SET cash = :cash WHERE id = :id", cash=updated_cash, id=user_id)
+         uptd_cash = user_cash + transaction_value
 
-        # Insert the sell transaction
-        date = datetime.datetime.now()
-        db.execute(
-            "INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (:user_id, :symbol, :shares, :price, :date)",
-            user_id=user_id,
-            symbol=stock["symbol"],
-            shares=(-1) * shares,
-            price=stock["price"],
-            date=date,
-        )
+         # UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition
+         db.execute("Update users SET cash = ? WHERE id = ?", uptd_cash, user_id)
 
-        flash("Sold!")
+         date = datetime.datetime.now()
 
-        return redirect("/")
+         #INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...)
+         db.execute("INSERT INTO transactions (user_id, symbol, shares price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], (-1)*shares, stock["price"], date)
+         flash("Sold!")
+
+         return redirect("/")
