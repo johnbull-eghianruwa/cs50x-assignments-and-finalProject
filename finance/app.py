@@ -259,8 +259,7 @@ def sell():
             "SELECT SUM(shares) as total_shares FROM transactions WHERE user_id=:id AND symbol = :symbol GROUP BY symbol",
             id=user_id,
             symbol=symbol,
-        ).fetchone()
-
+        )
         if user_shares is None or user_shares["total_shares"] < shares:
             return apology("You Do Not Have This Amount Of Shares")
 
