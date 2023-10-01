@@ -264,7 +264,7 @@ def sell():
             return apology("You Do Not Have This Amount Of Shares")
 
         # Update user's cash
-        user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
+        user_shares = db.execute("SELECT shares FROM users WHERE user_id=:id AND symbol=:symbol GROUP BY symbol", id=user_id, symbol=symbol)
         user_cash = user_cash_db["cash"]
         transaction_value = shares * stock["price"]
         updated_cash = user_cash + transaction_value
