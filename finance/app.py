@@ -257,7 +257,7 @@ def sell():
          user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id,)
          user_cash = user_cash_db[0]["cash"]
 
-         user_shares =db.execute("SELECT shares FROM users WHERE user_id=:id AND symbol = :symbol GROUP BY symbol", id=user_id, symbol=symbol)
+         user_shares =db.execute("SELECT shares AS total_shares FROM users WHERE user_id=:id AND symbol=:symbol GROUP BY symbol")
          user_shares_real = user_shares[0][shares]
 
          if shares > user_shares_real:
