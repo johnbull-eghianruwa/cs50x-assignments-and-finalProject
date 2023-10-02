@@ -234,5 +234,5 @@ def sell():
     """Sell shares of stock"""
     if request.method == "GET":
         user_id = session["user_id"]
-        symbols_usr = db.execute("SELECT symbol FROM transaction WHERE user_id = :id", id=user_id)
-        
+        symbols_usr = db.execute("SELECT symbol FROM transaction WHERE user_id = :id HAVING SUM(shares) > 0", id=user_id)
+        return render_template("sell.html", symbols = [row["symbol"] for row in  symbols])
