@@ -235,4 +235,4 @@ def sell():
     if request.method == "GET":
         user_id = session["user_id"]
         symbols_usr = db.execute("SELECT symbol FROM transaction WHERE user_id = :id GROUP BY SYMBOL HAVING SUM(shares) > 0", id=user_id)
-        return render_template("sell.html", symbols = [row["symbol"] for row in  symbols])
+        return render_template("sell.html", symbols = [row["symbol"] for row in  symbols_usser])
