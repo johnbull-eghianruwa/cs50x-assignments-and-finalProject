@@ -236,3 +236,41 @@ def sell():
         user_id = session["user_id"]
         symbols_user = db.execute("SELECT symbol FROM transaction WHERE user_id = :id GROUP BY SYMBOL HAVING SUM(shares) > 0", id=user_id)
         return render_template("sell.html", symbols = [row["symbol"] for row in  symbols_usser])
+
+    else:
+         symbol = request.form.get("symbol")
+         shares = int(request.form.get("shares"))
+
+    if not symbol:
+            return apology("Must Give Symbol")
+
+    stock = lookup(symbol.upper())
+    if stock == None:
+            return apology("Symbol Does Exist")
+
+    if shares < 0:
+            return apology("Share Not Allowed")
+
+    transaction_value = shares * stock["price"]
+
+    user_id = session["user_id"]
+    user_cash_db = db.execute("SELECT cash FROM users WHERE id = ?", (user_id,))
+
+    user_cash = user_cash_db[0]["cash"]
+
+    if user_cash < transaction_value:
+            return apology("Not Enough Money")
+
+    uptd_cash =  user_cash - transaction_value
+
+        # UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition
+    db.execute("UPDATE users SET cash = ? WHERE id = ?", uptd_cash,  user_id)
+
+    date = datetime.datetime.now()
+
+        # INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...)
+    db.execute("INSERT INTO transactions (user_id, symbol, shares, price, date) VALUES (?, ?, ?, ?, ?)", user_id, stock["symbol"], shares, stock["price"], date)
+
+    flash("Bought!")
+
+    return redirect("/")
