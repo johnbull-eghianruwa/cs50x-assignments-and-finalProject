@@ -251,8 +251,6 @@ def sell():
     if shares < 0:
             return apology("Share Not Allowed")
 
-    user_shares = db.execute("")
-
     transaction_value = shares * stock["price"]
 
     user_id = session["user_id"]
@@ -260,6 +258,8 @@ def sell():
 
     user_cash = user_cash_db[0]["cash"]
 
+    user_shares = db.execute("SELECT shares FROM  transactions WHERE id=:id AND symbol = :symbol GROUP BY symybol", user_id, symbol)
+    user_shares_real = user_shares
     uptd_cash =  user_cash + transaction_value
 
         # UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition
