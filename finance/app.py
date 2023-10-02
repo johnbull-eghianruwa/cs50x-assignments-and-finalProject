@@ -232,4 +232,7 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-   
+    if request.method == "GET":
+        user_id = session["user_id"]
+        symbols_usr = db.execute("SELECT symbol FROM transaction WHERE user_id = :id", id=user_id)
+        
