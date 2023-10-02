@@ -251,6 +251,8 @@ def sell():
     if shares < 0:
             return apology("Share Not Allowed")
 
+    user_shares = db.execute("")
+
     transaction_value = shares * stock["price"]
 
     user_id = session["user_id"]
