@@ -7,6 +7,7 @@ from flask import flash
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask import jsonify
 import datetime
+from sqlalchemy import create_engine
 
 from helpers import apology, login_required, lookup, usd
 
