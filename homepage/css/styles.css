@@ -142,7 +142,7 @@ footer{
 }
 /*------------------- BASKETBALL -----------------*/
 .ba-1 h2, h2 {
-    font-size: 20px;
+    font-size: 25px;
     padding-left: 15px;
 }
 
@@ -150,7 +150,7 @@ footer{
 
 /*----------------- FOOTBALL ----------*/
 .fov-s, .spo-t{
-    font-size: 20px;
+    font-size: 25px;
     padding-left: 15px;
     margin-top: 1ch;
 }
