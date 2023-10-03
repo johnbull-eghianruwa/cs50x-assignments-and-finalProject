@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Web Page</title>
+</head>
+<body>
+    <!--====================================================
+    ================= NAVIGATION HEADER BAR =================
+    =======================================================-->
+        <nav>
+            <ul>
+              <div class="header-bar">
+                  <li>
+                      <a href="../index.html"class="nav-link">
+                          Home
+                      </a>
+                  </li>
+                  <li>
+                      <a href="../about-me.html" class="nav-link">
+                          About Me
+                      </a>
+                  </li>
+                  <li>
+                      <a href="../contact.html" class="nav-link">
+                          Contact
+                      </a>
+                  </li>
+                  <li class="dropdown">
+                          Hobbies
+                        <div class="dropdown-content">
+                              <a href="./foot-ball.html">
+                                  Football
+                              </a>
+                              <a href="./basket-ball.html">
+                                  Basketball</a>
+                              <a href="./tennis.html">
+                                  Tennis
+                              </a>
+                        </div>
+                  </li>
+              </div>
+            </ul>
+        </nav>
+        <h2 class="fov-s">These are some of my favorite players</h2>
+        <h3 class="spo-t">Sport players</h3>
+        <!--==============================================================
+        =========================== LISTS SECTION ========================
+        ================================================================-->
+    <table class="tab-list">
+        <tr>
+          <th class="t-w">Company</th>
+          <th class="t-w">Contact</th>
+          <th class="t-w">Country</th>
+        </tr>
+        <tr>
+          <td class="b-w">Paris Saint-Germain</td>
+          <td class="b-w">Lionel Messi</td>
+          <td class="b-w">France</td>
+        </tr>
+        <tr>
+          <td class="b-w">Paris Saint-Germain</td>
+          <td class="b-w">Kylian Mbappé</td>
+          <td class="b-w">France</td>
+        </tr>
+      </table>
+        <!--============================================================================
+        =================== FOOTER SECTION ===============================================
+         ================================================================================-->
+        <footer>
+                <div>
+                        Copyright
+                    <i class="fa-solid fa-copyright">
+
+                    </i>
+                        Johnbull Eghianruwa
+                </div>
+        </footer>
+
+    <script>
+        //////////////////////////////////////////////////////////////////////
+        ////////// When the user clicks on the button,////////////////////////
+        ///// toggle between hiding and showing the dropdown content /////////
+        //////////////////////////////////////////////////////////////////////
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        //////////////////////////////////////////////////////////////////////
+        /////// Close the dropdown if the user clicks outside of it //////////
+        //////////////////////////////////////////////////////////////////////
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+</body>
+</html>
