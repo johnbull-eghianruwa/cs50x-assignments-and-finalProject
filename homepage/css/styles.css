@@ -23,7 +23,7 @@ nav {
 #nav-bar, .header-bar , ul {
     display: flex;
     text-align: center;
-    padding-left: 400px;
+    padding-left: 650px;
     column-gap: 50px;
 }
 
