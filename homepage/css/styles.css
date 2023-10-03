@@ -11,12 +11,13 @@ body {
     padding: 10px;
 }
 
-nav {
+nav, i{
     display: flex;
     justify-content: space-between;
     background-color: #555;
     color: #fff;
     padding: 10px;
+    text-align: center;
 
 
 }
