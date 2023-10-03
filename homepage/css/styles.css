@@ -142,28 +142,17 @@ footer{
 }
 /*------------------- BASKETBALL -----------------*/
 .ba-1 h2, h2 {
-    font-size: 18px;
+    font-size: 20px;
     padding-left: 15px;
 }
- .ten-plya, .ket-1 {
-    font-size: 18px;
-    padding-left: 300px;
- }
 
- .item-b{
-    font-size: 18px;
-    padding-left: 300px;
- }
+
+
 /*----------------- FOOTBALL ----------*/
 .fov-s, .spo-t{
     font-size: 20px;
     padding-left: 15px;
     margin-top: 1ch;
-}
-
- .t-w, .b-w {
-    font-size: 18px;
-    padding-left: 300px;
 }
 
 
@@ -176,9 +165,4 @@ footer{
 .sp-1{
     font-size: 25px;
     padding-left: 15px;
-}
-
-.com-1, .pls-2{
-    font-size: 18px;
-    padding-left: 400px;
 }
