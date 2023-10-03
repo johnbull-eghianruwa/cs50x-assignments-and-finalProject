@@ -20,19 +20,19 @@ nav {
 
 
 }
-#nav-bar, .header-bar , ul {
+#nav-bar, .header-bar , ul i {
     display: flex;
     text-align: center;
-    padding-left: 650px;
     column-gap: 50px;
 }
 
-ul {
+ul i{
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
     column-gap: 50px;
+    text-align: center;
 
 }
 
