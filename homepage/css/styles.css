@@ -11,7 +11,7 @@ body {
     padding: 10px;
 }
 
-nav, i{
+nav {
     display: flex;
     justify-content: space-between;
     background-color: #555;
