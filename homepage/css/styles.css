@@ -24,7 +24,7 @@ body {
     align-items: center;
 }
 
-ul i{
+.nav_link, i{
     list-style-type: none;
     margin: 0;
     padding: 0;
