@@ -215,10 +215,6 @@ nav ul {
 }
 
 .bottom div {
-    text-align: center;
-    width: 100px;
-  height: 100px;
-  
   transition: width 2s;
   transition-timing-function: linear;
 }
