@@ -20,6 +20,11 @@ nav ul {
     border: 3px solid green;
     align-items: center;
     }
+nav ul li {
+    display: flex;
+    align-items: center;
+    border: 2px solid yellow;
+}
 /*
 #nav-bar {
     padding: 10px;
