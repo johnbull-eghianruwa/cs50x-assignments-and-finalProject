@@ -10,21 +10,19 @@ nav {
     display: flex;
     background: #cccccc;
     color: #ffffff;
-
     justify-content: center;
     align-items: center;
     align-self: center;
 }
 nav ul {
     display: flex;
-
     align-items: center;
     padding: 15px 0 0 0;
     }
 nav ul li {
     display: flex;
     align-items: center;
-    
+
 }
 /*
 #nav-bar {
