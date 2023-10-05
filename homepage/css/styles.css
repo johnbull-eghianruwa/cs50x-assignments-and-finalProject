@@ -185,7 +185,7 @@ nav ul {
   text-align: center;
 }
 
-.para-1 {
+.details-section .para-1 {
     font-size: 20px;
     height: 0.5;
     text-align: center;
@@ -196,7 +196,7 @@ nav ul {
     margin-right: auto;
     margin-top: 25px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    
+
 }
 
 .details, h2, h3 {
