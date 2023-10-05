@@ -213,8 +213,10 @@ nav ul {
     background-color: #aaccff;
     color: white;
     text-align: center;
+}
 
-
+.bottom div {
+    text-align: center;
 }
 /*------------------- BASKETBALL -----------------*/
 .ba-1 h2, h2 {
