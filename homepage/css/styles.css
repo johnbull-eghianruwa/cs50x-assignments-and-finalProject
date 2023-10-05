@@ -209,7 +209,11 @@ nav ul {
 }
 
 .bottom:hover {
-    background-color: black;
+    width: 50%;
+    background-color: #aaccff;
+    color: white;
+    text-align: center;
+
 
 }
 /*------------------- BASKETBALL -----------------*/
