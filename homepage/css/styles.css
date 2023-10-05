@@ -171,7 +171,12 @@ nav {
     align-self: center;
 }
 
-nav ul
+nav ul {
+    display: flex;
+    align-items: center;
+    padding: 15px 0 0 0;
+    column-gap: 15px
+}
 .detail-1{
     font-size: 18px;
     padding-left: 25px;
