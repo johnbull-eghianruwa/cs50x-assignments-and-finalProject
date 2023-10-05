@@ -124,7 +124,7 @@ a {
 .content h1:hover{
     color: green;
     font-size: 35px;
-    transform: scale(1.1)
+    transform: scale(1.1);
 }
 .content .main-section .aboutme{
 
