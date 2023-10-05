@@ -12,13 +12,13 @@ nav {
     color: #ffffff;
     border: 1px solid red;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 nav ul {
     display: flex;
     border: 3px solid green;
-
-}
+    }
 /*
 #nav-bar {
     padding: 10px;
