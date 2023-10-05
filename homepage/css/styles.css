@@ -188,7 +188,7 @@ nav ul {
 .para-1 {
     font-size: 20px;
     height: 0.5;
-    padding-left: 25px;
+    text-align: center;
 }
 
 .details, h2, h3 {
