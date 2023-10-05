@@ -6,7 +6,7 @@ body {
     font-size: 30px;
     text-align: center;
 }
- #nav_bar {
+ #nav_bar  {
     display: flex;
     background: #aacccc;
     color: #ffffff;
