@@ -120,10 +120,10 @@ a {
 }
 
 /*-------------- FOOTER ------------*/
-footer:hover {
+footer{
   /*  position: absolute;
     bottom: 0;*/
-    font-size: 112px;
+    font-size: 14px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-left: 30px;
     margin: 50px 0 50px 0;
@@ -208,7 +208,9 @@ nav ul {
     height: 1.5em;
 }
 footer:hover {
-
+    background-color: #69aacc;
+    color: white;
+    text-align: center;
 }
 
 /*------------------- BASKETBALL -----------------*/
