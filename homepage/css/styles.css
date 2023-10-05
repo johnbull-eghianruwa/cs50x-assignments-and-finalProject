@@ -137,7 +137,7 @@ nav {
     align-self: center;
 }
 
-nav  {
+nav ul li {
     display: flex;
     align-items: center;
     padding: 15px 0 0 0;
