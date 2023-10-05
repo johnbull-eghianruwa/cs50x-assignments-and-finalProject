@@ -105,7 +105,10 @@ img{
     height: 200px;
 }
 
-.header h1{
+.content {
+    
+}
+.content h1{
     font-size: 25px;
     padding-left:25px;
     margin-top: 0.8em;
