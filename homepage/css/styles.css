@@ -210,14 +210,11 @@ nav ul {
 footer:hover {
     background-color: #69aacc;
     text-align: center;
+    color: white;
+
 }
 
-footer div {
-    width: 100%;
-    height: 200px
-    color:red;
-    background-color: green;
-}
+
 /*------------------- BASKETBALL -----------------*/
 .ba-1 h2, h2 {
     font-size: 25px;
