@@ -6,7 +6,7 @@ body {
     font-size: 30px;
     text-align: center;
 }
-nav {
+.nav_link {
     display: flex;
     background: #aacccc;
     color: #ffffff;
@@ -14,12 +14,12 @@ nav {
     align-items: center;
     align-self: center;
 }
-nav ul {
+.nav_link ul {
     display: flex;
     align-items: center;
     padding: 15px 0 0 0;
     }
-nav ul li {
+ ul li {
     display: flex;
     align-items: center;
 }
