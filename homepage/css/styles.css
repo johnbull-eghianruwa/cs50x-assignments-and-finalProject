@@ -145,9 +145,6 @@ nav ul li {
     padding: 15px 0 0 0;
     }
 
-    ul i{
-
-    }
 .info_section {
     padding-left: 20px;
 }
@@ -165,6 +162,14 @@ nav ul li {
 }
 
 /*----------------- DETAILS ABOUT ME ---------------*/
+nav {
+    display: flex;
+    background: #aacccc;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
 .detail-1{
     font-size: 18px;
     padding-left: 25px;
