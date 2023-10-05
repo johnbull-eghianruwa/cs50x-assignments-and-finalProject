@@ -189,12 +189,13 @@ nav ul {
     font-size: 20px;
     height: 0.5;
     text-align: center;
-    
+
     width: 500px;
     padding: 15px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 25px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .details, h2, h3 {
