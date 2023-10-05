@@ -196,12 +196,11 @@ nav ul {
     margin-right: auto;
     margin-top: 25px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-
-}
- .details, h2, h3 {
-    padding-left: 25px;
 }
 
+.para-1 h1{
+    font-size: 25px;
+}
 .list_section, li {
     display: block;
     font-size: 18px;
