@@ -6,7 +6,17 @@ body {
     font-size: 30px;
     text-align: center;
 }
-
+nav {
+    display: flex;
+    background: #cccccc;
+    color: #ffffff;
+    border: 1px solid red;
+}
+nav ul {
+    display: flex;
+    border: 3px soldi gree
+}
+/*
 #nav-bar {
     padding: 10px;
 }
@@ -26,7 +36,7 @@ nav {
     text-align: center;
     column-gap: 50px;
 }
-
+*/
 ul i{
     list-style-type: none;
     margin: 0;
