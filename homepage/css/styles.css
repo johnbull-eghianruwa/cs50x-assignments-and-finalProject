@@ -128,7 +128,7 @@ footer{
 }
 
 /*-------------- CONTACT SECTION --------------------*/
-#nav_link {
+nav {
     display: flex;
     background: #aacccc;
     color: #ffffff;
@@ -137,7 +137,7 @@ footer{
     align-self: center;
 }
 
-#nav_bar .nav_link {
+nav ul {
     display: flex;
     align-items: center;
     padding: 15px 0 0 0;
