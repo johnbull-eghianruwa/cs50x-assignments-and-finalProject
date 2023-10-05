@@ -176,7 +176,7 @@ nav {
 nav ul {
     display: flex;
     align-items: center;
-    top: 2.5em;
+    padding: 1px 0 0 0;
     row-gap: 10px;
     column-gap: 15px
 }
