@@ -107,14 +107,18 @@ img{
 
 .content {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 25px;
+    padding: 25px 0 50px 0;
+    width: 0 auto;
+    height: auto;
+
 }
 .content h1{
     font-size: 25px;
     padding-left:25px;
     margin-top: 0.8em;
+    text-align: center;
 }
-
+.content .main-section .aboutme
 /*-------------- FOOT ------------*/
 footer{
     position: absolute;
