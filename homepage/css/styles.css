@@ -144,12 +144,7 @@ nav ul li {
     }
 
     ul i{
-        list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    column-gap: 50px;
-    text-align: center;
+
     }
 .info_section {
     padding-left: 20px;
