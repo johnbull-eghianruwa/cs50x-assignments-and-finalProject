@@ -207,8 +207,11 @@ nav ul {
     padding-left: 12px;
     height: 1.5em;
 }
-
-
+footer:hover {
+    background-color: #69aacc;
+    color: white;
+    text-align: center;
+}
 .bottom div {
  font-size: 14px;
 }
