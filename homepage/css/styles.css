@@ -136,6 +136,12 @@ footer{
     align-items: center;
     align-self: center;
 }
+
+#nav_bar .nav_link {
+    display: flex;
+    align-items: center;
+    padding: 15px 0 0 0;
+    }
 .info_section {
     padding-left: 20px;
 }
