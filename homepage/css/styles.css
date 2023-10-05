@@ -129,7 +129,12 @@ footer{
 
 /*-------------- CONTACT SECTION --------------------*/
 #nav_link {
-    
+    display: flex;
+    background: #aacccc;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
 }
 .info_section {
     padding-left: 20px;
