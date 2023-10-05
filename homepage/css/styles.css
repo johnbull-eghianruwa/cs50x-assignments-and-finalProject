@@ -208,13 +208,13 @@ nav ul {
     height: 1.5em;
 }
 
-.bottom:hover i {
+.bottom:hover {
     background-color: #aaccff;
     color: white;
     text-align: center;
 }
 .bottom div {
-
+ font-size: 14px;
 }
 /*------------------- BASKETBALL -----------------*/
 .ba-1 h2, h2 {
