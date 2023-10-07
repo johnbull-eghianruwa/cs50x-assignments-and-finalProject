@@ -120,13 +120,17 @@ a {
 }
 
 /*-------------- FOOTER ------------*/
-footer{
+footer {
   /*  position: absolute;
     bottom: 0;*/
     font-size: 14px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-left: 30px;
     margin: 50px 0 50px 0;
+    bottom: 0px;
+}
+.bottom {
+    position: absolutely;
 }
 
 /*-------------- CONTACT SECTION --------------------*/
@@ -244,7 +248,7 @@ nav ul{
     font-size: 25px;
     padding-left: 15px;
     margin-top: 2.5ch;
-   
+
 }
 
 
