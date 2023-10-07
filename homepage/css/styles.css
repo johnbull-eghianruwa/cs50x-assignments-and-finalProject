@@ -130,7 +130,9 @@ footer {
     bottom: 0px;
 }
 .bottom {
-    position: absolutely;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
 }
 
 /*-------------- CONTACT SECTION --------------------*/
