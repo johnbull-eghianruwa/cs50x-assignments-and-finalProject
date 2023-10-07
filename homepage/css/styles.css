@@ -246,9 +246,9 @@ nav ul{
     align-self: center;
 }
 .fov-s, .spo-t{
-    font-size: 25px;
+    font-size: 20px;
     padding-left: 15px;
-    margin-top: 2.5ch;
+    /*--margin-top: 2.5ch;--*/
 }
 .fo-2{
     text-align: center;
