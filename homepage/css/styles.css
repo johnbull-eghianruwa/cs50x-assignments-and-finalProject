@@ -156,6 +156,11 @@ footer{
 }
 .info-section, h1 {
     font-size: 25px;
+
+}
+.info_secton, ul li {
+    font-size: 18px;
+
 }
 
 
