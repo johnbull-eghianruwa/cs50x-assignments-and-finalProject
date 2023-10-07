@@ -230,6 +230,9 @@ footer:hover {
 
 
 /*----------------- FOOTBALL ----------*/
+nav ul{
+    display: flex;
+}
 .fov-s, .spo-t{
     font-size: 25px;
     padding-left: 15px;
