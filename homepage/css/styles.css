@@ -130,13 +130,6 @@ footer{
 }
 
 /*-------------- CONTACT SECTION --------------------*/
-body {
-    position 
-    background-color: #aacccc;
-    z-index: -1;
-
-}
-
  nav {
     display: flex;
     background: #aacccc;
