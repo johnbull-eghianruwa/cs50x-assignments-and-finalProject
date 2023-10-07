@@ -146,33 +146,13 @@ nav ul li {
     }
 
 .info_section {
-   text-align: center;
-   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-   width:400px;
-   height: 500px;
-   padding-left:250px 0 0 0;
-}
-
-.info_section h2{
-    font-size: 20px;
-    justify-content: center;
-    text-align: center;
-    margin-top: 2.5em;
-
-
-    left: 50px;
 
 }
 
 
-.nfo_section .info-lists li {
-    font-size: 19px 20px;
-    text-align: center;
-    justify-content: center;
-    column-gap: 5px
 
 
-}
+
 
 /*----------------- DETAILS ABOUT ME ---------------*/
 nav {
