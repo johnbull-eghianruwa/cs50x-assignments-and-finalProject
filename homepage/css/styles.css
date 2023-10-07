@@ -139,8 +139,9 @@ nav {
     align-self: center;
 }
 
-nav ul li {
+body nav ul li {
     display: flex;
+    background-color: #aacccc;
     align-items: center;
     padding: 15px 0 0 0;
     }
