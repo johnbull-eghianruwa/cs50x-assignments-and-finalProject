@@ -220,7 +220,7 @@ nav ul {
     padding-left: 12px;
     height: 1.5em;
 }
-footer:hover {
+.bottom:hover {
     background-color: #69aacc;
     text-align: center;
     color: white;
