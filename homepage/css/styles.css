@@ -130,7 +130,8 @@ footer{
 }
 
 /*-------------- CONTACT SECTION --------------------*/
-body nav {
+body
+ nav {
     display: flex;
     background: #aacccc;
     color: #ffffff;
