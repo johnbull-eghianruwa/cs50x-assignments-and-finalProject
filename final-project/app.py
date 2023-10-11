@@ -8,7 +8,7 @@ import datetime
 from sqlalchemy import create_engine
 from helpers import apology, login_reqired, lookup, used
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 app.jinja_env.filters["usd"] = usd
 
