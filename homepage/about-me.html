@@ -4,102 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/171531b56e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
     <script src="./js/dropdown.js"></script>
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Web page</title>
+    <title>Document</title>
 </head>
 <body>
-        <!--========= NAVIGATION HEADER BAR ===========-->
-        <nav>
-            <ul>
-                <!--<div class="header-bar">-->
-                    <li>
-                        <a href="./index.html"class="nav-link">Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./about-me.html" class="nav-link">About Me
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./contact.html" class="nav-link">Contact
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        Hobbies
-                    <div class="dropdown-content">
-                        <a href="./hobbies/foot-ball.html">Football
-                        </a>
-                        <a href="./hobbies/basket-ball.html">Basketball
-                        </a>
-                        <a href="./hobbies/tennis.html">Tennis
-                        </a>
-                    </li>
-                <!--</div>-->
-            </ul>
-        </nav>
-         <!--========== DETAILS ABOUT ME ==========-->
-        <div class="main-section">
-            <div class="para-1">
-            <h1>Welcome to My Corner of the Web!
-            </h1>
-             <p>I'm [Johnbull Eghianruwa],
+    <!--
+        ================== NAVIGATION HEADERS =========================
+    -->
+    <header class="main-nav">
+        <div class="nav-header">
+            <div class="nav-item">
+                <a href="./index.html">Home</a>
+            </div>
+            <div class="nav-item">
+                <a href="./contact.html">Contact</a>
+            </div>
+            <div class="nav-item">
+                <a href="./about-me.html">About us</a>
+            </div>
+            <div class="dropdown">
+                <button id="dropbtn" class="dropbtn">
+                    Hobbies
+                </button>
+                <div id="myDropdown" class="dropdown-content hide">
+                    <a href="./hobbies/football.html">Football</a>
+                    <a href="./hobbies/basketball.html">Basketball</a>
+                    <a href="./hobbies/tennis.html">Tennis</a>
+                </div>
+            </div>
+        </div>
+    </header>
+        <!--
+            ====================== DETAILS ABOUT ME ========================
+        -->
+    <main class="main">
+        <div class="content-about-me">
+            <div class="content-section">
+                <h1>Welcome to my corner of the web!</h1>
+            </div>
+            <div class="content-section">
+                <p>
+                    I'm Johnbull Eghianruwa,
                     a passionate web developer on a mission
                     to turn<br> imaginative ideas into digital
                     reality.
                     I'm thrilled to welcome you to my digital<br>
                     home, where lines of code come
                     to life and pixels tell stories.
-            </p>
-            <h2 class="detail-1">Why Web Development?
-            </h2>
-            <p>Ever since I wrote my first'
+                </p>
+            </div>
+            <div class="content-section">
+                    <h2>Why Web Development?</h2>
+            </div>
+            <div class="content-section">
+                <p>
+                    Ever since I wrote my first'
                     "Hello World"
                     program, I knew I had found my calling.
-                <br>Web development, for me, is not just about
-                    creating websites; it's about building
-                <br>immersive experiences that leave a lasting
-                    impact. I love the endless possibilities
-                <br>that coding offers, and the ability to shape
-                 the digital landscape.
-            </p>
-            <!--<h3 class="detail-1">My Toolbox</h3>-->
-            <ul class="list_section">
+                    <br>Web development, for me, is not just about
+                        creating websites; it's about building
+                    <br>immersive experiences that leave a lasting
+                        impact. I love the endless possibilities
+                    <br>that coding offers, and the ability to shape
+                    the digital landscape.
+                </p>
+            </div>
+        </div>
+        <div class="lists">
+            <div class="list-section">
+                <ul>
                     <li>
-                        <strong>Languages
-                        </strong>
-                    </li>
-                         <li>HTML, CSS, JavaScript, Python and SQL
-                    </li>
-                    <li>
-                        <strong>Tools:
-                        </strong>
-                        <li>Vistual Studio Code and Git
+                        <strong>Languages:</strong>
+                        HTML, CSS, JavaScript, Python and SQL
                     </li>
                     <li>
-                        <strong>Design:
-                        </strong>
+                        <strong>Tools:</strong>Visual Studio Code and Github
                     </li>
                     <li>
-                            Firma and Float chart
-                    </li>
-                    <li>
-                        <strong>components of computation:
-                        </strong>
-                    </li>
-                    <li>
-                        Algorithm, Data structures and Memory
+                        <strong>components of computation:</strong>
+                                Algorithm, Data structures and Memory
                     </li>
                 </ul>
             </div>
-              <!--======================================================================
-              ====================== FOOTER SECTION =====================================
-
-              ========================================================================-->
-            <footer>
-                <div class="bottom">
-                    Copyright<i class="fa-solid fa-copyright"></i> 2023 Johnbull Eghianruwa
-                </div>
-        </footer>
+        </div>
+    </main>
+            <!--
+            ===================== FOOTER ==============================
+        -->
+    <footer>
+        <div class="footer-bottom">
+            <p>Copyright <i class="fa-solid fa-copyright"></i> 2023 Johnbull Eghianruwa</p>
+        </div>
+    </footer>
 </body>
 </html>
