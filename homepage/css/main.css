@@ -186,6 +186,7 @@ body {
     color: white;
     height: 100%;
     padding: 16px;
+    margin-top: -0.25rem;
     font-size: 1.25rem;
     border: none;
     cursor: pointer;
