@@ -4,57 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/171531b56e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
     <script src="./js/dropdown.js"></script>
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Jb Eghianruwa</title>
+    <title>Homepage</title>
 </head>
 <body>
-     <!--========= NAVIGATION HEADER BAR ===========-->
-     <nav>
-        <ul>
-            <!--<div class="header-bar">-->
-                <li>
-                    <a href="./index.html"class="nav-link">Home
-                    </a>
-                </li>
-                <li>
-                    <a href="./about-me.html" class="nav-link">About Me
-                    </a>
-                </li>
-                <li>
-                    <a href="./contact.html" class="nav-link">Contact
-                    </a>
-                </li>
-                <li class="dropdown">
+    <!--
+        ================== NAVIGATION HEADERS =========================
+    -->
+    <header class="main-nav">
+        <div class="nav-header">
+            <div class="nav-item">
+                <a href="./index.html">Home</a>
+            </div>
+            <div class="nav-item">
+                <a href="./contact.html">Contact</a>
+            </div>
+            <div class="nav-item">
+                <a href="./about-me.html">About us</a>
+            </div>
+            <div class="dropdown">
+                <button id="dropbtn" class="dropbtn">
                     Hobbies
-                    <div class="dropdown-content">
-                        <a href="./hobbies/foot-ball.html">Football
-
-                        </a>
-                        <a href="./hobbies/basket-ball.html">Basketball
-                        </a>
-                        <a href="./hobbies/tennis.html">Tennis
-                        </a>
-                    </div>
-                </li>
-           <!-- </div>-->
-        </ul>
-    </nav>
-
-        <!--========== CONTACT SECTION =============-->
-        <div class="info_section">
-            <h1>Contact me with the <br>following informations</h2>
-                <ul>
-                    <li><strong>Email:</strong>wisdomuwa005@gmail.com</li>
-                    <li><strong>Instagram:</strong>wizzyuwa84</li>
-                    <li><strong>Tel number</stron>0405556647g></li>
-                </ul>
+                </button>
+                <div id="myDropdown" class="dropdown-content hide">
+                    <a href="./hobbies/football.html">Football</a>
+                    <a href="./hobbies/basketball.html">Basketball</a>
+                    <a href="./hobbies/tennis.html">Tennis</a>
+                </div>
+            </div>
         </div>
-        <!--============ FOOTER SECTION ============-->
-    <footer class="bottom">
-        <div>Copyright <i class="fa-solid fa-copyright"></i>2023 Johnbull Eghianruwa
+    </header>
+        <!--
+            ======================== CONTACT SECTION =========================
+        -->
+    <main class="main">
+        <div class="content-section">
+            <div class="list-section">
+                <h1>Contact us with the <br>following information:</h2>
+            </div>
+            <div class="list-section">
+                <ul>
+                    <li><strong>Email: </strong>wisdomuwa005@gmail.com</li>
+                    <li><strong>Instagram: </strong>wizzyuwa84</li>
+                    <li><strong>Tel number: </strong>0405556647</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+            <!--
+            ===================== FOOTER ==============================
+        -->
+    <footer>
+        <div class="footer-bottom">
+                <p>Copyright <i class="fa-solid fa-copyright"></i> 2023 Johnbull Eghianruwa</p>
         </div>
     </footer>
-
 </body>
 </html>
