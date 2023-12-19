@@ -1,15 +1,27 @@
-document.addEventListener('DOMContentLoaded', function () {
+function openOrCloseDropDown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
-    ////////////////////////////////////////////////////////////////
-    /////// Add event listeners to your dropdown elements //////////
-    ///////////////////////////////////////////////////////////////
-    var dropdowns = document.querySelector('.dropdown');
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        let i;
+        for (i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
 
-    dropdowns.addEventListener('mouseover', function () {
-        this.querySelector('.dropdown-content').style.display = 'block';
-    });
+document.addEventListener("DOMContentLoaded", () => {
+    const dropBtn = document.getElementById("dropbtn")
 
-    dropdowns.addEventListener('mouseout', function () {
-        this.querySelector('.dropdown-content').style.display = 'none';
-    });
+    if (dropBtn) {
+        dropBtn.addEventListener("click", () => {
+            openOrCloseDropDown()
+        });
+    }
 });
