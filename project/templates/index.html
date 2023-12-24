@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jb Fashion - Inventory Management app</title>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/home.css">
+</head>
+<body>
+    <div class="main">
+        <div class="side-nav">
+            <div class="logo">
+                <img src="./static/logos/white-transparent.png" alt="jb-logo">
+            </div>
+            <div class="navbar">
+                <div class="navbar-item active">
+                    <a href="/">
+                        <i class="material-icons">home</i>
+                        <span>home</span>
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="/customers">
+                        <i class="material-icons">groups</i>
+                        <span>Customers</span>
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="/orders">
+                        <i class="material-icons">shopping_cart</i>
+                        <span>Orders</span>
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="/settings">
+                        <i class="material-icons">person_add</i>
+                        <span>Settings</span>
+                    </a>
+                </div>
+                <div class="navbar-item spacer"></div>
+                <div class="navbar-item">
+                    <a href="/logout">
+                        <i class="material-icons">logout</i>
+                        <span>logout</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="inner-content">
+                <div class="card-container">
+                    <div class="card" onclick="gotoPage('orders')">
+                        <i class="material-icons">shopping_cart</i>
+                        <h1 class="title">Orders</h1>
+                        <div class="description">
+                            <p>add a new order - see list and details of all orders - edit existing order - remove an existing order</p>
+                        </div>
+                        <div class="stat"></div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card" onclick="gotoPage('customers')">
+                        <i class="material-icons">groups</i>
+                        <h1 class="title">Customers</h1>
+                        <div class="description">
+                            <p>see list of all customers</p>
+                            <p>add a new customer</p>
+                            <p>edit existing customer</p>
+                            <p>remove an existing customer</p>
+                        </div>
+                        <div class="stat"></div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card" onclick="gotoPage('settings')">
+                        <i class="material-icons">person_add</i>
+                        <h1 class="title">Add User</h1>
+                    <div class="description">
+                        <p>See list of users that can access the application</p>
+                        <p>add new users</p>
+                        <p>delete a user</p>
+                    </div>
+                    <div class="stat"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function gotoPage(name) {
+            document.location.href = `/${name}`;
+        }
+    </script>
+</body>
+</html>

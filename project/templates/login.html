@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jb Fashion - Inventory Management app</title>
+    <link rel="stylesheet" href="static/css/login-style.css">
+</head>
+<body>
+    <div class="login-page">
+        <div class="login-page-content">
+            <img src="static/logos/white-transparent.png" height="160px">
+            <h2>Inventory Management Application Login</h2>
+            {% if message|length > 0 %}
+                <span class="information-banner">{{message}}</span>
+            {% endif %}
+            <form action="/login" method="POST">
+                <div class="text-box">
+                    <input type="text" name="username" id="username" placeholder="Enter username">
+                </div>
+                <div class="text-box">
+                    <input type="password" name="pwd" id="pwd" placeholder="Enter password">
+                </div>
+                <div class="btn">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jb Fashion - Orders</title>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/pages.css">
+</head>
+<body>
+    <div class="main">
+        <div class="side-nav">
+            <div class="logo">
+                <img src="./static/logos/white-transparent.png" alt="jb-logo">
+            </div>
+            <div class="navbar">
+                <div class="navbar-item">
+                    <a href="/">
+                        <i class="material-icons">home</i>
+                        <span>home</span>
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="/customers">
+                        <i class="material-icons">groups</i>
+                        <span>Customers</span>
+                    </a>
+                </div>
+                <div class="navbar-item active">
+                    <a href="/orders">
+                        <i class="material-icons">shopping_cart</i>
+                        <span>Orders</span>
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="/settings">
+                        <i class="material-icons">person_add</i>
+                        <span>Settings</span>
+                    </a>
+                </div>
+                <div class="navbar-item spacer"></div>
+                <div class="navbar-item">
+                    <a href="/logout">
+                        <i class="material-icons">logout</i>
+                        <span>logout</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <header>
+                <h1 class="spacer">Order</h1>
+                <button id="openDialogBtn" data-orders="{{customers|length == 0}}">
+                    <i class="material-icons">add</i>
+                    Add Order
+                </button>
+            </header>
+            <main>
+                <dialog id="dialog">
+                    <form onsubmit="submitForm(event, this)">
+                        <header>
+                            <h2 class="spacer">Add Order</h2>
+                            <button autofocus onclick="closeDialog()">
+                                <i class="material-icons">close</i>
+                            </button>
+                        </header>
+                        <main>
+                            <div class="form-entries">
+                                <div class="input-container">
+                                    <label>Customer</label>
+                                    <select name="customerId" required>
+                                        {% for customer in customers %}
+                                            <option value="{{customer.id}}">{{customer.firstName}} {{customer.lastName}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="input-container">
+                                    <label>Type</label>
+                                    <select name="type" required>
+                                        <option value="shirt">Shirt</option>
+                                        <option value="t-shirt">T-Shirt</option>
+                                        <option value="trouser">Trouser</option>
+                                        <option value="belt">Belt</option>
+                                        <option value="wallet">Wallet</option>
+                                        <option value="others">Others</option>
+                                    </select>
+                                </div>
+                                <div class="input-container">
+                                    <label>Delivery Address</label>
+                                    <input type="text" name="deliveryAddress" placeholder="enter the delivery address" required>
+                                </div>
+                                <div class="input-container">
+                                    <label>Total Cost</label>
+                                    <input type="number" name="totalCost" placeholder="enter total cost">
+                                </div>
+                                <div class="input-container">
+                                    <label>Amount Paid</label>
+                                    <input type="number" name="amountPaid" placeholder="enter amount paid">
+                                </div>
+                                <div class="input-container">
+                                    <label>Status</label>
+                                    <select name="status" required>
+                                        <option value="started" selected>Started</option>
+                                        <option value="in progress">In Progress</option>
+                                        <option value="completed">Completed</option>
+                                        <option value="closed">Closed</option>
+                                        <option value="cancelled">Cancelled</option>
+                                    </select>
+                                </div>
+                                <div class="input-container">
+                                    <label>Order Date</label>
+                                    <input type="date" name="orderDate" required>
+                                </div>
+                                <div class="input-container">
+                                    <label>Delivery Date</label>
+                                    <input type="date" name="deliveryDate" required>
+                                </div>
+                                <div class="textarea-container">
+                                    <label>Comment</label>
+                                    <textarea name="comment" 
+                                                rows="4" cols="50" 
+                                                placeholder="write any neccessary note about the order here..."></textarea>
+                                </div>
+                            </div>
+                        </main>
+                        <footer>
+                            <button onclick="closeDialog()">
+                                Close
+                                <i class="material-icons">close</i>
+                            </button>
+                            <div class="spacer"></div>
+                            <button type="submit" >
+                                Submit
+                            </button>
+                        </footer>
+                    </form>
+                </dialog>
+                <div class="table-container shadow-z-1">
+                    {% if orders|length == 0 %}
+                        <div class="empty-banner">
+                            <img src="./static/logos/png/empty-box.png" alt="empty-list">
+                            <h3>Empty table</h3>
+                            <span>No content to display</span>
+                            <button onclick="openDialogOrAlert('{{customers|length == 0}}')">
+                                <i class="material-icons">add</i>
+                                Add Order
+                            </button>
+                        </div>
+
+                    {% elif orders|length > 0 %}
+                        <div class="table">
+                            {% for order in orders %}
+                                <button class="accordion accordion_{{order.id}}">
+                                    <span>{{order.customer["firstName"]}} {{order.customer["lastName"]}}</span>
+                                </button>
+                                <div class="panel panel_{{order.id}}">
+                                    <form onsubmit="editOrderForm(event, this, '{{ order.id }}')">
+                                        <div class="form-inner edit-form_{{order.id}}">
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">text_fields</i>
+                                                    <label>Customer</label>
+                                                </div>
+                                                <select name="customerId" disabled>
+                                                    {% for customer in customers %}
+                                                        <option value="{{customer.id}}" {% if customer.id == order.customerId %} selected {% endif %}>
+                                                            {{customer.firstName}} {{customer.lastName}}
+                                                        </option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">text_fields</i>
+                                                    <label>Type</label>
+                                                </div>
+                                                <select name="type" disabled>
+                                                    <option value="shirt" {% if order.type == 'shirt' %} selected {% endif %}>Shirt</option>
+                                                    <option value="t-shirt" {% if order.type == 't-shirt' %} selected {% endif %}>T-Shirt</option>
+                                                    <option value="trouser" {% if order.type == 'trouser' %} selected {% endif %}>Trouser</option>
+                                                    <option value="belt" {% if order.type == 'belt' %} selected {% endif %}>Belt</option>
+                                                    <option value="wallet" {% if order.type == 'wallet' %} selected {% endif %}>Wallet</option>
+                                                    <option value="others" {% if order.type == 'others' %} selected {% endif %}>Others</option>
+                                                </select>
+                                            </div>
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">contact_mail</i>
+                                                    <label>Delivery Address</label>
+                                                </div>
+                                                <input type="text" name="deliveryAddress" value="{{order["deliveryAddress"]}}" disabled></input>
+                                            </div>
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">alternate_email</i>
+                                                    <label>Total Cost</label>
+                                                </div>
+                                                <input type="number" name="totalCost" value="{{order["totalCost"]}}" disabled></input>
+                                            </div>
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">alternate_email</i>
+                                                    <label>Amount Paid</label>
+                                                </div>
+                                                <input type="number" name="amountPaid" value="{{order["amountPaid"]}}" disabled></input>
+                                            </div>
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">contact_mail</i>
+                                                    <label>Status</label>
+                                                </div>
+                                                <select name="status" disabled>
+                                                    <option value="started" {% if order.type == 'started' %} selected {% endif %}>Started</option>
+                                                    <option value="in progress" {% if order.type == 'in progress' %} selected {% endif %}>In Progress</option>
+                                                    <option value="completed" {% if order.type == 'completed' %} selected {% endif %}>Completed</option>
+                                                    <option value="closed" {% if order.type == 'cloesed' %} selected {% endif %}>Closed</option>
+                                                    <option value="cancelled" {% if order.type == 'cancelled' %} selected {% endif %}>Cancelled</option>
+                                                </select>
+                                            </div>
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">call</i>
+                                                    <label>Order Date</label>
+                                                </div>
+                                                <input type="date" name="orderDate" value="{{order["orderDate"]}}" disabled></input>
+                                            </div>
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">call</i>
+                                                    <label>Delivery Date</label>
+                                                </div>
+                                                <input type="date" name="deliveryDate" value="{{order["deliveryDate"]}}" disabled></input>
+                                            </div>
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">comment</i>
+                                                    <label>Comment</label>
+                                                </div>
+                                                <textarea name="comment" rows="4" cols="50" disabled>{{order["comment"]}}</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="buttons buttons_{{order.id}}">
+                                            <div class="spacer"></div>
+                                            <button class="delete" onclick="deleteOrder(event, '{{ order.id }}')">Delete</button>
+                                            <button class="edit show" onclick="enableEdit(event, '{{ order.id }}')">Enable Edit</button>
+                                            <button type="submit" class="save hide">
+                                                Save
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <p>
+                            Unable to retrieve orders from the database. This is due to: {{message}}
+                        </p>
+                    {% endif %}
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="./static/scripts/order.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jb Fashion - Customers</title>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/pages.css">
+</head>
+<body>
+    <div class="main">
+        <div class="side-nav">
+            <div class="logo">
+                <img src="./static/logos/white-transparent.png" alt="jb-logo">
+            </div>
+            <div class="navbar">
+                <div class="navbar-item">
+                    <a href="/">
+                        <i class="material-icons">home</i>
+                        <span>home</span>
+                    </a>
+                </div>
+                <div class="navbar-item active">
+                    <a href="/customers">
+                        <i class="material-icons">groups</i>
+                        <span>Customers</span>
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="/orders">
+                        <i class="material-icons">shopping_cart</i>
+                        <span>Orders</span>
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="/settings">
+                        <i class="material-icons">person_add</i>
+                        <span>Settings</span>
+                    </a>
+                </div>
+                <div class="navbar-item spacer"></div>
+                <div class="navbar-item">
+                    <a href="/logout">
+                        <i class="material-icons">logout</i>
+                        <span>logout</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <header>
+                <h1 class="spacer">Customer</h1>
+                <button id="openDialogBtn">
+                    <i class="material-icons">add</i>
+                    Add Customer
+                </button>
+            </header>
+            <main class="spacer">
+                <dialog id="dialog">
+                    <form onsubmit="submitForm(event, this)">
+                        <header>
+                            <h2 class="spacer">Add Customer</h2>
+                            <button autofocus onclick="closeDialog()">
+                                <i class="material-icons">close</i>
+                            </button>
+                        </header>
+                        <main>
+                            <div class="form-entries">
+                                <div class="input-container">
+                                    <label>First Name</label>
+                                    <input type="text" name="firstName" placeholder="enter customer first name" required>
+                                </div>
+                                <div class="input-container">
+                                    <label>Last Name</label>
+                                    <input type="text" name="lastName" placeholder="enter customer last name" required>
+                                </div>
+                                <div class="input-container">
+                                    <label>Address</label>
+                                    <input type="text" name="address" placeholder="enter customer address" required>
+                                </div>
+                                <div class="input-container">
+                                    <label>Email</label>
+                                    <input type="email" name="email" placeholder="enter customer email">
+                                </div>
+                                <div class="input-container">
+                                    <label>Phone or mobile no.</label>
+                                    <input type="phone" name="phoneNumber" placeholder="enter customer phone number">
+                                </div>
+                                <div class="radio-container">
+                                    <label>Gender</label>
+                                    <div class="option">
+                                        <input type="radio" name="gender" value="male" checked>
+                                        <span>Male</span>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" name="gender" value="female">
+                                        <span>Female</span>
+                                    </div>
+                                </div>
+                                <div class="textarea-container">
+                                    <label>Measurement</label>
+                                    <textarea name="measurement" rows="7" cols="50" placeholder="add customer measurement here"></textarea>
+                                </div>
+                                <div class="textarea-container">
+                                    <label>Comment</label>
+                                    <textarea name="comment" 
+                                                rows="4" cols="50" 
+                                                placeholder="write any neccessary note about the customer here..."></textarea>
+                                </div>
+                            </div>
+                        </main>
+                        <footer>
+                            <button onclick="closeDialog()">
+                                Close
+                                <i class="material-icons">close</i>
+                            </button>
+                            <div class="spacer"></div>
+                            <button type="submit" >
+                                Submit
+                            </button>
+                        </footer>
+                    </form>
+                </dialog>
+
+                <div class="table-container shadow-z-1">
+                    {% if customers|length == 0 %}
+                        <div class="empty-banner">
+                            <img src="./static/logos/png/empty-box.png" alt="empty-list">
+                            <h3>Empty table</h3>
+                            <span>No content to display</span>
+                            <button onclick="openDialog()">
+                                <i class="material-icons">add</i>
+                                Add Customer
+                            </button>
+                        </div>
+
+                    {% elif customers|length > 0 %}
+                        <div class="table">
+                            {% for customer in customers %}
+                                <button class="accordion accordion_{{customer.id}}">
+                                    <span>{{customer["firstName"]}} {{customer["lastName"]}}</span>
+                                </button>
+                                <div class="panel panel_{{customer.id}}">
+                                    <form onsubmit="editCustomerForm(event, this, '{{ customer.id }}')">
+                                        <div class="form-inner edit-form_{{customer.id}}">
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">text_fields</i>
+                                                    <label>First Name</label>
+                                                </div>
+                                                <input type="text" name="firstName" value="{{customer["firstName"]}}" disabled></input>
+                                            </div>
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">text_fields</i>
+                                                    <label>Last Name</label>
+                                                </div>
+                                                <input type="text" name="lastName" value="{{customer["lastName"]}}" disabled></input>
+                                            </div>
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">contact_mail</i>
+                                                    <label>Address</label>
+                                                </div>
+                                                <input type="text" name="address" value="{{customer["address"]}}" disabled></input>
+                                            </div>
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">alternate_email</i>
+                                                    <label>Email</label>
+                                                </div>
+                                                <input type="email" name="email" value="{{customer["email"]}}" disabled></input>
+                                            </div>
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">call</i>
+                                                    <label>Phone</label>
+                                                </div>
+                                                <input type="phone" name="phoneNumber" value="{{customer["phoneNumber"]}}" disabled></input>
+                                            </div>
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">man_3</i>
+                                                    <label>Gender</label>
+                                                </div>
+                                                <div class="option">
+                                                    <div>
+                                                        <input type="radio" name="gender" value="male" {{'checked' if customer["gender"] == "male" else ''}} disabled>
+                                                        <span>Male</span>
+                                                    </div>
+                                                    <div>
+                                                        <input type="radio" name="gender" value="female" {{'checked' if customer["gender"] == "female" else ''}} disabled>
+                                                        <span>Female</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="display">
+                                                    <i class="material-icons">bia</i>
+                                                    <label>Measurement</label>
+                                                </div>
+                                                <textarea name="measurement" rows="7" cols="50" disabled>{{customer["measurement"]}}</textarea>
+                                            </div>
+                                            <div class="info">
+                                                <div class="display">
+                                                        <i class="material-icons">comment</i>
+                                                        <label>Comment</label>
+                                                </div>
+                                                <textarea name="comment" rows="4" cols="50" disabled>{{customer["comment"]}}</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="buttons buttons_{{customer.id}}">
+                                            <div class="spacer"></div>
+                                            <button class="delete" onclick="deleteCustomer(event, '{{ customer.id }}')">Delete</button>
+                                            <button class="edit show" onclick="enableEdit(event, '{{ customer.id }}')">Enable Edit</button>
+                                            <button type="submit" class="save hide">
+                                                Save
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <p>
+                            Unable to retrieve cystomers from the database. This is due to: {{message}}
+                        </p>
+                    {% endif %}
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="./static/scripts/customer.js"></script>
+</body>
+</html>
