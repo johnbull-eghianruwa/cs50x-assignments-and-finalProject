@@ -7,6 +7,6 @@ sort2 uses: Merge Sort
 How do you know?: It ran fastest on a random/unsorted list.
 
 
-sort3 uses: Select Sort
+sort3 uses: Selection Sort
 
 How do you know?: It was the only option left.
