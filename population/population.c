@@ -24,10 +24,10 @@ int main(void)
     do
     {
         initialPopulation = initialPopulation + (initialPopulation / 3) - (initialPopulation / 4);
-        years++;
+        year++;
     }
     while (initialPopulation < targetPopulation);
 
     // TODO: Print number of years
-    printf("Years: %i\n", years);
+    printf("Years: %i\n", year);
 }
