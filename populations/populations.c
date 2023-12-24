@@ -22,8 +22,9 @@ int main(void)
     do
     {
         start = start + (start/3) - (start/4);
+        year++
     }
-    while();
+    while(start < end);
 
     // TODO: Print number of years
 }
