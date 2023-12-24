@@ -29,7 +29,7 @@ int compute_score(string word)
 
     for (int i = 0; i < strlen(word); i++)
     {
-        if (word[i] > 65 && word[i]< 90)
+        if (isupper(word[i]))
         {
            score = score + POINTS[word[i]- 65];
         }
