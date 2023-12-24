@@ -9,9 +9,17 @@ How do you know?: Because bubble Sort is known for its simplicity but is not
 
 sort2 uses: Merge Sort
 
-How do you know?: It ran fastest on a random/unsorted list.
+How do you know?: Because merge Sort is a divide-and-conquer algorithm that divides the input list
+ into smaller parts, sorts them independently, and then merges them back together.
+Your observation: It ran fastest on a random/unsorted list. Merge Sort is known for its
+consistent performance and is efficient for both random and unsorted lists.
 
 
 sort3 uses: Select Sort
 
-How do you know?: It was the only option left.
+How do you know?: Characteristics: Selection Sort sorts an array by repeatedly
+finding the minimum element from the unsorted part of the array and putting it
+at the beginning. Your observation: It was the only option left. While it's not
+ the most efficient sorting algorithm, it's a valid choice, especially for small
+ datasets. However, the statement "It was the only option left" might suggest that
+  there was a predetermined decision to use Selection Sort for a specific reason.
