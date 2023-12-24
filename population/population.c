@@ -23,7 +23,8 @@ int main(void)
     {
         initialPopulation = initialPopulation + (initialPopulation / 3) - (initialPopulation / 4);
         years++;
-    } while (initialPopulation < targetPopulation);
+    }
+    while (initialPopulation < targetPopulation);
 
     // TODO: Print number of years
     printf("Years: %i\n", years);
