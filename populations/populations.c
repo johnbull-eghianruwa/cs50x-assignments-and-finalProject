@@ -18,14 +18,14 @@ int main(void)
     while(start > end);
 
     // TODO: Calculate number of years until we reach threshold
-    int years = 0;
+    int year = 0;
     do
     {
         start = start + (start/3) - (start/4);
-        year++
+        year++;
     }
     while(start < end);
 
     // TODO: Print number of years
-    printf("years: %i", year)
+    printf("years: %i", year);
 }
