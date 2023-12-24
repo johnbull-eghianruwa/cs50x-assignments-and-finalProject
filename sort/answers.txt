@@ -1,25 +1,12 @@
 sort1 uses: Bubble Sort
 
-How do you know?: Because bubble Sort is known for its simplicity but is not
- very efficient for large datasets. It repeatedly steps through the list, compares
-  adjacent elements, and swaps them if they are in the wrong order.Your observation:
-   It ran fastest on a sorted list. This is a characteristic behavior of Bubble Sort.
-    When the list is nearly sorted, Bubble Sort can perform well as it minimizes the
-     number of swaps needed.
+How do you know?: It ran fastest on a sorted list.
 
 sort2 uses: Merge Sort
 
-How do you know?: Because merge Sort is a divide-and-conquer algorithm that divides the input list
- into smaller parts, sorts them independently, and then merges them back together.
-Your observation: It ran fastest on a random/unsorted list. Merge Sort is known for its
-consistent performance and is efficient for both random and unsorted lists.
+How do you know?: It ran fastest on a random/unsorted list.
 
 
 sort3 uses: Select Sort
 
-How do you know?: Characteristics: Selection Sort sorts an array by repeatedly
-finding the minimum element from the unsorted part of the array and putting it
-at the beginning. Your observation: It was the only option left. While it's not
- the most efficient sorting algorithm, it's a valid choice, especially for small
- datasets. However, the statement "It was the only option left" might suggest that
-  there was a predetermined decision to use Selection Sort for a specific reason.
+How do you know?: It was the only option left.
