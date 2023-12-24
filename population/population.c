@@ -8,14 +8,16 @@ int main(void)
     do
     {
         initialPopulation = get_int("Starting Population: ");
-    } while (initialPopulation < 9);
+    }
+    while (initialPopulation < 9);
 
     // TODO: Prompt for end size
     int targetPopulation;
     do
     {
         targetPopulation = get_int("Ending Population: ");
-    } while (initialPopulation > targetPopulation);
+    }
+    while (initialPopulation > targetPopulation);
 
     // TODO: Calculate number of years until we reach threshold
     int years = 0;
