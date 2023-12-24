@@ -1,0 +1,350 @@
+
+.content {
+    display: flex;
+    flex-direction: column;
+    & > header {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+        background-color: #e5e5e5;
+        & > h1 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin: 0;
+        }
+        & > button {
+            width: 135px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            background-color: rgb(140, 164, 147);
+            color: #fff;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            & > i {
+                margin-right: 5px;
+            }
+        }
+    }
+    & > main {
+        padding: 0 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-y: hidden;
+
+        .shadow-z-1 {
+            -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,.12),
+                                0 1px 2px 0 rgba(0,0,0,.24);
+            -moz-box-shadow:    0 1px 3px 0 rgba(0,0,0,.12),
+                                0 1px 2px 0 rgba(0,0,0,.24);
+            box-shadow:         0 1px 3px 0 rgba(0,0,0,.12),
+                                0 1px 2px 0 rgba(0,0,0,.24);
+        }
+        .table-container {
+            margin: 1rem;
+            width: 90%;
+            height: 90%;
+            overflow-y: auto;
+            background-color: #f5f4f4;
+
+            .empty-banner {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                flex-direction: column;
+                & > img {
+                    width: 200px;
+                    height: auto;
+                }
+
+                & > h3 {
+                    font-weight: 400;
+                    line-height: 1.1;
+                    font-size: 2.5rem;
+                    margin: 0;
+                }
+                & > button {
+                    border: 2px solid #9db3d2;
+                    color: #9db3d2;
+                    outline: none;
+                    font-size: 1.1rem;
+                    height: 48px;
+                    padding: 0 1rem;
+                    background-color: transparent;
+                    border-radius: 24px;
+                    margin: 1.2rem 0;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 400;
+
+                    .material-icons {
+                        font-size: 2rem;
+                        color: #9db3d2;
+                        margin-right: 0.5rem;
+                    }
+                }
+                & > button:hover {
+                    background-color: #9db3d2;
+                    color: white;
+                    border: none;
+
+                    .material-icons {
+                        color: white;
+                    }
+                }
+            }
+            & > .table {
+                width: 100%;
+                .accordion {
+                    color: #444;
+                    cursor: pointer;
+                    padding: 18px;
+                    width: 100%;
+                    border: none;
+                    text-align: left;
+                    outline: none;
+                    font-size: 15px;
+                    transition: 0.4s;
+                    border-bottom: 1px solid #bababa;
+                }
+
+                .active, .accordion:hover {
+                    background-color: #ccc;
+                }
+
+                .accordion:after {
+                    content: '\002B';
+                    color: #777;
+                    font-weight: bold;
+                    float: right;
+                    margin-left: 5px;
+                }
+
+                .active:after {
+                    content: "\2212";
+                }
+
+                .panel {
+                    padding: 0 18px;
+                    background-color: white;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
+
+                    & > form {
+                        padding: 1rem;
+                        & > .form-inner {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 2.5rem 3rem;
+                            
+                            & > .info {
+                                display: flex;
+                                flex-direction: column;
+                                min-height: 80px;
+                                width: 45%;
+                                & > .display {
+                                    display: flex;
+                                    align-items: center;
+                                    margin-bottom: 0.34rem;
+                                    & > i {
+                                        margin-right: 5px;
+                                    }
+                                    & > label {
+                                        font-size: small;
+                                        font-weight: bold;
+                                        line-height: 1.1;
+                                        text-transform: uppercase;
+                                    }
+                                }
+                                & > input {
+                                    height: 50px;
+                                    width: 100%;
+                                    border-radius: 5px;
+                                    border: 1px solid #ccc;
+                                    padding: 0.25rem;
+                                }
+                                & > select {
+                                    height: 50px;
+                                    width: 100%;
+                                    border-radius: 5px;
+                                    border: 1px solid #ccc;
+                                    padding: 0.25rem;
+                                }
+                                & > .option {
+                                    display: flex;
+                                    height: 100%;
+                                    align-items: center;
+                                }
+                                & > textarea {
+                                    border-radius: 5px;
+                                }
+                            }
+                        }
+                        .buttons {
+                            display: flex;
+                            gap: 0.5rem;
+                            margin-top: 1rem;
+                            width: 100%;
+                            & > .hide {
+                                display: none;
+                            }
+                            & > .spacer {
+                                flex: 1 1 auto;
+                            }
+                            & > button {
+                                width: 100px;
+                                height: 45px;
+                                border: none;
+                                outline: none;
+                                border-radius: 5px;
+                                color: white;
+                                font-size: 1rem;
+                            }
+
+                            & > button.delete {
+                                background-color: #e56359;
+                            }
+                            & > button.edit {
+                                background-color: rgba(0, 174, 255, 0.753);
+                            }
+
+                            & > button.save {
+                                background-color: rgb(140, 164, 147);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+dialog {
+    height: 800px;
+    width: 600px;
+    overflow-y: hidden;
+    & > form {
+        height: 100%;
+        width: 100%;
+        & > header {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        & > main {
+            min-height: calc(100% - 80px - 4rem);
+            max-height: calc(100% - 80px - 4rem);
+            width: 100%;
+            overflow-y: scroll;
+            & > .form-entries {
+                
+                width: 100%;
+                & > .input-container {
+                    display: flex;
+                    margin: 04rem 1rem;
+                    align-items: center;
+                    & > label {
+                        text-transform: uppercase;
+                        font-size: 0.7rem;
+                        line-height: 1.1;
+                        font-weight: 300;
+                        width: 150px;
+                        margin-right: 0.4rem;
+                    }
+                    & > input {
+                        outline: none;
+                        border: 1px solid #ddd7d7;
+                        padding: 0.5rem;
+                        flex: 1 1 auto;
+                    }
+                    & > select {
+                        outline: none;
+                        border: 1px solid #ddd7d7;
+                        padding: 0.5rem;
+                        flex: 1 1 auto;
+                    }
+                }
+                & > .radio-container {
+                    display: flex;
+                    margin: 04rem 1rem;
+                    align-items: center;
+                    & > label {
+                        text-transform: uppercase;
+                        font-size: 0.7rem;
+                        line-height: 1.1;
+                        font-weight: 300;
+                        width: 150px;
+                        margin-right: 0.4rem;
+                    }
+                    & > .option {
+                        flex: 1 1 auto;
+                    }
+                }
+                & > .textarea-container {
+                    display: flex;
+                    margin: 04rem 1rem;
+                    align-items: center;
+                    & > label {
+                        text-transform: uppercase;
+                        font-size: 0.7rem;
+                        line-height: 1.1;
+                        font-weight: 300;
+                        width: 150px;
+                        margin-right: 0.4rem;
+                    }
+                    & > textarea {
+                        flex: 1 1 auto;
+                    }
+                }
+            }
+        }
+        & > footer {
+            width: 100%;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.54rem;
+
+            & > button {
+                width: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 50px;
+                font-size: 1rem;
+                border-radius: 5px;
+                & > i {
+                    margin-left: 0.45rem;
+                }
+            }
+            & > button:last-child {
+                background-color: rgb(0, 123, 255);
+                color: white;
+                border: none;
+            }
+        }
+    }
+}
+
+::backdrop {
+    background-image: linear-gradient(
+      45deg,
+      magenta,
+      rebeccapurple,
+      dodgerblue,
+      green
+    );
+    opacity: 0.75;
+}
