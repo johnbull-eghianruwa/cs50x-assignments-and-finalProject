@@ -1,6 +1,7 @@
 sort1 uses: Bubble Sort
 
-How do you know?: It ran fastest on a sorted list.
+How do you know?: Because bubble Sort is known for its simplicity but is not very efficient for large datasets. It repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
+Your observation: It ran fastest on a sorted list. This is a characteristic behavior of Bubble Sort. When the list is nearly sorted, Bubble Sort can perform well as it minimizes the number of swaps needed.
 
 sort2 uses: Merge Sort
 
