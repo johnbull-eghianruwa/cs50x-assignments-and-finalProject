@@ -17,13 +17,13 @@ int main(void)
     {
         targetPopulation = get_int("Ending Population: ");
     }
-    while (initialPopulation > targetPopulation);
+    while (initialPopulation < targetPopulation);
 
     // TODO: Calculate number of years until we reach threshold
     int year = 0;
     do
     {
-        initialPopulation = initialPopulation + (initialPopulation / 3) - (initialPopulation / 4);
+        initialPopulation = initialPopulation + (int)(initialPopulation / 3.0) - (int)(initialPopulation / 4.0);
         year++;
     }
     while (initialPopulation < targetPopulation);
