@@ -34,6 +34,7 @@ def index():
 
             return redirect("/")
         db.execute("INSERT INTO bithdays (name, moth, day) VALUE(?, ?, ?)", name.capitalize(), month, day)
+
         return redirect("/")
 
     else:
