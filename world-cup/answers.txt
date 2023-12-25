@@ -15,4 +15,7 @@ he prediction that proved incorrect as the number of simulations increased is th
  increasing time with a higher number of simulations.
 
 Suppose you're charged a fee for each second of compute time your program uses.
-After how many simulations would you call the predictions "good enough"?: TODO
+After how many simulations would you call the predictions "good enough"?:
+It seems like the predictions stabilized after about 1000 simulations, where
+the time is 0m0.39s. Therefore, you might consider the predictions "good enough"
+ after 1000 simulations.
