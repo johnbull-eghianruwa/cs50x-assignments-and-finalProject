@@ -27,8 +27,13 @@ def index():
     if request.method == "POST":
 
         # TODO: Add the user's entry into the database
-        
+        name = request.form.get("name")
+        month = request.form.get("month")
+        day = request.form.get("day")
+        if not name or not month or not day:
 
+            return redirect("/")
+        db.execute("INSERT INTO bithdays (name, moth, day) VALUE(?, ?, ?)", name.capitalize(), month, day)
         return redirect("/")
 
     else:
