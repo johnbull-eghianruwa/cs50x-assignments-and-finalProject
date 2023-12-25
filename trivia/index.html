@@ -24,7 +24,19 @@
                         document.querySelector("#answer1").innerHTML = "Incorrect!";
                     });
                 }
-            })
+
+                // Check free response submission
+                document.querySelector("#check").addEventListner("click", function(){
+                    let input = document.querySelector("input");
+                    if (input.value.toLowerCase() == "switzerland") {
+                        input.style.backgroundColor = "gree";
+                        documnet.querySelector("#answer2").innerHTML = "Correct!";
+                    } else {
+                        input.style.backgroundColor = "red";
+                        documnet.querySelector("#answer2").innerHTML = "Incorrect!";
+                    }
+                });
+            });
         </script>
     </head>
     <body>
