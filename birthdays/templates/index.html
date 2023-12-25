@@ -7,6 +7,7 @@
         <title>Birthdays</title>
     </head>
     <body>
+        {% block body %}
         <div class="header">
             <h1>Birthdays</h1>
         </div>
@@ -19,7 +20,7 @@
                         <input type="text" name="name" autocomplete="off" placeholder="Enter name here...">
                         <input type="text"name="month" autocomplete="off" placeholder="Enter month here...">
                         <input type="text"name="day" autocomplete="off" placeholdeer="Enter day here...">
-                        <button="submit">Add birthday</button>
+                        <input type="submit" value="Add birthday"></submit>
                     </form>
             </div>
 
@@ -38,13 +39,19 @@
                         {% for birthday in birthdays %}
                             <tr>
                                 <td>{{birthday["name"]}}</td>
-                                <td>{{birthday["month"]}}</td>
-                                <td>{{birthday["day"]}}</td>
+                                <td>{{birthday["month"]}}/{{birthday["day"]}}</td>
+                                <td>
+                                    <form action="/delete" method="post">
+                                        <input type="hidden" name="idd" value="{{birthday.id}}">
+                                        <input type="submit" value="DELETE">
+                                    </form>
+                                </td>
                             </tr>
-
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
         </div>
+        {% endblock %}
     </body>
 </html>
