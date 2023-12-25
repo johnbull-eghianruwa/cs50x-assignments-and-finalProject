@@ -3,7 +3,7 @@ Times:
 10 simulations: 0m0. 032s
 100 simulations: 0m0. 048s
 1000 simulations: 0m0. 39s
-10000 simulations: 0m0. 042s
+10000 simulations: 0m0. 0221s
 100000 simulations: omo. 038s
 1000000 simulations: omo. 039s
 
