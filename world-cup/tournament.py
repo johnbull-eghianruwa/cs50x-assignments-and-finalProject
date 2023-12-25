@@ -3,7 +3,7 @@ import sys
 import random
 
 # Number of simulations to run
-N = 1000000
+N = 100000
 
 
 def main():
