@@ -9,8 +9,10 @@ Times:
 
 Questions:
 
-Which predictions, if any, proved incorrect as you increased the number of simulations?: TODO
-No predictions proved incorrect as the number of simulations increased; the execution time increased as expected.
+Which predictions, if any, proved incorrect as you increased the number of simulations?:
+he prediction that proved incorrect as the number of simulations increased is the time for
+ 10000 simulations, which unexpectedly decreased to 0m0.0221s. This contradicts the trend of
+ increasing time with a higher number of simulations.
 
 Suppose you're charged a fee for each second of compute time your program uses.
 After how many simulations would you call the predictions "good enough"?: TODO
