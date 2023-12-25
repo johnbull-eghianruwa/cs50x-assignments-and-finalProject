@@ -49,4 +49,5 @@ def delete():
     idd=request.form.get("idd")
     if idd:
         db.execute("DELETE FROM birthdays WHERE id = ?", idd)
+
     return redirect("/")
