@@ -23,7 +23,7 @@ int main(void)
     int year = 0;
     do
     {
-        initialPopulation = initialPopulation + (initialPopulation / 3) - (initialPopulation / 4);
+        initialPopulation = initialPopulation + (initialPopulation / 3.0) - (initialPopulation / 4.0);
         year++;
     }
     while (initialPopulation < targetPopulation);
